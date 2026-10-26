@@ -1,0 +1,26 @@
+# Локальная среда и личные данные
+saves/
+logs/
+crash-reports/
+screenshots/
+local/
+xaero/
+XaeroWaypoints*
+options.txt
+optionsof.txt
+usercache.json
+usernamecache.json
+rhino.local.properties
+steam_appid.txt
+
+# Не коммитить бинарные моды и большие клиентские библиотеки
+mods/
+resourcepacks/
+shaderpacks/
+
+# Временные файлы
+*.log
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
