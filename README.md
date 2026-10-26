@@ -28,4 +28,5 @@
 
 - [Список модов](docs/mods-list.md)
 - [План разработки](docs/roadmap.md)
+- [Рецепты IC2: сравнение и журнал изменений](docs/recipe-changes.md)
 - [KubeJS](kubejs/README.md)
