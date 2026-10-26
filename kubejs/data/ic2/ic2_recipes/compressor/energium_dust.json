@@ -1,7 +1,7 @@
 {
   "input": {
     "item": "kubejs:energium_dust",
-    "size": 1,
+    "size": 9,
     "type": "ic2:item"
   },
   "output": {
