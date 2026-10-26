@@ -1,15 +1,15 @@
 // Best-Sborka — IC2 Classic recipe balance
 // Minecraft Forge 1.19.2
 //
-// Replaces the easy recipe (1 diamond + redstone) with a recipe
-// requiring 4 IC2 Classic diamond dust + 5 redstone dust.
-// Diamond Dust item ID confirmed from IC2Classic 2.1.3.4 assets: ic2:dust_diamond.
+// Classic progression: 4 IC2 diamond dust + 5 redstone -> 9 Energium Dust.
+// One Energium Dust is then compressed into an Energy Crystal.
+// IDs checked against IC2Classic 2.1.3.4 JAR assets.
 
 ServerEvents.recipes(event => {
   event.remove({ output: 'ic2:energy_crystal' })
 
   event.shaped(
-    'ic2:energy_crystal',
+    '9x kubejs:energium_dust',
     [
       'RDR',
       'DRD',
