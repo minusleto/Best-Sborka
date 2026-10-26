@@ -13,6 +13,6 @@ hostEnabled = true
 # Fallback UDP port for voice mods and other UDP services; Simple Voice Chat and Plasmo Voice are detected automatically; use 0 to disable the fallback
 # default: 24454
 voiceChatPort = 24454
-# Experimental: on Linux and macOS, relaunch Minecraft before LWJGL starts so LWJGL starts so Steam can inject its overlay; set true to enable
+# Experimental: on Linux and macOS, relaunch Minecraft before LWJGL starts so Steam can inject its overlay; set true to enable
 # default: false
 overlayRelaunch = false
