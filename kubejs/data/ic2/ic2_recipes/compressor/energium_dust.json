@@ -1,0 +1,17 @@
+{
+  "input": {
+    "item": "kubejs:energium_dust",
+    "size": 1,
+    "type": "ic2:item"
+  },
+  "output": {
+    "xp": 0.0,
+    "outputs": [
+      {
+        "item": "ic2:energy_crystal",
+        "count": 1
+      }
+    ],
+    "type": "ic2:simple"
+  }
+}
