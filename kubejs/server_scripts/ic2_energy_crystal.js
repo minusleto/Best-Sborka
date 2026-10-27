@@ -104,6 +104,18 @@ ServerEvents.recipes(event => {
   event.shaped('ic2:advanced_machine_block', ['SCS', 'AMA', 'SCS'], casingKeys)
 
   // ---------------------------------------------------------------
+  // Lapotron Crystal — use Advanced Circuit instead of the regular Circuit,
+  // following the recipe on the Russian Minecraft Wiki.
+  // Keep the existing lapis lazuli and Energy Crystal ingredients.
+  // ---------------------------------------------------------------
+  event.remove({ output: 'ic2:lapotron_crystal' })
+  event.shapeless('ic2:lapotron_crystal', [
+    'minecraft:lapis_lazuli',
+    'ic2:advanced_circuit',
+    'ic2:energy_crystal'
+  ])
+
+  // ---------------------------------------------------------------
   // Mining Laser — add a second Advanced Circuit by replacing one
   // composite/advanced-alloy ingredient in the IC2 Experimental recipe.
   // Requested layout: Rcc / AAC / AA
