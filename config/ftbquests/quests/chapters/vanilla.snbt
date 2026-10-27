@@ -1,0 +1,462 @@
+{
+	id: "0D1621A89217E2D3"
+	group: ""
+	order_index: 1
+	filename: "vanilla"
+	title: "Ваниль: выживание"
+	icon: "minecraft:iron_pickaxe"
+	subtitle: [
+		"Первые шаги: дерево, камень, железо, алмазы"
+	]
+	default_quest_shape: "rsquare"
+	quests: [
+		{
+			title: "Верстак"
+			x: 0.0d
+			y: 0.0d
+			shape: "hexagon"
+			subtitle: "Первый шаг"
+			description: [
+				"&6Что делать:&r ломай дерево (зажми ЛКМ на стволе), делай из брёвен доски, из 4 досок — верстак."
+				"&6Зачем:&r на верстаке (сетка 3×3) создаётся почти всё. Рецепты ищи в JEI клавишей R."
+			]
+			size: 1.3d
+			id: "43A2976A54855BBF"
+			tasks: [
+				{
+					id: "343278F59E739788"
+					type: "item"
+					item: "minecraft:crafting_table"
+				}
+			]
+			rewards: [
+				{
+					id: "050473A272FC54B7"
+					type: "item"
+					item: "minecraft:stick"
+					count: 8
+				}
+			]
+		}
+		{
+			title: "Деревянная кирка"
+			x: 2.0d
+			y: 0.0d
+			subtitle: "Чтобы копать камень"
+			description: [
+				"&6Рецепт:&r 3 доски сверху и 2 палки вниз по центру."
+				"Без кирки камень не добыть: рука его просто не ломает."
+			]
+			dependencies: ["43A2976A54855BBF"]
+			id: "0D3D04EBA6FD785A"
+			tasks: [
+				{
+					id: "2B808C323F10C781"
+					type: "item"
+					item: "minecraft:wooden_pickaxe"
+				}
+			]
+			rewards: [
+				{
+					id: "622D61407C03AAC9"
+					type: "item"
+					item: "minecraft:coal"
+					count: 4
+				}
+			]
+		}
+		{
+			title: "Каменная кирка"
+			x: 4.0d
+			y: 0.0d
+			subtitle: "Следующий уровень"
+			description: [
+				"&6Как:&r накопай булыжника (cobblestone) деревянной киркой и сделай каменную кирку."
+				"Каменная кирка добывает &bжелезо&r. А железо — основа всего в IC2."
+			]
+			dependencies: ["0D3D04EBA6FD785A"]
+			id: "23D260AC4F26107F"
+			tasks: [
+				{
+					id: "11D900364C3E175C"
+					type: "item"
+					item: "minecraft:stone_pickaxe"
+				}
+			]
+			rewards: [
+				{
+					id: "1A59BDAF336FC462"
+					type: "item"
+					item: "minecraft:torch"
+					count: 8
+				}
+			]
+		}
+		{
+			title: "Печь"
+			x: 6.0d
+			y: 0.0d
+			subtitle: "Плавим руду"
+			description: [
+				"&6Рецепт:&r 8 булыжников по кругу."
+				"Печь плавит руду в слитки и жарит еду. Топливо — уголь, уголь древесный, дерево."
+				"&7Позже мы заменим печь электрической, но первые слитки ты получишь здесь.&r"
+			]
+			dependencies: ["23D260AC4F26107F"]
+			id: "0CC29F15A2613870"
+			tasks: [
+				{
+					id: "3D157C47C3CEC107"
+					type: "item"
+					item: "minecraft:furnace"
+				}
+			]
+			rewards: [
+				{
+					id: "45FC11F2687F0487"
+					type: "item"
+					item: "minecraft:coal"
+					count: 8
+				}
+			]
+		}
+		{
+			title: "Железо"
+			x: 8.0d
+			y: 0.0d
+			subtitle: "Основа техники"
+			description: [
+				"&6Где искать:&r железная руда лежит в пещерах и шахтах, чаще на средних глубинах."
+				"Выплавь 8 слитков в печи (руда + топливо)."
+				"&6Зачем:&r железо нужно для инструментов, брони, ведра, и почти для всех машин IC2."
+			]
+			dependencies: ["0CC29F15A2613870"]
+			id: "22B98F3875CFB733"
+			tasks: [
+				{
+					id: "608CD7F0123A11AB"
+					type: "item"
+					item: "minecraft:iron_ingot"
+					count: 8L
+				}
+			]
+			rewards: [
+				{
+					id: "786BED39B9B758B5"
+					type: "item"
+					item: "minecraft:bread"
+					count: 4
+				}
+			]
+		}
+		{
+			title: "Железная кирка"
+			x: 10.0d
+			y: 0.0d
+			subtitle: "Для алмазов"
+			description: [
+				"&6Рецепт:&r 3 железных слитка сверху и 2 палки вниз."
+				"Железная кирка добывает &bалмазы&r и золото."
+			]
+			dependencies: ["22B98F3875CFB733"]
+			id: "59F46FD06B8A0FCC"
+			tasks: [
+				{
+					id: "447132B2336D9EE6"
+					type: "item"
+					item: "minecraft:iron_pickaxe"
+				}
+			]
+			rewards: [
+				{
+					id: "1DBC49735B739B32"
+					type: "item"
+					item: "minecraft:cooked_beef"
+					count: 8
+				}
+			]
+		}
+		{
+			title: "Алмазы"
+			x: 12.0d
+			y: 0.0d
+			shape: "hexagon"
+			subtitle: "Редкая находка"
+			description: [
+				"&6Где искать:&r глубоко под землёй, лучшие слои — у самой нижней границы мира (около y = -58)."
+				"&6Зачем:&r алмазная кирка, и &bалмазная пыль для энергетического кристалла IC2&r (см. главу IC2)."
+				"&7Кидай факелы и копай шахту-лесенку или ходи по пещерам.&r"
+			]
+			dependencies: ["59F46FD06B8A0FCC"]
+			size: 1.2d
+			id: "3A990520D3B2D421"
+			tasks: [
+				{
+					id: "20DCFF9213AADCFF"
+					type: "item"
+					item: "minecraft:diamond"
+					count: 3L
+				}
+			]
+			rewards: [
+				{
+					id: "62C8D9C0982D8052"
+					type: "item"
+					item: "minecraft:experience_bottle"
+					count: 4
+				}
+			]
+		}
+		{
+			title: "Алмазная кирка"
+			x: 14.0d
+			y: 0.0d
+			subtitle: "Добыча обсидиана"
+			description: [
+				"&6Рецепт:&r 3 алмаза сверху и 2 палки вниз."
+				"Только алмазной киркой можно добыть &bобсидиан&r."
+			]
+			dependencies: ["3A990520D3B2D421"]
+			id: "23FD9499AB463ED0"
+			tasks: [
+				{
+					id: "764238CB60554B7A"
+					type: "item"
+					item: "minecraft:diamond_pickaxe"
+				}
+			]
+			rewards: [
+				{
+					id: "24C1903366921BC9"
+					type: "item"
+					item: "minecraft:golden_apple"
+				}
+			]
+		}
+		{
+			title: "Сундук"
+			x: 0.0d
+			y: 2.0d
+			shape: "circle"
+			subtitle: "Склад на первое время"
+			description: [
+				"&6Рецепт:&r 8 досок по кругу."
+				"Вещей станет много. Позже склад заменит ME-система из AE2, но сейчас сундуки очень нужны."
+			]
+			dependencies: ["43A2976A54855BBF"]
+			id: "590D42EA1EEE61B3"
+			tasks: [
+				{
+					id: "77B7581728E2E007"
+					type: "item"
+					item: "minecraft:chest"
+				}
+			]
+			rewards: [
+				{
+					id: "440C7F9CDDE55989"
+					type: "item"
+					item: "minecraft:oak_planks"
+					count: 16
+				}
+			]
+		}
+		{
+			title: "Уголь"
+			x: 4.0d
+			y: 2.0d
+			subtitle: "Топливо и факелы"
+			description: [
+				"&6Где:&r чёрные пятнышки в камне, обычно у поверхности и в пещерах."
+				"Уголь нужен для факелов и как топливо в печи. Позже — для генераторов IC2."
+			]
+			dependencies: ["23D260AC4F26107F"]
+			id: "66C3C33193460D12"
+			tasks: [
+				{
+					id: "541410CE1A6FC781"
+					type: "item"
+					item: "minecraft:coal"
+					count: 16L
+				}
+			]
+			rewards: [
+				{
+					id: "14BE6879CA7858D4"
+					type: "item"
+					item: "minecraft:iron_ingot"
+					count: 2
+				}
+			]
+		}
+		{
+			title: "Факелы"
+			x: 6.0d
+			y: 2.0d
+			shape: "circle"
+			subtitle: "Свет против монстров"
+			description: [
+				"&6Рецепт:&r уголь + палка = 4 факела."
+				"На освещённом месте монстры не появляются. Освещай пещеры и базу."
+			]
+			dependencies: ["66C3C33193460D12"]
+			id: "491D99F6A8C911B1"
+			tasks: [
+				{
+					id: "4D39625A15492D78"
+					type: "item"
+					item: "minecraft:torch"
+					count: 16L
+				}
+			]
+			rewards: [
+				{
+					id: "08EC9E8D539C1DEC"
+					type: "item"
+					item: "minecraft:cooked_beef"
+					count: 4
+				}
+			]
+		}
+		{
+			title: "Еда"
+			x: 6.0d
+			y: 4.0d
+			shape: "circle"
+			subtitle: "Не голодай"
+			description: [
+				"&6Как:&r убей корову или свинью, пожарь мясо в печи."
+				"Сытость нужна, чтобы лечиться и бегать. Позже можно сделать ферму."
+			]
+			dependencies: ["0CC29F15A2613870"]
+			id: "2CD7BC183FA2ABFD"
+			tasks: [
+				{
+					id: "743481FEE4D497DF"
+					type: "item"
+					item: "minecraft:cooked_beef"
+					count: 8L
+				}
+			]
+			rewards: [
+				{
+					id: "2762F11BA4B33995"
+					type: "item"
+					item: "minecraft:bread"
+					count: 8
+				}
+			]
+		}
+		{
+			title: "Ведро"
+			x: 8.0d
+			y: 2.0d
+			shape: "circle"
+			subtitle: "Вода и лава"
+			description: [
+				"&6Рецепт:&r 3 железных слитка буквой V."
+				"Вода нужна для ферм и для крафта в AE2. Лава — для геотермального генератора IC2."
+			]
+			dependencies: ["22B98F3875CFB733"]
+			id: "3C1B34E7CA077FF8"
+			tasks: [
+				{
+					id: "35931DC6A4ACB02A"
+					type: "item"
+					item: "minecraft:bucket"
+				}
+			]
+			rewards: [
+				{
+					id: "7C83F511C29239A0"
+					type: "item"
+					item: "minecraft:iron_ingot"
+					count: 3
+				}
+			]
+		}
+		{
+			title: "Железная броня"
+			x: 10.0d
+			y: 2.0d
+			shape: "circle"
+			subtitle: "Защита"
+			description: [
+				"&6Рецепт нагрудника:&r 8 железных слитков."
+				"Броня снижает урон. Позже её заменит нано-броня IC2."
+			]
+			dependencies: ["22B98F3875CFB733"]
+			id: "1126B9DE7B810AE8"
+			tasks: [
+				{
+					id: "6C37987D855704B7"
+					type: "item"
+					item: "minecraft:iron_chestplate"
+				}
+			]
+			rewards: [
+				{
+					id: "075EC584502646F5"
+					type: "item"
+					item: "minecraft:cooked_beef"
+					count: 8
+				}
+			]
+		}
+		{
+			title: "Обсидиан"
+			x: 14.0d
+			y: 2.0d
+			subtitle: "Для портала"
+			description: [
+				"&6Как получить:&r вода, текущая на источник лавы, даёт обсидиан. Ломать его можно только алмазной киркой."
+				"Нужно 10 штук на портал в Незер. В Незере есть кварц, пригодится для AE2."
+			]
+			dependencies: ["23FD9499AB463ED0" "3C1B34E7CA077FF8"]
+			id: "192756A168FF578F"
+			tasks: [
+				{
+					id: "2FE615DCB2851D2B"
+					type: "item"
+					item: "minecraft:obsidian"
+					count: 10L
+				}
+			]
+			rewards: [
+				{
+					id: "4C48EB9F60275246"
+					type: "item"
+					item: "minecraft:diamond"
+				}
+			]
+		}
+		{
+			title: "Огниво"
+			x: 16.0d
+			y: 2.0d
+			shape: "circle"
+			subtitle: "Открываем портал"
+			description: [
+				"&6Рецепт:&r железный слиток + кремень (добывается из гравия)."
+				"Зажги рамку из обсидиана — откроется портал в Незер."
+			]
+			dependencies: ["192756A168FF578F"]
+			id: "15323645DB5DA786"
+			tasks: [
+				{
+					id: "618C82A1602103E2"
+					type: "item"
+					item: "minecraft:flint_and_steel"
+				}
+			]
+			rewards: [
+				{
+					id: "28037092D8DD8BD9"
+					type: "item"
+					item: "minecraft:gold_ingot"
+					count: 4
+				}
+			]
+		}
+	]
+}

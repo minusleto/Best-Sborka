@@ -1,0 +1,373 @@
+{
+	id: "2451D56F75B2F42B"
+	group: ""
+	order_index: 3
+	filename: "ic2_energy"
+	title: "IC2: энергия"
+	icon: "ic2:mfe"
+	subtitle: [
+		"Генераторы, накопители, реактор"
+	]
+	default_quest_shape: "rsquare"
+	quests: [
+		{
+			title: "Солнечная панель"
+			x: 0.0d
+			y: -1.0d
+			shape: "hexagon"
+			subtitle: "Бесплатная энергия днём"
+			description: [
+				"&6Что делает:&r вырабатывает EU, пока над ней открытое небо и светло."
+				"Топливо не нужно, но ночью и в дождь не работает. Ставь рядом БатБокс."
+				"Это первый шаг к автономной базе."
+			]
+			dependencies: ["79F6AD149FBA70E5"]
+			size: 1.2d
+			id: "1EA99FBECF9248E6"
+			tasks: [
+				{
+					id: "3D35ADFC45FC6117"
+					type: "item"
+					item: "ic2:solar_panel"
+				}
+			]
+			rewards: [
+				{
+					id: "52DC0CDE71EAE52C"
+					type: "item"
+					item: "ic2:re_battery"
+				}
+			]
+		}
+		{
+			title: "Геотермальный генератор"
+			x: 0.0d
+			y: 1.0d
+			subtitle: "Энергия из лавы"
+			description: [
+				"&6Что делает:&r питается лавой (из ведра или трубы)."
+				"Ставь рядом с лавовым озером в пещерах или Незере."
+			]
+			dependencies: ["1D937A85C784EFFB" "3C1B34E7CA077FF8"]
+			id: "6943B3C2395ED79B"
+			tasks: [
+				{
+					id: "1DF0B1CF22DEFF7F"
+					type: "item"
+					item: "ic2:geothermal_generator"
+				}
+			]
+			rewards: [
+				{
+					id: "535CF475140B63E3"
+					type: "item"
+					item: "minecraft:bucket"
+				}
+			]
+		}
+		{
+			title: "Трансформатор"
+			x: 2.0d
+			y: -1.0d
+			subtitle: "Меняет напряжение"
+			description: [
+				"&6Что делает:&r повышает или понижает ступень энергии (LV ↔ MV)."
+				"Мощные машины требуют более высокой ступени. Сильный ток по слабому кабелю сожжёт его, поэтому будь внимателен."
+			]
+			dependencies: ["1EA99FBECF9248E6" "4CF4D7C4777C9BCE"]
+			id: "50055DE772097D9D"
+			tasks: [
+				{
+					id: "2F5A2ED6C4957B0E"
+					type: "item"
+					item: "ic2:transformer_lv"
+				}
+			]
+			rewards: [
+				{
+					id: "4F04009697FC5E9C"
+					type: "item"
+					item: "ic2:copper_cable_item"
+					count: 8
+				}
+			]
+		}
+		{
+			title: "МФЭ"
+			x: 4.0d
+			y: -1.0d
+			shape: "hexagon"
+			subtitle: "Большой накопитель"
+			description: [
+				"&6МФЭ&r (MFE) хранит гораздо больше, чем БатБокс."
+				"Ставится между генераторами и машинами, выравнивает нагрузку и копит запас на ночь."
+			]
+			dependencies: ["50055DE772097D9D" "0033EBE18E9CE255"]
+			size: 1.2d
+			id: "25D66EB1BEAEA919"
+			tasks: [
+				{
+					id: "4091EFA9B0B42559"
+					type: "item"
+					item: "ic2:mfe"
+				}
+			]
+			rewards: [
+				{
+					id: "1B3B31F1D5F189DB"
+					type: "item"
+					item: "ic2:energy_crystal"
+				}
+			]
+		}
+		{
+			title: "МФСУ"
+			x: 6.0d
+			y: -2.0d
+			subtitle: "Ещё больший накопитель"
+			description: [
+				"&6МФСУ&r (MFSU) — следующий накопитель после МФЭ."
+				"Нужен, если энергии много и надо копить её надолго."
+			]
+			dependencies: ["25D66EB1BEAEA919"]
+			id: "4B553915AA3A8FD4"
+			tasks: [
+				{
+					id: "7A3F416639AAAFF5"
+					type: "item"
+					item: "ic2:mfsu"
+				}
+			]
+			rewards: [
+				{
+					id: "676A316C43889D08"
+					type: "item"
+					item: "ic2:advanced_circuit"
+					count: 2
+				}
+			]
+		}
+		{
+			title: "Зарядный стенд"
+			x: 6.0d
+			y: 0.0d
+			shape: "circle"
+			subtitle: "Заряжай инструменты"
+			description: [
+				"&6Что делает:&r заряжает аккумуляторы и электроинструменты, лежащие в нём."
+				"Подключи кабелем к сети — и инструменты всегда с запасом."
+			]
+			dependencies: ["25D66EB1BEAEA919"]
+			id: "210798243D21FBA0"
+			tasks: [
+				{
+					id: "754ED41322EFA5C8"
+					type: "item"
+					item: "ic2:charging_bench_lv"
+				}
+			]
+			rewards: [
+				{
+					id: "1F46B33B9A5BD231"
+					type: "item"
+					item: "ic2:re_battery"
+					count: 2
+				}
+			]
+		}
+		{
+			title: "Лапотронный кристалл"
+			x: 8.0d
+			y: 0.0d
+			subtitle: "Мощная батарея"
+			description: [
+				"&6Что это:&r очень ёмкий кристалл."
+				"Нужен для квантовой брони, мощных накопителей и ядерных проектов."
+			]
+			dependencies: ["4B553915AA3A8FD4" "6E96558F861EFCF1"]
+			id: "17EAD36A90CAA166"
+			tasks: [
+				{
+					id: "51CD05C680DCC351"
+					type: "item"
+					item: "ic2:lapotron_crystal"
+				}
+			]
+			rewards: [
+				{
+					id: "23D1236D06A58848"
+					type: "item"
+					item: "minecraft:lapis_lazuli"
+					count: 16
+				}
+			]
+		}
+		{
+			title: "Улучшенная солнечная панель"
+			x: 2.0d
+			y: 1.0d
+			subtitle: "Advanced Solars"
+			description: [
+				"&6Мод Advanced Solars&r добавляет несколько уровней панелей."
+				"Улучшенная даёт заметно больше энергии, чем обычная."
+				"Рецепт ищи в JEI (R)."
+			]
+			dependencies: ["1EA99FBECF9248E6"]
+			id: "7BBFD965A754C138"
+			tasks: [
+				{
+					id: "3A6834D4E1BF2783"
+					type: "item"
+					item: "advanced_solars:advanced_solar_panel"
+				}
+			]
+			rewards: [
+				{
+					id: "0EDA523E3D12FEDA"
+					type: "item"
+					item: "ic2:advanced_circuit"
+				}
+			]
+		}
+		{
+			title: "Гибридная панель"
+			x: 4.0d
+			y: 1.0d
+			subtitle: "Работает и ночью"
+			description: [
+				"&6Что делает:&r вырабатывает EU и днём, и ночью."
+				"Хороший вариант для базы без накопителей."
+			]
+			dependencies: ["7BBFD965A754C138"]
+			id: "150D9D643F3367D1"
+			tasks: [
+				{
+					id: "2440B1785C6201DA"
+					type: "item"
+					item: "advanced_solars:hybrid_solar_panel"
+				}
+			]
+			rewards: [
+				{
+					id: "111799107AD82F9F"
+					type: "item"
+					item: "ic2:energy_crystal"
+				}
+			]
+		}
+		{
+			title: "Идеальная гибридная панель"
+			x: 6.0d
+			y: 2.0d
+			shape: "hexagon"
+			subtitle: "Лучшая из панелей"
+			description: [
+				"&6Что делает:&r самая мощная панель мода. Требует дорогих материалов, готовься заранее."
+			]
+			dependencies: ["150D9D643F3367D1"]
+			size: 1.2d
+			id: "4B0C005F71281D97"
+			tasks: [
+				{
+					id: "7AD032E3FF2D1148"
+					type: "item"
+					item: "advanced_solars:ultimate_hybrid_solar_panel"
+				}
+			]
+			rewards: [
+				{
+					id: "47CF52E26123941B"
+					type: "item"
+					item: "ic2:lapotron_crystal"
+				}
+			]
+		}
+		{
+			title: "Уран"
+			x: 10.0d
+			y: 0.0d
+			subtitle: "Топливо реактора"
+			description: [
+				"&6Где искать:&r уранная руда лежит глубоко под землёй."
+				"Слиток урана — топливо для ядерного реактора."
+				"&cРабота с реактором опасна:&r прочитай следующие квесты, прежде чем строить."
+			]
+			dependencies: ["17EAD36A90CAA166"]
+			id: "16A585F60D31D78F"
+			tasks: [
+				{
+					id: "7709E89A398C8575"
+					type: "item"
+					item: "ic2:ingot_uranium"
+					count: 4L
+				}
+			]
+			rewards: [
+				{
+					id: "57DFA215897AB3D0"
+					type: "item"
+					item: "minecraft:iron_ingot"
+					count: 8
+				}
+			]
+		}
+		{
+			title: "Планировщик реактора"
+			x: 12.0d
+			y: 0.0d
+			shape: "circle"
+			subtitle: "Проектируй безопасно"
+			description: [
+				"&6Что это:&r блок, где можно собрать схему реактора и посмотреть, сколько он выдаст — без риска."
+				"Сначала всегда проверяй схему здесь."
+			]
+			dependencies: ["16A585F60D31D78F"]
+			id: "707EC2A6BB7F5065"
+			tasks: [
+				{
+					id: "6FE00A7B6D475FEE"
+					type: "item"
+					item: "ic2:reactor_planner"
+				}
+			]
+			rewards: [
+				{
+					id: "5613D0E6EBF299BF"
+					type: "item"
+					item: "minecraft:iron_ingot"
+					count: 8
+				}
+			]
+		}
+		{
+			title: "Ядерный реактор"
+			x: 14.0d
+			y: 0.0d
+			shape: "hexagon"
+			subtitle: "Много энергии и много риска"
+			description: [
+				"&6Что делает:&r очень много EU из урановых стержней."
+				"&cРеактор может взорваться,&r если перегреется: построй его вдали от базы и охлаждай по проверенной схеме."
+				"Для начала достаточно солнечных панелей. Реактор — на потом."
+			]
+			dependencies: ["707EC2A6BB7F5065" "45DA98458BF8AD7B"]
+			size: 1.4d
+			id: "3F8646F5E41D157E"
+			tasks: [
+				{
+					id: "2EE70188367982B2"
+					type: "item"
+					item: "ic2:nuclear_reactor"
+				}
+			]
+			rewards: [
+				{
+					id: "6E5B69AB3CFFAF9C"
+					type: "item"
+					item: "minecraft:diamond"
+					count: 4
+				}
+			]
+		}
+	]
+}

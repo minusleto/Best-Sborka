@@ -1,0 +1,310 @@
+{
+	id: "2D62CB9CE05950F1"
+	group: ""
+	order_index: 5
+	filename: "gear"
+	title: "Снаряжение"
+	icon: "ic2:nano_suit_chestplate"
+	subtitle: [
+		"Броня, рюкзаки, Gravisuit"
+	]
+	default_quest_shape: "rsquare"
+	quests: [
+		{
+			title: "Электроснаряжение"
+			x: 0.0d
+			y: 0.0d
+			shape: "hexagon"
+			subtitle: "Броня и инструменты на EU"
+			description: [
+				"&6Электроброня&r использует EU: чем сильнее — тем больше нужно энергии."
+				"Заряжай её в зарядном стенде. Шаги идут в порядке усиления."
+			]
+			dependencies: ["17EAD36A90CAA166"]
+			size: 1.3d
+			id: "1BE3F9E550AC601D"
+			tasks: [
+				{
+					id: "2ABA928F05C05A6F"
+					type: "checkmark"
+					title: "Я прочитал"
+				}
+			]
+			rewards: [
+				{
+					id: "05625A6C7795C2D5"
+					type: "item"
+					item: "ic2:re_battery"
+				}
+			]
+		}
+		{
+			title: "БатПак"
+			x: 2.0d
+			y: -2.0d
+			shape: "circle"
+			subtitle: "Носимый аккумулятор"
+			description: [
+				"&6Что делает:&r носишь на спине и заряжаешь инструменты на ходу."
+			]
+			dependencies: ["1BE3F9E550AC601D"]
+			id: "028A77D758FCA7DF"
+			tasks: [
+				{
+					id: "48A61D6D3542F13F"
+					type: "item"
+					item: "ic2:batpack"
+				}
+			]
+			rewards: [
+				{
+					id: "17306C396942E4F1"
+					type: "item"
+					item: "ic2:re_battery"
+				}
+			]
+		}
+		{
+			title: "ЛапПак"
+			x: 4.0d
+			y: -1.0d
+			shape: "circle"
+			subtitle: "Ёмкий рюкзак"
+			description: [
+				"&6Что делает:&r то же, но ёмкость выше."
+			]
+			dependencies: ["028A77D758FCA7DF"]
+			id: "4580D9F9B3DF4187"
+			tasks: [
+				{
+					id: "596B3C0D9921020E"
+					type: "item"
+					item: "ic2:lappack"
+				}
+			]
+			rewards: [
+				{
+					id: "15AC0D5D4759FB0E"
+					type: "item"
+					item: "ic2:lapotron_crystal"
+				}
+			]
+		}
+		{
+			title: "Нано-броня"
+			x: 2.0d
+			y: 0.0d
+			subtitle: "Лёгкая и сильная"
+			description: [
+				"&6Что это:&r нагрудник, шлем, поножи и ботинки. Защищают лучше железа, заряжаются EU."
+				"Шлем в этой сборке требует очки ночного видения (ic2:nightvision_goggles). Начни с нагрудника."
+			]
+			dependencies: ["1BE3F9E550AC601D"]
+			id: "4DB6A297454A9283"
+			tasks: [
+				{
+					id: "6FBE7FA869D28BE0"
+					type: "item"
+					item: "ic2:nano_suit_chestplate"
+				}
+			]
+			rewards: [
+				{
+					id: "216BD6CBBC97FCEB"
+					type: "item"
+					item: "ic2:energy_crystal"
+				}
+			]
+		}
+		{
+			title: "Квантовая броня"
+			x: 4.0d
+			y: 1.0d
+			shape: "hexagon"
+			subtitle: "Лучшая броня"
+			description: [
+				"&6Что это:&r самая сильная электроброня. Для неё нужны иридий и лапотронные кристаллы."
+				"В этой сборке рецепт может отличаться — смотри в JEI."
+			]
+			dependencies: ["4DB6A297454A9283" "17EAD36A90CAA166"]
+			size: 1.2d
+			id: "0219A43A6E3AF6F8"
+			tasks: [
+				{
+					id: "1E07C84605E1E578"
+					type: "item"
+					item: "ic2:quantum_suit_chestplate"
+				}
+			]
+			rewards: [
+				{
+					id: "6AE582C0C9F3A667"
+					type: "item"
+					item: "ic2:plate_iridium"
+				}
+			]
+		}
+		{
+			title: "Иридий"
+			x: 6.0d
+			y: -1.0d
+			shape: "circle"
+			subtitle: "Редкий металл"
+			description: [
+				"&6Где:&r иридиевая руда или осколки встречаются редко, нужны для самых сильных предметов."
+			]
+			dependencies: ["0219A43A6E3AF6F8"]
+			id: "610D8A6FDAEB7196"
+			tasks: [
+				{
+					id: "2F993B4B37AD0FE5"
+					type: "item"
+					item: "ic2:plate_iridium"
+				}
+			]
+			rewards: [
+				{
+					id: "4FD1BCEA697EBD65"
+					type: "item"
+					item: "minecraft:diamond"
+					count: 2
+				}
+			]
+		}
+		{
+			title: "Защитный костюм"
+			x: 2.0d
+			y: 2.0d
+			shape: "circle"
+			subtitle: "От радиации"
+			description: [
+				"&6Что делает:&r защищает от опасных эффектов вокруг реактора и радиоактивных материалов."
+			]
+			dependencies: ["1BE3F9E550AC601D"]
+			id: "11548CE787FEA3C2"
+			tasks: [
+				{
+					id: "3311353B7DAE7ED2"
+					type: "item"
+					item: "ic2:armor_hazmat_helmet"
+				}
+			]
+			rewards: [
+				{
+					id: "21F7534D22C3687E"
+					type: "item"
+					item: "minecraft:iron_ingot"
+					count: 8
+				}
+			]
+		}
+		{
+			title: "Gravisuit: Гравитул"
+			x: 6.0d
+			y: 1.0d
+			subtitle: "Инструмент нового уровня"
+			description: [
+				"&6Мод Gravisuit&r добавляет мощные предметы к IC2."
+				"Гравитул объединяет несколько электроинструментов в одном (ключ, кран для смолы и др.). Подробности — в JEI."
+			]
+			dependencies: ["0219A43A6E3AF6F8"]
+			id: "3BE8191954697C67"
+			tasks: [
+				{
+					id: "1194CC9B7D29F3C4"
+					type: "item"
+					item: "gravisuit:gravitool"
+				}
+			]
+			rewards: [
+				{
+					id: "4B571C3C089C779F"
+					type: "item"
+					item: "ic2:advanced_circuit"
+					count: 2
+				}
+			]
+		}
+		{
+			title: "Гравитационный джетпак"
+			x: 8.0d
+			y: -2.0d
+			shape: "hexagon"
+			subtitle: "Полёт"
+			description: [
+				"&6Что делает:&r позволяет летать, тратя энергию."
+			]
+			dependencies: ["3BE8191954697C67"]
+			size: 1.2d
+			id: "111AE988A5445B0E"
+			tasks: [
+				{
+					id: "0AC8014CC3027BA4"
+					type: "item"
+					item: "gravisuit:gravitation_jetpack"
+				}
+			]
+			rewards: [
+				{
+					id: "3818577DBD28EB94"
+					type: "item"
+					item: "ic2:energy_crystal"
+				}
+			]
+		}
+		{
+			title: "Ваджра"
+			x: 8.0d
+			y: 0.0d
+			shape: "hexagon"
+			subtitle: "Лучший инструмент"
+			description: [
+				"&6Что это:&r мощный электроинструмент Gravisuit для добычи. Требует много энергии."
+			]
+			dependencies: ["3BE8191954697C67"]
+			size: 1.2d
+			id: "13170EAD63F686BA"
+			tasks: [
+				{
+					id: "75617064EA61C948"
+					type: "item"
+					item: "gravisuit:vajra"
+				}
+			]
+			rewards: [
+				{
+					id: "0ED426FA1A2BB5B2"
+					type: "item"
+					item: "ic2:lapotron_crystal"
+				}
+			]
+		}
+		{
+			title: "Магнит"
+			x: 8.0d
+			y: 2.0d
+			shape: "circle"
+			subtitle: "Притягивает предметы"
+			description: [
+				"&6Что делает:&r притягивает выпавшие предметы к игроку. Удобно при добыче."
+			]
+			dependencies: ["3BE8191954697C67"]
+			id: "6DC5CBE251A05169"
+			tasks: [
+				{
+					id: "508F46A7213ECD12"
+					type: "item"
+					item: "gravisuit:magnet"
+				}
+			]
+			rewards: [
+				{
+					id: "6D87C5951C21C57C"
+					type: "item"
+					item: "minecraft:iron_ingot"
+					count: 8
+				}
+			]
+		}
+	]
+}
