@@ -49,10 +49,6 @@ ServerEvents.recipes(event => {
   // ---------------------------------------------------------------
   // Iron plate + Forge Hammer  (IC2 Experimental 1.12.2 "plate" system)
   // IC2C 1.19.2 has no iron plates, no hammer and no Metal Former machine.
-  //  - Forge Hammer: 5 iron ingots + 2 sticks (1.12.2 layout, both mirrors)
-  //  - Iron Plate:   iron ingot + hammer (hammer loses 1 durability), shapeless
-  //  - Iron Plate:   iron ingot in the Compressor (stand-in for Metal Former
-  //    "rolling"): kubejs/data/ic2/ic2_recipes/compressor/iron_plate.json
   // ---------------------------------------------------------------
   const hammerKeys = { I: 'minecraft:iron_ingot', S: 'minecraft:stick' }
   event.shaped('kubejs:forge_hammer', ['II ', 'ISS', 'II '], hammerKeys)
@@ -61,7 +57,6 @@ ServerEvents.recipes(event => {
   event.shapeless('kubejs:iron_plate', ['minecraft:iron_ingot', 'kubejs:forge_hammer'])
     .damageIngredient('kubejs:forge_hammer', 1)
 
-  // Other plates, same hammer rule as iron (the Metal Former rolls them too)
   const hammerPlates = {
     'kubejs:copper_plate': 'minecraft:copper_ingot',
     'kubejs:tin_plate': 'ic2:ingot_tin',
@@ -73,12 +68,7 @@ ServerEvents.recipes(event => {
       .damageIngredient('kubejs:forge_hammer', 1)
   })
 
-  // ---------------------------------------------------------------
   // Cables: require the Metal Former, as in IC2 Experimental 1.12.2.
-  // Remove direct crafting recipes that turn ingots into cables; the
-  // Metal Former extrusion recipes live in data/ic2/ic2_recipes/metal_former_extruding.
-  // Keep plate -> cable cutting recipes in the Metal Former.
-  // ---------------------------------------------------------------
   ;[
     'ic2:copper_cable_item',
     'ic2:tin_cable_item',
@@ -86,28 +76,18 @@ ServerEvents.recipes(event => {
     'ic2:iron_cable_item'
   ].forEach(cable => event.remove({ output: cable }))
 
-  // ---------------------------------------------------------------
-  // Advanced Machine Casing  (IC2 Experimental 1.12.2 layout)
-  // machine casing + 2 advanced alloy + 2 carbon plate + 4 iron plates.
-  // (1.12.2 uses steel plates; there is no steel in this pack, so iron plates.)
-  // ---------------------------------------------------------------
+  // Advanced Machine Casing (adapted Experimental layout)
   event.remove({ output: 'ic2:advanced_machine_block' })
-
   const casingKeys = {
     S: 'kubejs:iron_plate',
     A: 'ic2:plate_advanced_alloy',
     C: 'ic2:carbon_plate',
     M: 'ic2:machine_block'
   }
-
   event.shaped('ic2:advanced_machine_block', ['SAS', 'CMC', 'SAS'], casingKeys)
   event.shaped('ic2:advanced_machine_block', ['SCS', 'AMA', 'SCS'], casingKeys)
 
-  // ---------------------------------------------------------------
-  // Lapotron Crystal — use Advanced Circuit instead of the regular Circuit,
-  // following the recipe on the Russian Minecraft Wiki.
-  // Keep the existing lapis lazuli and Energy Crystal ingredients.
-  // ---------------------------------------------------------------
+  // Lapotron Crystal — Advanced Circuit instead of regular Circuit.
   event.remove({ output: 'ic2:lapotron_crystal' })
   event.shapeless('ic2:lapotron_crystal', [
     'minecraft:lapis_lazuli',
@@ -115,14 +95,7 @@ ServerEvents.recipes(event => {
     'ic2:energy_crystal'
   ])
 
-  // ---------------------------------------------------------------
-  // Mining Laser — add a second Advanced Circuit by replacing one
-  // composite/advanced-alloy ingredient in the IC2 Experimental recipe.
-  // Requested layout: Rcc / AAC / AA
-  // R = redstone, A = advanced alloy plate (composite), C = advanced circuit,
-  // c = Energy Crystal. Recipe verified against IC2 Experimental 1.12.2
-  // shaped_recipes.ini; test in JEI in the 1.19.2 pack.
-  // ---------------------------------------------------------------
+  // Mining Laser — requested layout: Rcc / AAC / AA
   event.remove({ output: 'ic2:mining_laser' })
   event.shaped('ic2:mining_laser', [
     'Rcc',
@@ -135,12 +108,18 @@ ServerEvents.recipes(event => {
     c: 'ic2:energy_crystal'
   })
 
-  // ---------------------------------------------------------------
+  // Nano Helmet — the Nightvision Goggles must be consumed in its recipe,
+  // as specified by the Russian Minecraft Wiki for the nano helmet.
+  // Replace the IC2C recipe with a shapeless recipe containing the same
+  // core components plus the goggles; the goggles are not returned.
+  event.remove({ output: 'ic2:nano_helmet' })
+  event.shapeless('ic2:nano_helmet', [
+    'ic2:carbon_plate',
+    'ic2:energy_crystal',
+    'ic2:nightvision_goggles'
+  ])
+
   // Metal Former machine (mod: mods-src/bs-machines, block bs_machines:metal_former)
-  // 1.12.2: circuit + toolbox + machine casing + coils. IC2C has no toolbox/coil,
-  // so: circuit on top, iron plates on the sides of the casing, 3 copper cables below.
-  // Modes use IC2 datapack recipes: kubejs/data/ic2/ic2_recipes/metal_former_*/
-  // ---------------------------------------------------------------
   event.shaped('bs_machines:metal_former', [' C ', 'PMP', 'WWW'], {
     C: 'ic2:circuit',
     P: 'kubejs:iron_plate',
