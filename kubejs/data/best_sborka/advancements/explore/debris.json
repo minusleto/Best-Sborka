@@ -1,0 +1,43 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:ancient_debris"
+    },
+    "title": {
+      "text": "Древние обломки"
+    },
+    "description": {
+      "text": "Раздобудь древние обломки. Копай на уровне Y 15, а лучше с кроватью: взрывы помогают."
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "best_sborka:explore/nether",
+  "criteria": {
+    "has_ancient_debris": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:ancient_debris"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_ancient_debris"
+    ]
+  ],
+  "rewards": {
+    "experience": 150,
+    "loot": [
+      "best_sborka:rewards/explore/debris"
+    ]
+  }
+}

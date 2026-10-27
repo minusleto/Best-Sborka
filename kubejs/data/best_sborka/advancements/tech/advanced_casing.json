@@ -1,0 +1,43 @@
+{
+  "display": {
+    "icon": {
+      "item": "ic2:advanced_machine_block"
+    },
+    "title": {
+      "text": "Продвинутый корпус"
+    },
+    "description": {
+      "text": "Корпус машины, 2 улучшенных сплава, 2 углеродные пластины и 4 железные пластины. Дорога к серьёзным машинам открыта."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "best_sborka:tech/advanced_parts",
+  "criteria": {
+    "has_advanced_machine_block": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ic2:advanced_machine_block"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_advanced_machine_block"
+    ]
+  ],
+  "rewards": {
+    "experience": 250,
+    "loot": [
+      "best_sborka:rewards/tech/advanced_casing"
+    ]
+  }
+}

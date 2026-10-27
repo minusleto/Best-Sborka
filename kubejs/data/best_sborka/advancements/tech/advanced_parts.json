@@ -1,0 +1,58 @@
+{
+  "display": {
+    "icon": {
+      "item": "ic2:plate_advanced_alloy"
+    },
+    "title": {
+      "text": "Передовые материалы"
+    },
+    "description": {
+      "text": "Раздобудь пластину улучшенного сплава и углеродную пластину: обе нужны для продвинутого корпуса."
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "best_sborka:tech/machine_block",
+  "criteria": {
+    "has_plate_advanced_alloy": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ic2:plate_advanced_alloy"
+            ]
+          }
+        ]
+      }
+    },
+    "has_carbon_plate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ic2:carbon_plate"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_plate_advanced_alloy"
+    ],
+    [
+      "has_carbon_plate"
+    ]
+  ],
+  "rewards": {
+    "experience": 60,
+    "loot": [
+      "best_sborka:rewards/tech/advanced_parts"
+    ]
+  }
+}
