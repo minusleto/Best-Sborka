@@ -104,6 +104,27 @@ ServerEvents.recipes(event => {
   event.shaped('ic2:advanced_machine_block', ['SCS', 'AMA', 'SCS'], casingKeys)
 
   // ---------------------------------------------------------------
+  // Mining Laser — add a second Advanced Circuit by replacing one
+  // composite/advanced-alloy ingredient in the IC2 Experimental recipe.
+  // Original layout: RRc / AAC / AA
+  // Adapted layout:  RRc / ACC / AA
+  // R = redstone, A = advanced alloy plate (composite), C = advanced circuit,
+  // c = Energy Crystal. Recipe verified against IC2 Experimental 1.12.2
+  // shaped_recipes.ini; test in JEI in the 1.19.2 pack.
+  // ---------------------------------------------------------------
+  event.remove({ output: 'ic2:mining_laser' })
+  event.shaped('ic2:mining_laser', [
+    'RRc',
+    'ACC',
+    ' AA'
+  ], {
+    R: 'minecraft:redstone',
+    A: 'ic2:plate_advanced_alloy',
+    C: 'ic2:advanced_circuit',
+    c: 'ic2:energy_crystal'
+  })
+
+  // ---------------------------------------------------------------
   // Metal Former machine (mod: mods-src/bs-machines, block bs_machines:metal_former)
   // 1.12.2: circuit + toolbox + machine casing + coils. IC2C has no toolbox/coil,
   // so: circuit on top, iron plates on the sides of the casing, 3 copper cables below.
