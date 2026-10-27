@@ -112,8 +112,8 @@ ServerEvents.recipes(event => {
   // unavailable Advanced Battery in the original recipe.
   event.remove({ output: 'ic2:nightvision_goggles' })
   event.shaped('ic2:nightvision_goggles', [
-    'BEB',
     '   ',
+    'BEB',
     '   '
   ], {
     B: 'ic2:re_battery',
