@@ -1,5 +1,5 @@
 {
-	id: "977E5CBE544CCEEA"
+	id: "177E5CBE544CCEEA"
 	group: ""
 	order_index: 1
 	filename: "ic2"
@@ -10,7 +10,7 @@
 	default_hide_dependency_lines: false
 	quests: [
 		{
-			id: "848CD6BE0A4210F0"
+			id: "048CD6BE0A4210F0"
 			title: "Алмазная пыль"
 			icon: "ic2:dust_diamond"
 			x: 0.0d
@@ -20,7 +20,7 @@
 				"Измельчи алмаз в дробилке (Macerator). Алмазная пыль нужна для энергетической пыли."
 				"Пригодятся 4 штуки на одну партию."
 			]
-			dependencies: ["9ABC313820DECB53"]
+			dependencies: ["1ABC313820DECB53"]
 			tasks: [
 				{
 					id: "2584E6DD065EA37B"
@@ -36,7 +36,7 @@
 					xp: 40
 				}
 				{
-					id: "E46BC0D1A78E656C"
+					id: "646BC0D1A78E656C"
 					type: "item"
 					item: "minecraft:redstone"
 					count: 5
@@ -44,7 +44,7 @@
 			]
 		}
 		{
-			id: "B95EF3B8FFCA521F"
+			id: "395EF3B8FFCA521F"
 			title: "Энергетическая пыль"
 			icon: "kubejs:energium_dust"
 			x: 2.0d
@@ -54,7 +54,7 @@
 				"4 алмазной пыли и 5 редстоуна «крестиком» на верстаке дают сразу 9 энергетической пыли."
 				"Схема: R D R / D R D / R D R, где R — редстоун, D — алмазная пыль."
 			]
-			dependencies: ["848CD6BE0A4210F0"]
+			dependencies: ["048CD6BE0A4210F0"]
 			tasks: [
 				{
 					id: "41A86162383836CE"
@@ -65,7 +65,7 @@
 			]
 			rewards: [
 				{
-					id: "D0C0FC246E9F3A88"
+					id: "50C0FC246E9F3A88"
 					type: "xp"
 					xp: 50
 				}
@@ -78,7 +78,7 @@
 			]
 		}
 		{
-			id: "893EB51EEF55529B"
+			id: "093EB51EEF55529B"
 			title: "Энергокристалл"
 			icon: "ic2:energy_crystal"
 			x: 4.0d
@@ -90,10 +90,10 @@
 				"Положи 9 энергетической пыли в компрессор — получишь энергокристалл."
 				"Крафт на верстаке отключён: теперь только через пыль."
 			]
-			dependencies: ["B95EF3B8FFCA521F"]
+			dependencies: ["395EF3B8FFCA521F"]
 			tasks: [
 				{
-					id: "8EA76BFAE3CA284D"
+					id: "0EA76BFAE3CA284D"
 					type: "item"
 					item: "ic2:energy_crystal"
 				}
@@ -120,10 +120,10 @@
 			y: 2.0d
 			subtitle: "Основа любого механизма"
 			description: ["Базовый корпус машины IC2. Из него строится почти вся техника."]
-			dependencies: ["9ABC313820DECB53"]
+			dependencies: ["1ABC313820DECB53"]
 			tasks: [
 				{
-					id: "B475E4C62B7EA689"
+					id: "3475E4C62B7EA689"
 					type: "item"
 					item: "ic2:machine_block"
 				}
@@ -135,7 +135,7 @@
 					xp: 40
 				}
 				{
-					id: "9AA38E136EC8B031"
+					id: "1AA38E136EC8B031"
 					type: "item"
 					item: "kubejs:iron_plate"
 					count: 2
@@ -170,7 +170,7 @@
 			]
 			rewards: [
 				{
-					id: "E8F4646F8E5723F6"
+					id: "68F4646F8E5723F6"
 					type: "xp"
 					xp: 60
 				}
@@ -183,7 +183,7 @@
 			]
 		}
 		{
-			id: "84AF9EE788E75C97"
+			id: "04AF9EE788E75C97"
 			title: "Продвинутый корпус"
 			icon: "ic2:advanced_machine_block"
 			x: 4.0d
@@ -205,7 +205,7 @@
 			]
 			rewards: [
 				{
-					id: "C788CC17B41A2ED6"
+					id: "4788CC17B41A2ED6"
 					type: "xp"
 					xp: 250
 				}
@@ -216,7 +216,7 @@
 					count: 2
 				}
 				{
-					id: "E242B283BC9C2026"
+					id: "6242B283BC9C2026"
 					type: "item"
 					item: "minecraft:redstone"
 					count: 8

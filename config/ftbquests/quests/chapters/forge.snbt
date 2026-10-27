@@ -1,5 +1,5 @@
 {
-	id: "B08137CB8D1294A6"
+	id: "308137CB8D1294A6"
 	group: ""
 	order_index: 0
 	filename: "forge"
@@ -31,13 +31,13 @@
 			]
 			tasks: [
 				{
-					id: "846E29F961388E49"
+					id: "046E29F961388E49"
 					type: "checkmark"
 				}
 			]
 			rewards: [
 				{
-					id: "E22B6C43DBF680DC"
+					id: "622B6C43DBF680DC"
 					type: "item"
 					item: "minecraft:bread"
 					count: 12
@@ -49,7 +49,7 @@
 					count: 32
 				}
 				{
-					id: "F7210CB6FBA5C468"
+					id: "77210CB6FBA5C468"
 					type: "item"
 					item: "minecraft:iron_ingot"
 					count: 4
@@ -57,7 +57,7 @@
 			]
 		}
 		{
-			id: "BFC28DEE5BB9B018"
+			id: "3FC28DEE5BB9B018"
 			title: "Железный век"
 			icon: "minecraft:iron_ingot"
 			x: 2.0d
@@ -70,21 +70,21 @@
 			dependencies: ["5C94667F7B5C4880"]
 			tasks: [
 				{
-					id: "F0E8137D7FF5A546"
+					id: "70E8137D7FF5A546"
 					type: "item"
 					item: "minecraft:iron_ingot"
 				}
 			]
 			rewards: [
 				{
-					id: "A4ABF9E057FEB498"
+					id: "24ABF9E057FEB498"
 					type: "xp"
 					xp: 20
 				}
 			]
 		}
 		{
-			id: "E5C3658023763B22"
+			id: "65C3658023763B22"
 			title: "Хватка кузнеца"
 			icon: "kubejs:forge_hammer"
 			x: 4.0d
@@ -94,7 +94,7 @@
 				"Скрафти кузнечный молот: 5 слитков железа и 2 палки (форма — как в IC2 1.12.2)."
 				"Молот выдерживает 80 использований, так что береги его."
 			]
-			dependencies: ["BFC28DEE5BB9B018"]
+			dependencies: ["3FC28DEE5BB9B018"]
 			tasks: [
 				{
 					id: "700E280EC5F62FC7"
@@ -117,7 +117,7 @@
 			]
 		}
 		{
-			id: "9ABC313820DECB53"
+			id: "1ABC313820DECB53"
 			title: "Прокат"
 			icon: "kubejs:iron_plate"
 			x: 6.0d
@@ -129,7 +129,7 @@
 				"Положи железный слиток и молот рядом в верстаке — получится железная пластина (молот теряет 1 прочность)."
 				"Пластину можно сделать и в компрессоре IC2 без износа молота."
 			]
-			dependencies: ["E5C3658023763B22"]
+			dependencies: ["65C3658023763B22"]
 			tasks: [
 				{
 					id: "3D7B2DE4D27FB8D8"
@@ -139,7 +139,7 @@
 			]
 			rewards: [
 				{
-					id: "FAE45A919F2A4576"
+					id: "7AE45A919F2A4576"
 					type: "xp"
 					xp: 30
 				}
