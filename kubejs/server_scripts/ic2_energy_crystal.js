@@ -26,6 +26,15 @@ ServerEvents.recipes(event => {
     }
   )
 
+  // Energium Dust is also used for glass fibre cable in IC2 Experimental 1.12.2.
+  // 6 glass + 1 silver dust + 1 Energium Dust -> 6 glass fibre cables.
+  event.remove({ output: 'ic2:glass_cable_item' })
+  event.shaped('6x ic2:glass_cable_item', ['GGG', 'DSD', 'GGG'], {
+    G: 'minecraft:glass',
+    D: 'kubejs:energium_dust',
+    S: 'ic2:dust_silver'
+  })
+
   // ---------------------------------------------------------------
   // Iron plate + Forge Hammer  (IC2 Experimental 1.12.2 "plate" system)
   // IC2C 1.19.2 has no iron plates, no hammer and no Metal Former machine.
