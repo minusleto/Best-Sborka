@@ -108,6 +108,18 @@ ServerEvents.recipes(event => {
     c: 'ic2:energy_crystal'
   })
 
+  // Nightvision Goggles — substitute an IC2 Classic battery for the
+  // unavailable Advanced Battery in the original recipe.
+  event.remove({ output: 'ic2:nightvision_goggles' })
+  event.shaped('ic2:nightvision_goggles', [
+    'BEB',
+    '   ',
+    '   '
+  ], {
+    B: 'ic2:re_battery',
+    E: 'ic2:energy_crystal'
+  })
+
   // Nano Helmet — shaped recipe matching the wiki layout:
   // carbon plates in the four corners, Energy Crystal top-center,
   // Nightvision Goggles center. Ingredients are consumed.
