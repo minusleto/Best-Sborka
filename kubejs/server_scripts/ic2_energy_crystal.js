@@ -54,6 +54,19 @@ ServerEvents.recipes(event => {
   })
 
   // ---------------------------------------------------------------
+  // Cables: require the Metal Former, as in IC2 Experimental 1.12.2.
+  // Remove direct crafting recipes that turn ingots into cables; the
+  // Metal Former extrusion recipes live in data/ic2/ic2_recipes/metal_former_extruding.
+  // Keep plate -> cable cutting recipes in the Metal Former.
+  // ---------------------------------------------------------------
+  ;[
+    'ic2:copper_cable_item',
+    'ic2:tin_cable_item',
+    'ic2:gold_cable_item',
+    'ic2:iron_cable_item'
+  ].forEach(cable => event.remove({ output: cable }))
+
+  // ---------------------------------------------------------------
   // Advanced Machine Casing  (IC2 Experimental 1.12.2 layout)
   // machine casing + 2 advanced alloy + 2 carbon plate + 4 iron plates.
   // (1.12.2 uses steel plates; there is no steel in this pack, so iron plates.)
