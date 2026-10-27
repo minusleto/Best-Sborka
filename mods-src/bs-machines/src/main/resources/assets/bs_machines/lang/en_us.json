@@ -1,0 +1,10 @@
+{
+  "block.bs_machines.metal_former": "Metal Former",
+  "itemGroup.bs_machines": "Best-Sborka Machines",
+  "gui.bs_machines.mode.rolling": "Rolling",
+  "gui.bs_machines.mode.extruding": "Extruding",
+  "gui.bs_machines.mode.cutting": "Cutting",
+  "jei.bs_machines.metal_former.rolling": "Metal Former: Rolling",
+  "jei.bs_machines.metal_former.extruding": "Metal Former: Extruding",
+  "jei.bs_machines.metal_former.cutting": "Metal Former: Cutting"
+}

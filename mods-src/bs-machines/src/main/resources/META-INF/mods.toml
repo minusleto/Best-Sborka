@@ -1,0 +1,30 @@
+modLoader="javafml"
+loaderVersion="[43,)"
+license="LGPL-3.0-or-later"
+issueTrackerURL="https://github.com/minusleto/Best-Sborka/issues"
+
+[[mods]]
+modId="bs_machines"
+version="${version}"
+displayName="Best-Sborka Machines"
+description='''Machines for the Best-Sborka modpack. Adds the IC2 Experimental style Metal Former (rolling, extruding, cutting) to IC2 Classic.'''
+authors="minusleto"
+
+[[dependencies.bs_machines]]
+    modId="forge"
+    mandatory=true
+    versionRange="[43.1.34,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.bs_machines]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.19.2,1.20)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.bs_machines]]
+    modId="ic2"
+    mandatory=true
+    versionRange="[1.19.2-2.1.3.3,)"
+    ordering="AFTER"
+    side="BOTH"

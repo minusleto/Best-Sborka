@@ -1,0 +1,43 @@
+{
+  "display": {
+    "icon": {
+      "item": "kubejs:energium_dust"
+    },
+    "title": {
+      "text": "Энергетическая пыль"
+    },
+    "description": {
+      "text": "4 алмазной пыли и 5 редстоуна «крестиком» на верстаке дают сразу 9 энергетической пыли."
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "best_sborka:tech/diamond_dust",
+  "criteria": {
+    "has_energium_dust": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kubejs:energium_dust"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_energium_dust"
+    ]
+  ],
+  "rewards": {
+    "experience": 50,
+    "loot": [
+      "best_sborka:rewards/tech/energium_dust"
+    ]
+  }
+}

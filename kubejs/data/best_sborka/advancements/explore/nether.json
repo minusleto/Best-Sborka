@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:obsidian"
+    },
+    "title": {
+      "text": "Дверь в ад"
+    },
+    "description": {
+      "text": "Построй портал и зайди в Незер."
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "best_sborka:explore/diamond",
+  "criteria": {
+    "nether": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "minecraft:the_nether"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "nether"
+    ]
+  ],
+  "rewards": {
+    "experience": 80,
+    "loot": [
+      "best_sborka:rewards/explore/nether"
+    ]
+  }
+}

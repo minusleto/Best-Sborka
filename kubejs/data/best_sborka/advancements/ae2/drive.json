@@ -1,0 +1,40 @@
+{
+  "display": {
+    "icon": {
+      "item": "ae2:drive"
+    },
+    "title": {
+      "text": "Дисковый отсек"
+    },
+    "description": {
+      "text": "ME-привод принимает ячейки хранения. Время думать о том, куда складывать добычу."
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "best_sborka:ae2/processors",
+  "criteria": {
+    "has_drive": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ae2:drive"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_drive"
+    ]
+  ],
+  "rewards": {
+    "experience": 60
+  }
+}

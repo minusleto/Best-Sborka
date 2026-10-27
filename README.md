@@ -30,4 +30,5 @@
 - [Квесты (FTB Quests)](docs/quests.md)
 - [План разработки](docs/roadmap.md)
 - [Рецепты IC2: сравнение и журнал изменений](docs/recipe-changes.md)
+- [Квесты](docs/quests.md)
 - [KubeJS](kubejs/README.md)

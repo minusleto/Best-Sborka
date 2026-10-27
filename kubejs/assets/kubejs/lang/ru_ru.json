@@ -1,5 +1,9 @@
 {
   "item.kubejs.energium_dust": "Энергетическая пыль",
   "item.kubejs.iron_plate": "Железная пластина",
-  "item.kubejs.forge_hammer": "Кузнечный молот"
+  "item.kubejs.forge_hammer": "Кузнечный молот",
+  "item.kubejs.copper_plate": "Медная пластина",
+  "item.kubejs.tin_plate": "Оловянная пластина",
+  "item.kubejs.bronze_plate": "Бронзовая пластина",
+  "item.kubejs.gold_plate": "Золотая пластина"
 }

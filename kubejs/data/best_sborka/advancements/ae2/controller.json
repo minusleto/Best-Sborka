@@ -1,0 +1,40 @@
+{
+  "display": {
+    "icon": {
+      "item": "ae2:controller"
+    },
+    "title": {
+      "text": "Сердце сети"
+    },
+    "description": {
+      "text": "Скрафти контроллер ME — центр большой и организованной сети."
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "best_sborka:ae2/processors",
+  "criteria": {
+    "has_controller": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ae2:controller"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_controller"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  }
+}

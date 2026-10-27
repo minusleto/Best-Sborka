@@ -24,3 +24,8 @@ shaderpacks/
 *.bak
 .DS_Store
 Thumbs.db
+
+# Mod build output
+mods-src/**/build/
+mods-src/**/.gradle/
+mods-src/**/run/

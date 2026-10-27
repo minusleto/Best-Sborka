@@ -1,0 +1,43 @@
+{
+  "display": {
+    "icon": {
+      "item": "kubejs:iron_plate"
+    },
+    "title": {
+      "text": "Прокат"
+    },
+    "description": {
+      "text": "Положи слиток и молот рядом в верстаке — получится железная пластина. Её можно сделать и в компрессоре, без износа молота."
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "best_sborka:forge/hammer",
+  "criteria": {
+    "has_iron_plate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kubejs:iron_plate"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_iron_plate"
+    ]
+  ],
+  "rewards": {
+    "experience": 30,
+    "loot": [
+      "best_sborka:rewards/forge/plate"
+    ]
+  }
+}
