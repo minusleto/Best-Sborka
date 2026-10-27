@@ -1,0 +1,268 @@
+{
+	id: "A437228F9674062E"
+	group: ""
+	order_index: 2
+	filename: "ae2"
+	title: "Сеть ME"
+	icon: "ae2:controller"
+	subtitle: ["От кварца до автокрафта"]
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			id: "A4AC1B06407DDE8F"
+			title: "Кварц Certus"
+			icon: "ae2:certus_quartz_crystal"
+			x: 0.0d
+			y: 0.0d
+			subtitle: "Основа всей сети"
+			description: ["Найди залежи кварца Certus под землёй и добудь кристалл."]
+			dependencies: ["5C94667F7B5C4880"]
+			tasks: [
+				{
+					id: "49C42BDA85C94994"
+					type: "item"
+					item: "ae2:certus_quartz_crystal"
+				}
+			]
+			rewards: [
+				{
+					id: "E62A08FC81290584"
+					type: "xp"
+					xp: 30
+				}
+				{
+					id: "953BCBCE8BC5B844"
+					type: "item"
+					item: "minecraft:coal"
+					count: 4
+				}
+			]
+		}
+		{
+			id: "116F73383C862D44"
+			title: "Заряженный кварц"
+			icon: "ae2:charged_certus_quartz_crystal"
+			x: 2.0d
+			y: -1.0d
+			subtitle: "Нужна энергия"
+			description: ["Зарядь кристалл Certus в зарядном устройстве AE2 (Charger)."]
+			dependencies: ["A4AC1B06407DDE8F"]
+			tasks: [
+				{
+					id: "85F1B0745D42C87F"
+					type: "item"
+					item: "ae2:charged_certus_quartz_crystal"
+				}
+			]
+			rewards: [
+				{
+					id: "36676211CAFA240F"
+					type: "xp"
+					xp: 50
+				}
+				{
+					id: "9E307A81360A661B"
+					type: "item"
+					item: "ae2:certus_quartz_crystal"
+					count: 4
+				}
+			]
+		}
+		{
+			id: "3E2BD7050FBADF77"
+			title: "Кремниевое дело"
+			icon: "ae2:silicon"
+			x: 2.0d
+			y: 1.0d
+			subtitle: "Расходник для процессоров"
+			description: ["Получи кремний — он нужен для всех процессоров."]
+			dependencies: ["A4AC1B06407DDE8F"]
+			tasks: [
+				{
+					id: "3FFBCE8CDC1DF6B3"
+					type: "item"
+					item: "ae2:silicon"
+					count: 3
+				}
+			]
+			rewards: [
+				{
+					id: "A62AC60050D6D287"
+					type: "xp"
+					xp: 30
+				}
+			]
+		}
+		{
+			id: "8593C856C238D441"
+			title: "Печатный станок"
+			icon: "ae2:inscriber"
+			x: 4.0d
+			y: 1.0d
+			subtitle: "Штампует схемы"
+			description: ["Инскрайбер делает печатные платы и процессоры — вычислительное сердце сети."]
+			dependencies: ["3E2BD7050FBADF77"]
+			tasks: [
+				{
+					id: "18D414AA61F79FEA"
+					type: "item"
+					item: "ae2:inscriber"
+				}
+			]
+			rewards: [
+				{
+					id: "34C4D2771436BEB9"
+					type: "xp"
+					xp: 60
+				}
+			]
+		}
+		{
+			id: "1A5A7997648B7C97"
+			title: "Мозги сети"
+			icon: "ae2:engineering_processor"
+			x: 6.0d
+			y: 1.0d
+			shape: "hexagon"
+			size: 1.5d
+			subtitle: "Три вида процессоров"
+			description: ["Получи по одному процессору каждого вида: логический, вычислительный и инженерный."]
+			dependencies: ["8593C856C238D441"]
+			tasks: [
+				{
+					id: "1CD096F43F1557AD"
+					type: "item"
+					item: "ae2:logic_processor"
+				}
+				{
+					id: "4ED15AE9C4C1DEB8"
+					type: "item"
+					item: "ae2:calculation_processor"
+				}
+				{
+					id: "42D5924A948B5544"
+					type: "item"
+					item: "ae2:engineering_processor"
+				}
+			]
+			rewards: [
+				{
+					id: "213D45981DA42600"
+					type: "xp"
+					xp: 120
+				}
+				{
+					id: "C8819FA4E659F5DD"
+					type: "item"
+					item: "ae2:silicon"
+					count: 4
+				}
+			]
+		}
+		{
+			id: "31510226657C2448"
+			title: "Сердце сети"
+			icon: "ae2:controller"
+			x: 8.0d
+			y: 0.0d
+			subtitle: "Контроллер ME"
+			description: ["Контроллер — центр большой и организованной сети."]
+			dependencies: ["1A5A7997648B7C97"]
+			tasks: [
+				{
+					id: "BBD5F55826AFA985"
+					type: "item"
+					item: "ae2:controller"
+				}
+			]
+			rewards: [
+				{
+					id: "C310BB2AD221C0DA"
+					type: "xp"
+					xp: 100
+				}
+			]
+		}
+		{
+			id: "BA610B862F760FF0"
+			title: "Дисковый отсек"
+			icon: "ae2:drive"
+			x: 8.0d
+			y: 2.0d
+			subtitle: "Куда складывать добычу"
+			description: ["ME-привод принимает ячейки хранения."]
+			dependencies: ["1A5A7997648B7C97"]
+			tasks: [
+				{
+					id: "DDDCA1A7E995A21C"
+					type: "item"
+					item: "ae2:drive"
+				}
+			]
+			rewards: [
+				{
+					id: "E049A01B7CD4A3F0"
+					type: "xp"
+					xp: 60
+				}
+			]
+		}
+		{
+			id: "45A301A9C1135A73"
+			title: "Килобайты места"
+			icon: "ae2:item_storage_cell_1k"
+			x: 10.0d
+			y: 2.0d
+			subtitle: "Первая ячейка"
+			description: ["Собери ячейку хранения на 1k и вставь в привод."]
+			dependencies: ["BA610B862F760FF0"]
+			tasks: [
+				{
+					id: "B6EE854B096D73E4"
+					type: "item"
+					item: "ae2:item_storage_cell_1k"
+				}
+			]
+			rewards: [
+				{
+					id: "A92BF01020532C92"
+					type: "xp"
+					xp: 60
+				}
+			]
+		}
+		{
+			id: "43FC6CE470B4B91B"
+			title: "Автоматизация"
+			icon: "ae2:molecular_assembler"
+			x: 12.0d
+			y: 2.0d
+			shape: "octagon"
+			size: 1.5d
+			subtitle: "Начало автокрафта"
+			description: ["Молекулярный сборщик — основа автокрафта. Дальше сеть начнёт работать за тебя."]
+			dependencies: ["45A301A9C1135A73"]
+			tasks: [
+				{
+					id: "4BA7E53EDFDBFB1C"
+					type: "item"
+					item: "ae2:molecular_assembler"
+				}
+			]
+			rewards: [
+				{
+					id: "E8FCC98FDA2036B0"
+					type: "xp"
+					xp: 250
+				}
+				{
+					id: "1862B9CE840DB27B"
+					type: "item"
+					item: "minecraft:diamond"
+					count: 2
+				}
+			]
+		}
+	]
+}

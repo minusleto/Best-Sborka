@@ -1,0 +1,155 @@
+{
+	id: "B08137CB8D1294A6"
+	group: ""
+	order_index: 0
+	filename: "forge"
+	title: "Кузница"
+	icon: "kubejs:forge_hammer"
+	subtitle: ["С чего начинается любая сборка"]
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			id: "5C94667F7B5C4880"
+			title: "Добро пожаловать в Best-Sborka"
+			icon: "minecraft:compass"
+			x: 0.0d
+			y: 0.0d
+			shape: "gear"
+			size: 1.5d
+			subtitle: "Путь инженера начинается здесь"
+			description: [
+				"Это сборка про технику: IndustrialCraft 2 Classic, Applied Energistics 2 и многое другое."
+				""
+				"Главы слева:"
+				"Кузница — молот и железные пластины."
+				"Техника IC2 — энергокристалл и продвинутые корпуса."
+				"Сеть ME — от кварца до автокрафта."
+				"Исследование — шахты, Тёмные глубины и Незер."
+				""
+				"Нажми на галочку, забери стартовый набор и вперёд!"
+			]
+			tasks: [
+				{
+					id: "846E29F961388E49"
+					type: "checkmark"
+				}
+			]
+			rewards: [
+				{
+					id: "E22B6C43DBF680DC"
+					type: "item"
+					item: "minecraft:bread"
+					count: 12
+				}
+				{
+					id: "49539487F00E1B83"
+					type: "item"
+					item: "minecraft:torch"
+					count: 32
+				}
+				{
+					id: "F7210CB6FBA5C468"
+					type: "item"
+					item: "minecraft:iron_ingot"
+					count: 4
+				}
+			]
+		}
+		{
+			id: "BFC28DEE5BB9B018"
+			title: "Железный век"
+			icon: "minecraft:iron_ingot"
+			x: 2.0d
+			y: 0.0d
+			subtitle: "Железо — основа всего"
+			description: [
+				"В этой сборке из железа куют молот, пластины и корпуса машин."
+				"Добудь железный слиток."
+			]
+			dependencies: ["5C94667F7B5C4880"]
+			tasks: [
+				{
+					id: "F0E8137D7FF5A546"
+					type: "item"
+					item: "minecraft:iron_ingot"
+				}
+			]
+			rewards: [
+				{
+					id: "A4ABF9E057FEB498"
+					type: "xp"
+					xp: 20
+				}
+			]
+		}
+		{
+			id: "E5C3658023763B22"
+			title: "Хватка кузнеца"
+			icon: "kubejs:forge_hammer"
+			x: 4.0d
+			y: 0.0d
+			subtitle: "Рецепт из IC2 Experimental"
+			description: [
+				"Скрафти кузнечный молот: 5 слитков железа и 2 палки (форма — как в IC2 1.12.2)."
+				"Молот выдерживает 80 использований, так что береги его."
+			]
+			dependencies: ["BFC28DEE5BB9B018"]
+			tasks: [
+				{
+					id: "700E280EC5F62FC7"
+					type: "item"
+					item: "kubejs:forge_hammer"
+				}
+			]
+			rewards: [
+				{
+					id: "51395AE2B8817595"
+					type: "xp"
+					xp: 30
+				}
+				{
+					id: "34A4D98549DD8697"
+					type: "item"
+					item: "minecraft:iron_ingot"
+					count: 5
+				}
+			]
+		}
+		{
+			id: "9ABC313820DECB53"
+			title: "Прокат"
+			icon: "kubejs:iron_plate"
+			x: 6.0d
+			y: 0.0d
+			shape: "hexagon"
+			size: 1.5d
+			subtitle: "Слиток + молот = пластина"
+			description: [
+				"Положи железный слиток и молот рядом в верстаке — получится железная пластина (молот теряет 1 прочность)."
+				"Пластину можно сделать и в компрессоре IC2 без износа молота."
+			]
+			dependencies: ["E5C3658023763B22"]
+			tasks: [
+				{
+					id: "3D7B2DE4D27FB8D8"
+					type: "item"
+					item: "kubejs:iron_plate"
+				}
+			]
+			rewards: [
+				{
+					id: "FAE45A919F2A4576"
+					type: "xp"
+					xp: 30
+				}
+				{
+					id: "69DA92426D2F90EA"
+					type: "item"
+					item: "kubejs:iron_plate"
+					count: 2
+				}
+			]
+		}
+	]
+}
