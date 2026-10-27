@@ -7,6 +7,13 @@ StartupEvents.registry('item', event => {
   event.create('energium_dust')
     .displayName('Energium Dust')
 
+  // IC2 Experimental 1.12.2 lapis dust (IC2C has none). Made in the macerator,
+  // used by the Lapotron Crystal recipe.
+  event.create('lapis_dust')
+    .displayName('Lapis Lazuli Dust')
+    .tag('forge:dusts')
+    .tag('forge:dusts/lapis')
+
   // IC2 Experimental 1.12.2 "plate" system (IC2C 1.19.2 has no iron plates)
   event.create('iron_plate')
     .displayName('Iron Plate')

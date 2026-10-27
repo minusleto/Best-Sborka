@@ -87,13 +87,22 @@ ServerEvents.recipes(event => {
   event.shaped('ic2:advanced_machine_block', ['SAS', 'CMC', 'SAS'], casingKeys)
   event.shaped('ic2:advanced_machine_block', ['SCS', 'AMA', 'SCS'], casingKeys)
 
-  // Lapotron Crystal — Advanced Circuit instead of regular Circuit.
-  event.remove({ output: 'ic2:lapotron_crystal' })
-  event.shapeless('ic2:lapotron_crystal', [
-    'minecraft:lapis_lazuli',
-    'ic2:advanced_circuit',
-    'ic2:energy_crystal'
-  ])
+  // Lapotron Crystal (IC2 Experimental 1.12.2 recipe).
+  // IC2C: lapis lazuli + BASIC circuit. 1.12.2 Experimental: lapis DUST +
+  // ADVANCED circuit around an Energy Crystal (any charge).
+  // Lapis dust (kubejs:lapis_dust) is made in the macerator:
+  // kubejs/data/ic2/ic2_recipes/macerator/.
+  // The IC2C registry id is "lapatron_crystal" (sic), NOT "lapotron_crystal".
+  event.remove({ output: 'ic2:lapatron_crystal' })
+  event.shaped('ic2:lapatron_crystal', [
+    'LCL',
+    'LDL',
+    'LCL'
+  ], {
+    L: 'kubejs:lapis_dust',
+    C: 'ic2:advanced_circuit',
+    D: 'ic2:energy_crystal'
+  })
 
   // Mining Laser — requested layout: Rcc / AAC / AA
   event.remove({ output: 'ic2:mining_laser' })
