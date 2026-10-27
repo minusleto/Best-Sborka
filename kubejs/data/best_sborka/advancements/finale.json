@@ -1,0 +1,52 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:nether_star"
+    },
+    "title": {
+      "text": "Легенда Best-Sborka"
+    },
+    "description": {
+      "text": "Заверши главные дела: энергокристалл, продвинутый корпус, молекулярный сборщик и Тёмные глубины. Ты прошёл путь инженера."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "best_sborka:root",
+  "criteria": {
+    "legend": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "player": {
+                "advancements": {
+                  "best_sborka:tech/energy_crystal": true,
+                  "best_sborka:tech/advanced_casing": true,
+                  "best_sborka:ae2/assembler": true,
+                  "best_sborka:explore/deep_dark": true
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "legend"
+    ]
+  ],
+  "rewards": {
+    "experience": 1000,
+    "loot": [
+      "best_sborka:rewards/finale"
+    ]
+  }
+}

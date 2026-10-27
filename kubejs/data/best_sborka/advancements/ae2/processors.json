@@ -1,0 +1,73 @@
+{
+  "display": {
+    "icon": {
+      "item": "ae2:engineering_processor"
+    },
+    "title": {
+      "text": "Мозги сети"
+    },
+    "description": {
+      "text": "Получи все три процессора: логический, вычислительный и инженерный."
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "best_sborka:ae2/inscriber",
+  "criteria": {
+    "has_logic_processor": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ae2:logic_processor"
+            ]
+          }
+        ]
+      }
+    },
+    "has_calculation_processor": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ae2:calculation_processor"
+            ]
+          }
+        ]
+      }
+    },
+    "has_engineering_processor": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ae2:engineering_processor"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_logic_processor"
+    ],
+    [
+      "has_calculation_processor"
+    ],
+    [
+      "has_engineering_processor"
+    ]
+  ],
+  "rewards": {
+    "experience": 120,
+    "loot": [
+      "best_sborka:rewards/ae2/processors"
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "display": {
+    "icon": {
+      "item": "ae2:charged_certus_quartz_crystal"
+    },
+    "title": {
+      "text": "Заряженный кварц"
+    },
+    "description": {
+      "text": "Зарядь кристалл Certus в зарядном устройстве AE2 (Charger). Ему потребуется энергия."
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "best_sborka:ae2/certus",
+  "criteria": {
+    "has_charged_certus_quartz_crystal": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ae2:charged_certus_quartz_crystal"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_charged_certus_quartz_crystal"
+    ]
+  ],
+  "rewards": {
+    "experience": 50,
+    "loot": [
+      "best_sborka:rewards/ae2/charged"
+    ]
+  }
+}
