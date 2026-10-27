@@ -30,14 +30,14 @@
 			]
 			rewards: [
 				{
-					id: "9C85157CA79AA11D"
+					id: "1C85157CA79AA11D"
 					type: "xp"
 					xp: 40
 				}
 			]
 		}
 		{
-			id: "D5D8E157CA3EEF26"
+			id: "55D8E157CA3EEF26"
 			title: "Алмазная лихорадка"
 			icon: "minecraft:diamond"
 			x: 2.0d
@@ -47,7 +47,7 @@
 			dependencies: ["790C05DA7835720F"]
 			tasks: [
 				{
-					id: "FDA5E6BE020268A1"
+					id: "7DA5E6BE020268A1"
 					type: "item"
 					item: "minecraft:diamond"
 				}
@@ -76,7 +76,7 @@
 			dependencies: ["790C05DA7835720F"]
 			tasks: [
 				{
-					id: "AE890B0DCEB483D6"
+					id: "2E890B0DCEB483D6"
 					type: "biome"
 					biome: "minecraft:deep_dark"
 				}
@@ -103,17 +103,17 @@
 			y: -1.0d
 			subtitle: "Портал и Незер"
 			description: ["Построй портал и зайди в Незер."]
-			dependencies: ["D5D8E157CA3EEF26"]
+			dependencies: ["55D8E157CA3EEF26"]
 			tasks: [
 				{
-					id: "DFA0C3570527B691"
+					id: "5FA0C3570527B691"
 					type: "dimension"
 					dimension: "minecraft:the_nether"
 				}
 			]
 			rewards: [
 				{
-					id: "AEDFD49FEE21CCF5"
+					id: "2EDFD49FEE21CCF5"
 					type: "xp"
 					xp: 80
 				}
@@ -126,7 +126,7 @@
 			]
 		}
 		{
-			id: "B3BF1454ECD6C2C6"
+			id: "33BF1454ECD6C2C6"
 			title: "Древние обломки"
 			icon: "minecraft:ancient_debris"
 			x: 6.0d
@@ -138,7 +138,7 @@
 			dependencies: ["13C973DA0DB6534E"]
 			tasks: [
 				{
-					id: "CADB0221B19302DB"
+					id: "4ADB0221B19302DB"
 					type: "item"
 					item: "minecraft:ancient_debris"
 				}

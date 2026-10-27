@@ -1,5 +1,5 @@
 {
-	id: "A437228F9674062E"
+	id: "2437228F9674062E"
 	group: ""
 	order_index: 2
 	filename: "ae2"
@@ -10,7 +10,7 @@
 	default_hide_dependency_lines: false
 	quests: [
 		{
-			id: "A4AC1B06407DDE8F"
+			id: "24AC1B06407DDE8F"
 			title: "Кварц Certus"
 			icon: "ae2:certus_quartz_crystal"
 			x: 0.0d
@@ -27,12 +27,12 @@
 			]
 			rewards: [
 				{
-					id: "E62A08FC81290584"
+					id: "662A08FC81290584"
 					type: "xp"
 					xp: 30
 				}
 				{
-					id: "953BCBCE8BC5B844"
+					id: "153BCBCE8BC5B844"
 					type: "item"
 					item: "minecraft:coal"
 					count: 4
@@ -47,10 +47,10 @@
 			y: -1.0d
 			subtitle: "Нужна энергия"
 			description: ["Зарядь кристалл Certus в зарядном устройстве AE2 (Charger)."]
-			dependencies: ["A4AC1B06407DDE8F"]
+			dependencies: ["24AC1B06407DDE8F"]
 			tasks: [
 				{
-					id: "85F1B0745D42C87F"
+					id: "05F1B0745D42C87F"
 					type: "item"
 					item: "ae2:charged_certus_quartz_crystal"
 				}
@@ -62,7 +62,7 @@
 					xp: 50
 				}
 				{
-					id: "9E307A81360A661B"
+					id: "1E307A81360A661B"
 					type: "item"
 					item: "ae2:certus_quartz_crystal"
 					count: 4
@@ -77,7 +77,7 @@
 			y: 1.0d
 			subtitle: "Расходник для процессоров"
 			description: ["Получи кремний — он нужен для всех процессоров."]
-			dependencies: ["A4AC1B06407DDE8F"]
+			dependencies: ["24AC1B06407DDE8F"]
 			tasks: [
 				{
 					id: "3FFBCE8CDC1DF6B3"
@@ -88,14 +88,14 @@
 			]
 			rewards: [
 				{
-					id: "A62AC60050D6D287"
+					id: "262AC60050D6D287"
 					type: "xp"
 					xp: 30
 				}
 			]
 		}
 		{
-			id: "8593C856C238D441"
+			id: "0593C856C238D441"
 			title: "Печатный станок"
 			icon: "ae2:inscriber"
 			x: 4.0d
@@ -128,7 +128,7 @@
 			size: 1.5d
 			subtitle: "Три вида процессоров"
 			description: ["Получи по одному процессору каждого вида: логический, вычислительный и инженерный."]
-			dependencies: ["8593C856C238D441"]
+			dependencies: ["0593C856C238D441"]
 			tasks: [
 				{
 					id: "1CD096F43F1557AD"
@@ -153,7 +153,7 @@
 					xp: 120
 				}
 				{
-					id: "C8819FA4E659F5DD"
+					id: "48819FA4E659F5DD"
 					type: "item"
 					item: "ae2:silicon"
 					count: 4
@@ -171,21 +171,21 @@
 			dependencies: ["1A5A7997648B7C97"]
 			tasks: [
 				{
-					id: "BBD5F55826AFA985"
+					id: "3BD5F55826AFA985"
 					type: "item"
 					item: "ae2:controller"
 				}
 			]
 			rewards: [
 				{
-					id: "C310BB2AD221C0DA"
+					id: "4310BB2AD221C0DA"
 					type: "xp"
 					xp: 100
 				}
 			]
 		}
 		{
-			id: "BA610B862F760FF0"
+			id: "3A610B862F760FF0"
 			title: "Дисковый отсек"
 			icon: "ae2:drive"
 			x: 8.0d
@@ -195,14 +195,14 @@
 			dependencies: ["1A5A7997648B7C97"]
 			tasks: [
 				{
-					id: "DDDCA1A7E995A21C"
+					id: "5DDCA1A7E995A21C"
 					type: "item"
 					item: "ae2:drive"
 				}
 			]
 			rewards: [
 				{
-					id: "E049A01B7CD4A3F0"
+					id: "6049A01B7CD4A3F0"
 					type: "xp"
 					xp: 60
 				}
@@ -216,17 +216,17 @@
 			y: 2.0d
 			subtitle: "Первая ячейка"
 			description: ["Собери ячейку хранения на 1k и вставь в привод."]
-			dependencies: ["BA610B862F760FF0"]
+			dependencies: ["3A610B862F760FF0"]
 			tasks: [
 				{
-					id: "B6EE854B096D73E4"
+					id: "36EE854B096D73E4"
 					type: "item"
 					item: "ae2:item_storage_cell_1k"
 				}
 			]
 			rewards: [
 				{
-					id: "A92BF01020532C92"
+					id: "292BF01020532C92"
 					type: "xp"
 					xp: 60
 				}
@@ -252,7 +252,7 @@
 			]
 			rewards: [
 				{
-					id: "E8FCC98FDA2036B0"
+					id: "68FCC98FDA2036B0"
 					type: "xp"
 					xp: 250
 				}

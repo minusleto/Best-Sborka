@@ -33,7 +33,7 @@ ServerEvents.recipes(event => {
   // alternative, not a replacement for the crystal-based recipes.
   // ---------------------------------------------------------------
   event.shaped(
-    '6x ic2:glass_cable_item',
+    '6x ic2:glassfiber_cable_item',
     [
       'GGG',
       'SDS',
@@ -136,10 +136,12 @@ ServerEvents.recipes(event => {
   })
 
   // Metal Former machine (mod: mods-src/bs-machines, block bs_machines:metal_former)
+  // Copper ingots, not copper cables: copper cable crafting is removed above and
+  // cables are now made only in the Metal Former itself (would be a dead end).
   event.shaped('bs_machines:metal_former', [' C ', 'PMP', 'WWW'], {
     C: 'ic2:circuit',
     P: 'kubejs:iron_plate',
     M: 'ic2:machine_block',
-    W: 'ic2:copper_cable_item'
+    W: 'minecraft:copper_ingot'
   })
 })
