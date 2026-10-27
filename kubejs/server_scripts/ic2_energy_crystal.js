@@ -27,6 +27,26 @@ ServerEvents.recipes(event => {
   )
 
   // ---------------------------------------------------------------
+  // Glass fibre cable — additional IC2 Experimental 1.12.2 recipe.
+  // 6 glass + Energium Dust + silver dust -> 6 glass cables.
+  // Keep IC2 Classic's existing glass-cable recipes; this is an extra
+  // alternative, not a replacement for the crystal-based recipes.
+  // ---------------------------------------------------------------
+  event.shaped(
+    '6x ic2:glass_cable_item',
+    [
+      'GGG',
+      'SDS',
+      'GGG'
+    ],
+    {
+      G: 'minecraft:glass',
+      S: '#forge:dusts/silver',
+      D: 'kubejs:energium_dust'
+    }
+  )
+
+  // ---------------------------------------------------------------
   // Iron plate + Forge Hammer  (IC2 Experimental 1.12.2 "plate" system)
   // IC2C 1.19.2 has no iron plates, no hammer and no Metal Former machine.
   //  - Forge Hammer: 5 iron ingots + 2 sticks (1.12.2 layout, both mirrors)
