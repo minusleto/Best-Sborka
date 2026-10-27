@@ -57,4 +57,17 @@ ServerEvents.recipes(event => {
 
   event.shaped('ic2:advanced_machine_block', ['SAS', 'CMC', 'SAS'], casingKeys)
   event.shaped('ic2:advanced_machine_block', ['SCS', 'AMA', 'SCS'], casingKeys)
+
+  // ---------------------------------------------------------------
+  // Metal Former machine (mod: mods-src/bs-machines, block bs_machines:metal_former)
+  // 1.12.2: circuit + toolbox + machine casing + coils. IC2C has no toolbox/coil,
+  // so: circuit on top, iron plates on the sides of the casing, 3 copper cables below.
+  // Modes use IC2 datapack recipes: kubejs/data/ic2/ic2_recipes/metal_former_*/
+  // ---------------------------------------------------------------
+  event.shaped('bs_machines:metal_former', [' C ', 'PMP', 'WWW'], {
+    C: 'ic2:circuit',
+    P: 'kubejs:iron_plate',
+    M: 'ic2:machine_block',
+    W: 'ic2:copper_cable_item'
+  })
 })

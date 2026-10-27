@@ -1,0 +1,10 @@
+{
+  "block.bs_machines.metal_former": "Металлоформовочный механизм",
+  "itemGroup.bs_machines": "Best-Sborka: машины",
+  "gui.bs_machines.mode.rolling": "Прокатка",
+  "gui.bs_machines.mode.extruding": "Экструзия",
+  "gui.bs_machines.mode.cutting": "Резка",
+  "jei.bs_machines.metal_former.rolling": "Металлоформовщик: прокатка",
+  "jei.bs_machines.metal_former.extruding": "Металлоформовщик: экструзия",
+  "jei.bs_machines.metal_former.cutting": "Металлоформовщик: резка"
+}
