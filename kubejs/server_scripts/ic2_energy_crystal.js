@@ -27,17 +27,29 @@ ServerEvents.recipes(event => {
   )
 
   // ---------------------------------------------------------------
-  // Advanced Machine Casing  (IC2 Experimental 1.12.2 layout)
-  // machine casing + 2 advanced alloy + 2 carbon plate + 4 "steel" plates.
-  // There is NO steel in this pack (IC2C, IC2C Extras, IC2C Additions have none),
-  // so CASING_PLATE is a stand-in. Change this one line to swap the material.
+  // Iron plate + Forge Hammer  (IC2 Experimental 1.12.2 "plate" system)
+  // IC2C 1.19.2 has no iron plates, no hammer and no Metal Former machine.
+  //  - Forge Hammer: 5 iron ingots + 2 sticks (1.12.2 layout, both mirrors)
+  //  - Iron Plate:   iron ingot + hammer (hammer loses 1 durability), shapeless
+  //  - Iron Plate:   iron ingot in the Compressor (stand-in for Metal Former
+  //    "rolling"): kubejs/data/ic2/ic2_recipes/compressor/iron_plate.json
   // ---------------------------------------------------------------
-  const CASING_PLATE = 'ic2:plate_dense_copper'
+  const hammerKeys = { I: 'minecraft:iron_ingot', S: 'minecraft:stick' }
+  event.shaped('kubejs:forge_hammer', ['II ', 'ISS', 'II '], hammerKeys)
+  event.shaped('kubejs:forge_hammer', [' II', 'SSI', ' II'], hammerKeys)
 
+  event.shapeless('kubejs:iron_plate', ['minecraft:iron_ingot', 'kubejs:forge_hammer'])
+    .damageIngredient('kubejs:forge_hammer', 1)
+
+  // ---------------------------------------------------------------
+  // Advanced Machine Casing  (IC2 Experimental 1.12.2 layout)
+  // machine casing + 2 advanced alloy + 2 carbon plate + 4 iron plates.
+  // (1.12.2 uses steel plates; there is no steel in this pack, so iron plates.)
+  // ---------------------------------------------------------------
   event.remove({ output: 'ic2:advanced_machine_block' })
 
   const casingKeys = {
-    S: CASING_PLATE,
+    S: 'kubejs:iron_plate',
     A: 'ic2:plate_advanced_alloy',
     C: 'ic2:carbon_plate',
     M: 'ic2:machine_block'
