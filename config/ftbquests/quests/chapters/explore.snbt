@@ -1,0 +1,161 @@
+{
+	id: "2CBAA3793AFB05A6"
+	group: ""
+	order_index: 3
+	filename: "explore"
+	title: "Исследование"
+	icon: "minecraft:deepslate_diamond_ore"
+	subtitle: ["Глубины, Тёмные глубины и Незер"]
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			id: "790C05DA7835720F"
+			title: "В глубину!"
+			icon: "minecraft:deepslate"
+			x: 0.0d
+			y: 0.0d
+			subtitle: "Ниже Y = -40"
+			description: ["Спустись под землю ниже уровня Y = -40. Здесь начинаются глубинные сланцы и алмазы."]
+			dependencies: ["5C94667F7B5C4880"]
+			tasks: [
+				{
+					id: "50BC04F5DB5FCC19"
+					type: "location"
+					dimension: "minecraft:overworld"
+					ignore_dimension: false
+					position: [I; -30000000, -64, -30000000]
+					size: [I; 60000000, 24, 60000000]
+				}
+			]
+			rewards: [
+				{
+					id: "9C85157CA79AA11D"
+					type: "xp"
+					xp: 40
+				}
+			]
+		}
+		{
+			id: "D5D8E157CA3EEF26"
+			title: "Алмазная лихорадка"
+			icon: "minecraft:diamond"
+			x: 2.0d
+			y: -1.0d
+			subtitle: "Редкий и нужный"
+			description: ["Найди алмаз. Он нужен для алмазной пыли, а значит и для энергокристалла."]
+			dependencies: ["790C05DA7835720F"]
+			tasks: [
+				{
+					id: "FDA5E6BE020268A1"
+					type: "item"
+					item: "minecraft:diamond"
+				}
+			]
+			rewards: [
+				{
+					id: "1EE9CFD59E7D588D"
+					type: "xp"
+					xp: 60
+				}
+			]
+		}
+		{
+			id: "415197D81A064FA6"
+			title: "Тишина... подозрительная"
+			icon: "minecraft:sculk_shrieker"
+			x: 2.0d
+			y: 1.0d
+			shape: "heart"
+			size: 1.5d
+			subtitle: "Не шуми"
+			description: [
+				"Спустись в Тёмные глубины (Deep Dark)."
+				"Двигайся тихо: шерсть глушит вибрации, а Хранитель такого не прощает."
+			]
+			dependencies: ["790C05DA7835720F"]
+			tasks: [
+				{
+					id: "AE890B0DCEB483D6"
+					type: "biome"
+					biome: "minecraft:deep_dark"
+				}
+			]
+			rewards: [
+				{
+					id: "17BB250B8228397F"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "191FC4FD00E770F1"
+					type: "item"
+					item: "minecraft:white_wool"
+					count: 8
+				}
+			]
+		}
+		{
+			id: "13C973DA0DB6534E"
+			title: "Дверь в ад"
+			icon: "minecraft:obsidian"
+			x: 4.0d
+			y: -1.0d
+			subtitle: "Портал и Незер"
+			description: ["Построй портал и зайди в Незер."]
+			dependencies: ["D5D8E157CA3EEF26"]
+			tasks: [
+				{
+					id: "DFA0C3570527B691"
+					type: "dimension"
+					dimension: "minecraft:the_nether"
+				}
+			]
+			rewards: [
+				{
+					id: "AEDFD49FEE21CCF5"
+					type: "xp"
+					xp: 80
+				}
+				{
+					id: "7DAD629891A2988E"
+					type: "item"
+					item: "minecraft:golden_carrot"
+					count: 4
+				}
+			]
+		}
+		{
+			id: "B3BF1454ECD6C2C6"
+			title: "Древние обломки"
+			icon: "minecraft:ancient_debris"
+			x: 6.0d
+			y: -1.0d
+			shape: "pentagon"
+			size: 1.5d
+			subtitle: "Для редких материалов"
+			description: ["Раздобудь древние обломки. Лучше всего их искать около уровня Y 15, а взрывы кроватей помогают."]
+			dependencies: ["13C973DA0DB6534E"]
+			tasks: [
+				{
+					id: "CADB0221B19302DB"
+					type: "item"
+					item: "minecraft:ancient_debris"
+				}
+			]
+			rewards: [
+				{
+					id: "32336E9F26623A5E"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "1A76F546CF19129E"
+					type: "item"
+					item: "minecraft:gold_ingot"
+					count: 2
+				}
+			]
+		}
+	]
+}

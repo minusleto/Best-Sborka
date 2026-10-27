@@ -17,6 +17,7 @@
 | Curios API | `curios-forge-1.19.2-5.1.6.4.jar` |
 | E4Steam | `e4steam-forge-mc1.18.2-1.20.2-v0.3.2.jar` |
 | FTB Library | `ftb-library-forge-1902.4.2-build.701.jar` |
+| FTB Quests | **нужно добавить** `ftb-quests-forge-1902.x.jar` (для квестов, см. [quests.md](quests.md)) |
 | Fast Leaf Decay | Файл JAR добавлен пользователем отдельно; точное имя и версия пока не зафиксированы |
 | FTB Teams | `ftb-teams-forge-1902.2.14-build.123.jar` |
 | GeckoLib | `geckolib-forge-1.19-3.1.40.jar` |
