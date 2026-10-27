@@ -112,8 +112,8 @@ ServerEvents.recipes(event => {
   // as specified by the Russian Minecraft Wiki for the nano helmet.
   // Replace the IC2C recipe with a shapeless recipe containing the same
   // core components plus the goggles; the goggles are not returned.
-  event.remove({ output: 'ic2:nano_helmet' })
-  event.shapeless('ic2:nano_helmet', [
+  event.remove({ output: 'ic2:nano_suit_helmet' })
+  event.shapeless('ic2:nano_suit_helmet', [
     'ic2:carbon_plate',
     'ic2:energy_crystal',
     'ic2:nightvision_goggles'
