@@ -41,6 +41,18 @@ ServerEvents.recipes(event => {
   event.shapeless('kubejs:iron_plate', ['minecraft:iron_ingot', 'kubejs:forge_hammer'])
     .damageIngredient('kubejs:forge_hammer', 1)
 
+  // Other plates, same hammer rule as iron (the Metal Former rolls them too)
+  const hammerPlates = {
+    'kubejs:copper_plate': 'minecraft:copper_ingot',
+    'kubejs:tin_plate': 'ic2:ingot_tin',
+    'kubejs:bronze_plate': 'ic2:ingot_bronze',
+    'kubejs:gold_plate': 'minecraft:gold_ingot'
+  }
+  Object.keys(hammerPlates).forEach(plate => {
+    event.shapeless(plate, [hammerPlates[plate], 'kubejs:forge_hammer'])
+      .damageIngredient('kubejs:forge_hammer', 1)
+  })
+
   // ---------------------------------------------------------------
   // Advanced Machine Casing  (IC2 Experimental 1.12.2 layout)
   // machine casing + 2 advanced alloy + 2 carbon plate + 4 iron plates.

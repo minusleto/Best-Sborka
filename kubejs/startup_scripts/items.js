@@ -13,6 +13,20 @@ StartupEvents.registry('item', event => {
     .tag('forge:plates')
     .tag('forge:plates/iron')
 
+  // More IC2 Experimental 1.12.2 plates (made by hammer or in the Metal Former)
+  const plates = {
+    copper: 'Copper Plate',
+    tin: 'Tin Plate',
+    bronze: 'Bronze Plate',
+    gold: 'Gold Plate'
+  }
+  Object.keys(plates).forEach(metal => {
+    event.create(metal + '_plate')
+      .displayName(plates[metal])
+      .tag('forge:plates')
+      .tag('forge:plates/' + metal)
+  })
+
   // IC2 Experimental 1.12.2 Forge Hammer (IC2C 1.19.2 has none). 80 uses.
   event.create('forge_hammer')
     .maxDamage(80)
