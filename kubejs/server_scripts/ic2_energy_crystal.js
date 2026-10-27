@@ -33,7 +33,7 @@ ServerEvents.recipes(event => {
   // alternative, not a replacement for the crystal-based recipes.
   // ---------------------------------------------------------------
   event.shaped(
-    '6x ic2:glass_cable_item',
+    '6x ic2:glassfiber_cable_item',
     [
       'GGG',
       'SDS',
