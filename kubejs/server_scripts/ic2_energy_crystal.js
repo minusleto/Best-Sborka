@@ -120,9 +120,10 @@ ServerEvents.recipes(event => {
     E: 'ic2:energy_crystal'
   })
 
-  // Nano Helmet — shaped recipe matching the wiki layout:
-  // carbon plates in the four corners, Energy Crystal top-center,
-  // Nightvision Goggles center. Ingredients are consumed.
+  // Nano Helmet — preserve the native IC2 Classic electric armor item.
+  // Only replace its recipe; do not create a KubeJS substitute item.
+  // Shaped layout: carbon plates in corners, Energy Crystal top-center,
+  // Nightvision Goggles center.
   event.remove({ output: 'ic2:nano_suit_helmet' })
   event.shaped('ic2:nano_suit_helmet', [
     'CEC',
