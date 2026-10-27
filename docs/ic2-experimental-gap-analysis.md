@@ -245,3 +245,37 @@ IC2C локализация показывает Crop Harvester, WeedEx, Hydrati
 ## 9. Ограничения этого отчёта
 
 Это **первый проход**, а не заявление, что каждый из 89 страниц и каждый класс JAR уже разобран полностью. Статически проверены основные JAR, локализации и ресурсы, а wiki использована для составления системного списка. Для завершения Issue #15 нужно продолжить инспекцию registry/class/recipe data и проверить игровые функции в запущенном экземпляре. Там, где нет доказательства отсутствия или идентичности механики, отчёт явно оставляет статус «проверить».
+
+
+## 10. Дополнительная проверка байткода IC2 Classic
+
+После первого прохода выполнен поиск ASCII-констант по class-файлам IC2 Classic 2.1.3.4 и по локализациям нескольких аддонов. Это сильнее простого поиска в переводах, но всё ещё не полная декомпиляция всех методов и не игровое тестирование.
+
+### Прямо подтверждено в реестровых классах IC2C
+
+В `ic2/core/platform/registries/IC2Blocks.class` обнаружены, среди прочего, константы:
+- машины/системы: `CROP_MATRON`, `CROP_HARVESTER`, `CROP_ANALYZER`, `PUMP`, `MINER`, `ADVANCED_MACHINE_BLOCK`, `TERRAFORMER`, `MASS_FABRICATOR`, `ROCKET_MINER`, `FUSION_REACTOR`, `STEAM_REACTOR`, `REACTOR_PLANNER`, `ELECTROLYZER`, `CHARGED_ELECTROLYZER`, `CENTRIFUGAL_EXTRACTOR`, `CENTRIFUGAL_RARE_EARTH_EXTRACTOR`;
+- генераторы/энергия: `GENERATOR`, `GEOTHERMAL_GENERATOR`, `SOLAR_PANEL` и уровни Solar Panel, `WATER_MILL` и уровни Water Mill, `WIND_TURBINE`, `SOLAR_TURBINE`, `THERMAL_GENERATOR`, `STEAM_TURBINE`, `WAVE_GENERATOR`, `OCEAN_GENERATOR`, `LIQUID_FUEL_GENERATOR`;
+- трансформаторы: `TRANSFORMER_LV/MV/HV/EV/IV` и `TRANSFORMER_ADJUSTABLE`;
+- кабели: `TIN_CABLE`, `COPPER_CABLE`, `GOLD_CABLE`, `BRONZE_CABLE`, `IRON_CABLE`, `ALUMINUM_CABLE`, `GLASS_CABLE`, `SUPER_CABLE`, `PLASMA_CABLE`, `DETECTOR_CABLE`, `SPLITTER_CABLE`, `COMPARING_CABLE`;
+- reinforced/scaffold: `SCAFFOLD_WOOD`, `SCAFFOLD_IRON`, `REINFORCED_STONE`, `REINFORCED_GLASS`, `REINFORCED_DOOR`.
+
+В `ic2/core/platform/registries/IC2Items.class` обнаружены константы:
+- `VENT_HEAT`, `VENT_HEAT_ADVANCED`, `VENT_HEAT_CORE`, `VENT_HEAT_OVERCLOCKED`, steam/electric vents, heat exchangers, heat balancers, heat pump, coolant cells 10K/30K/60K, condensators, plating;
+- `EU_READER`, `PAINTER` и цветные варианты, `MINER_REMOTE`, `MEMORY_STICK`, `FREQUENCY_TRANSMITTER`;
+- кабельные предметы и utility items.
+
+Поиск по class-файлам также подтвердил, что Crop-Matron и Electric Hoe/Treetap упоминаются в коде IC2C, даже если поиск по отдельным локализационным ключам не всегда показывал их явно. Следовательно, старые выводы по сельскому хозяйству и электрическим инструментам нужно трактовать как «сверить поведение», а не «отсутствует».
+
+### Что всё ещё не подтверждено поиском констант
+
+В проверенных классах/ресурсах не найдено очевидных прямых строк для `electric_motor`, `tin_item_casing`, `advanced_re_battery`, `block_cutting_machine`, `kinetic_generator`, `turning_table`, `pattern_storage`, `crystal_memory`, `replicator` и `advanced_miner`. Это **не финальное доказательство отсутствия**: имя могло быть другим, сборка могла объединить механику, или строка могла быть представлена иначе. Для каждого кандидата требуется более точечная проверка регистраций, классов и рецептов.
+
+### Уточнённая интерпретация
+
+- Crop-Matron — не считать отсутствующим: класс и регистрационная константа найдены.
+- Miner/Pump/Terraformer — базовые классы присутствуют; сравнивать возможности и поведение с Experimental.
+- Ядерная система — IC2C имеет отдельные Reactor/Steam Reactor/Fusion Reactor/Planner и большое число компонентов. Проверять разницу механик, а не переносить старые предметы автоматически.
+- Генерация и передача энергии в IC2C намного шире классической схемы Experimental: есть дополнительные генераторы, tiers и регулируемый трансформатор. Сначала решить, какие старые функции действительно потеряны.
+- Название `Advanced Miner` не найдено, но наличие `ROCKET_MINER` и `MINER` означает, что нужно сравнить их функции прежде, чем планировать восстановление Advanced Miner.
+
