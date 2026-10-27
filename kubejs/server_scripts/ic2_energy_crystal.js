@@ -41,7 +41,7 @@ ServerEvents.recipes(event => {
     ],
     {
       G: 'minecraft:glass',
-      S: '#forge:dusts/silver',
+      S: 'ic2:dust_silver',
       D: 'kubejs:energium_dust'
     }
   )
