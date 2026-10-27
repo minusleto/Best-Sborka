@@ -1,0 +1,282 @@
+{
+	id: "4A6A58911209689D"
+	group: ""
+	order_index: 6
+	filename: "extras"
+	title: "Дополнения"
+	icon: "ic2c_extras:thermal_centrifuge"
+	subtitle: [
+		"Extras, AE Additions, ME Requester"
+	]
+	default_quest_shape: "rsquare"
+	quests: [
+		{
+			title: "Дополнения сборки"
+			x: 0.0d
+			y: -3.0d
+			shape: "hexagon"
+			subtitle: "Что ещё есть"
+			description: [
+				"&6Кроме главных модов&r в сборке есть дополнения: обогащение руд (IC2C Extras), большие ячейки AE2 (AE Additions), запросы предметов (ME Requester)."
+				"Они не обязательны, но делают игру удобнее."
+			]
+			dependencies: ["1043627EB5D4BC27"]
+			size: 1.3d
+			id: "19A4BBF8F2FF7057"
+			tasks: [
+				{
+					id: "102AC614D1FD4347"
+					type: "checkmark"
+					title: "Я прочитал"
+				}
+			]
+			rewards: [
+				{
+					id: "17C919E82CB4BF26"
+					type: "item"
+					item: "minecraft:diamond"
+				}
+			]
+		}
+		{
+			title: "Мойка руды"
+			x: 2.0d
+			y: -1.0d
+			subtitle: "Ещё больше слитков"
+			description: [
+				"&6IC2C Extras:&r моет измельчённую руду в воде, повышает выход металла."
+				"Подключи к воде и энергии."
+			]
+			dependencies: ["19A4BBF8F2FF7057"]
+			id: "60087D9F210CBBAB"
+			tasks: [
+				{
+					id: "74730F8A07133412"
+					type: "item"
+					item: "ic2c_extras:ore_washing_plant"
+				}
+			]
+			rewards: [
+				{
+					id: "79F6FC7BDE136827"
+					type: "item"
+					item: "minecraft:iron_ingot"
+					count: 8
+				}
+			]
+		}
+		{
+			title: "Термоцентрифуга"
+			x: 4.0d
+			y: 0.0d
+			subtitle: "Последний шаг обогащения"
+			description: [
+				"&6Что делает:&r ещё одна ступень переработки руды после мойки. Подробности — в JEI."
+			]
+			dependencies: ["60087D9F210CBBAB"]
+			id: "080F3CC003616694"
+			tasks: [
+				{
+					id: "1349715532C7AF6E"
+					type: "item"
+					item: "ic2c_extras:thermal_centrifuge"
+				}
+			]
+			rewards: [
+				{
+					id: "7419CBB127044A80"
+					type: "item"
+					item: "minecraft:iron_ingot"
+					count: 8
+				}
+			]
+		}
+		{
+			title: "Свинец"
+			x: 6.0d
+			y: 0.0d
+			shape: "circle"
+			subtitle: "Новый металл"
+			description: [
+				"&6Что это:&r свинец добавляет IC2C Extras. Он идёт в ряд рецептов этого мода (смотри в JEI)."
+			]
+			dependencies: ["080F3CC003616694"]
+			id: "01088D251B4B8A18"
+			tasks: [
+				{
+					id: "6470AAA16BCB8422"
+					type: "item"
+					item: "ic2c_extras:lead_ingot"
+					count: 4L
+				}
+			]
+			rewards: [
+				{
+					id: "3EBEAF7211E81339"
+					type: "item"
+					item: "ic2c_extras:lead_ingot"
+					count: 4
+				}
+			]
+		}
+		{
+			title: "Автоверстак"
+			x: 2.0d
+			y: -3.0d
+			shape: "circle"
+			subtitle: "Крафтит сам"
+			description: [
+				"&6Что делает:&r верстак, который крафтит по рецепту без твоего участия, пока есть энергия и материалы."
+			]
+			dependencies: ["19A4BBF8F2FF7057"]
+			id: "4C6AF11776E13C7F"
+			tasks: [
+				{
+					id: "6526C495FEB6D8CF"
+					type: "item"
+					item: "ic2c_extras:autocrafting_table"
+				}
+			]
+			rewards: [
+				{
+					id: "540A5C05F451899B"
+					type: "item"
+					item: "minecraft:iron_ingot"
+					count: 8
+				}
+			]
+		}
+		{
+			title: "Большие ячейки"
+			x: 0.0d
+			y: -1.0d
+			subtitle: "AE Additions"
+			description: [
+				"&6Что это:&r дополнение, добавляющее ячейки на гораздо большие объёмы, чем у обычного AE2."
+			]
+			dependencies: ["06E3852157062A75"]
+			id: "61C25A2E0841BD40"
+			tasks: [
+				{
+					id: "7B14316D8AE09F2D"
+					type: "item"
+					item: "ae2additions:cell_component_1024"
+				}
+			]
+			rewards: [
+				{
+					id: "31886AB65CA4FE7D"
+					type: "item"
+					item: "ae2:cell_component_4k"
+					count: 2
+				}
+			]
+		}
+		{
+			title: "Беспроводной приёмопередатчик"
+			x: 2.0d
+			y: 1.0d
+			shape: "circle"
+			subtitle: "Без кабелей"
+			description: [
+				"&6Что делает:&r соединяет части сети без кабелей."
+			]
+			dependencies: ["61C25A2E0841BD40"]
+			id: "34CD12D99F1EFCA3"
+			tasks: [
+				{
+					id: "4DE4DB1FFAF72B48"
+					type: "item"
+					item: "ae2additions:me_wireless_transceiver"
+				}
+			]
+			rewards: [
+				{
+					id: "44FAE822E8EC5D42"
+					type: "item"
+					item: "ae2:fluix_glass_cable"
+					count: 8
+				}
+			]
+		}
+		{
+			title: "ME-запросчик"
+			x: 0.0d
+			y: 1.0d
+			subtitle: "Запрашивает предметы автоматически"
+			description: [
+				"&6ME Requester:&r ставишь блок и говоришь: «держи 64 предмета». Сеть сама крафтит недостающее."
+			]
+			dependencies: ["44FB6CD55F733974"]
+			id: "28F924EEA6AC50CF"
+			tasks: [
+				{
+					id: "7DA7B739D594ACCF"
+					type: "item"
+					item: "merequester:requester"
+				}
+			]
+			rewards: [
+				{
+					id: "5945DDB4688C9540"
+					type: "item"
+					item: "ae2:blank_pattern"
+					count: 4
+				}
+			]
+		}
+		{
+			title: "Нано-лук"
+			x: 0.0d
+			y: 3.0d
+			shape: "circle"
+			subtitle: "IC2C Additions"
+			description: [
+				"&6Что это:&r электрический лук. Заряжается EU и стреляет без стрел."
+			]
+			dependencies: ["4DB6A297454A9283"]
+			id: "53A2E1EF841D6A3F"
+			tasks: [
+				{
+					id: "696F3B33D873EF15"
+					type: "item"
+					item: "ic2cadditions:nanobow"
+				}
+			]
+			rewards: [
+				{
+					id: "77AEC01675BB2F2E"
+					type: "item"
+					item: "ic2:energy_crystal"
+				}
+			]
+		}
+		{
+			title: "Модуль элитр"
+			x: 2.0d
+			y: 3.0d
+			shape: "circle"
+			subtitle: "Лёгкий полёт"
+			description: [
+				"&6Что это:&r модуль для нано/квантовой брони, позволяет планировать."
+			]
+			dependencies: ["53A2E1EF841D6A3F"]
+			id: "7876F856E68BCB20"
+			tasks: [
+				{
+					id: "33E77E59A15DB739"
+					type: "item"
+					item: "ic2cadditions:elytra_module"
+				}
+			]
+			rewards: [
+				{
+					id: "06F5F67BD95B2388"
+					type: "item"
+					item: "minecraft:experience_bottle"
+					count: 8
+				}
+			]
+		}
+	]
+}

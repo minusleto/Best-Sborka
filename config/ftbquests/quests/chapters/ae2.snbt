@@ -1,68 +1,124 @@
 {
-	id: "2437228F9674062E"
+	id: "3AB4BC1B38D6E73E"
 	group: ""
-	order_index: 2
+	order_index: 4
 	filename: "ae2"
-	title: "Сеть ME"
+	title: "AE2: умный склад"
 	icon: "ae2:controller"
-	subtitle: ["От кварца до автокрафта"]
-	default_quest_shape: ""
-	default_hide_dependency_lines: false
+	subtitle: [
+		"Сеть, ячейки, терминалы и автокрафт"
+	]
+	default_quest_shape: "rsquare"
 	quests: [
 		{
-			id: "24AC1B06407DDE8F"
-			title: "Кварц Certus"
-			icon: "ae2:certus_quartz_crystal"
+			title: "Что такое AE2"
 			x: 0.0d
 			y: 0.0d
-			subtitle: "Основа всей сети"
-			description: ["Найди залежи кварца Certus под землёй и добудь кристалл."]
-			dependencies: ["5C94667F7B5C4880"]
+			shape: "hexagon"
+			subtitle: "Умный склад"
+			description: [
+				"&6Applied Energistics 2&r — это склад, где все предметы лежат в одной сети и находятся через один экран."
+				"Хранилища — диски (ячейки). Терминал показывает всё сразу. Есть автокрафт: попросил предмет — сеть сама его сделала из ресурсов."
+				"Питается энергией &bFE&r (Forge Energy), а не EU из IC2."
+				"&7Как связать IC2 и AE2, мы разберём по ходу игры.&r"
+			]
+			dependencies: ["4CF4D7C4777C9BCE"]
+			size: 1.4d
+			id: "0F02EAB4F1126E6C"
 			tasks: [
 				{
-					id: "49C42BDA85C94994"
-					type: "item"
-					item: "ae2:certus_quartz_crystal"
+					id: "030C0C2D2A20508A"
+					type: "checkmark"
+					title: "Я прочитал"
 				}
 			]
 			rewards: [
 				{
-					id: "662A08FC81290584"
-					type: "xp"
-					xp: 30
-				}
-				{
-					id: "153BCBCE8BC5B844"
+					id: "05DE6C1B44381259"
 					type: "item"
-					item: "minecraft:coal"
-					count: 4
+					item: "minecraft:iron_ingot"
+					count: 8
 				}
 			]
 		}
 		{
-			id: "116F73383C862D44"
-			title: "Заряженный кварц"
-			icon: "ae2:charged_certus_quartz_crystal"
+			title: "Метеорит"
 			x: 2.0d
 			y: -1.0d
-			subtitle: "Нужна энергия"
-			description: ["Зарядь кристалл Certus в зарядном устройстве AE2 (Charger)."]
-			dependencies: ["24AC1B06407DDE8F"]
+			subtitle: "Небесный камень"
+			description: [
+				"&6Где:&r в мире изредка падают метеориты — найди кратер. В нём лежит &bнебесный камень&r."
+				"Компас метеорита (смотри в JEI) подскажет направление."
+				"Небесный камень нужен для процессоров и контроллера."
+			]
+			dependencies: ["0F02EAB4F1126E6C"]
+			id: "704F626F602B14ED"
 			tasks: [
 				{
-					id: "05F1B0745D42C87F"
+					id: "2EDE2203EA65CF3F"
 					type: "item"
-					item: "ae2:charged_certus_quartz_crystal"
+					item: "ae2:sky_stone_block"
+					count: 8L
 				}
 			]
 			rewards: [
 				{
-					id: "36676211CAFA240F"
-					type: "xp"
-					xp: 50
+					id: "24B364B931D98B0B"
+					type: "item"
+					item: "minecraft:iron_ingot"
+					count: 8
 				}
+			]
+		}
+		{
+			title: "Кварц Certus"
+			x: 2.0d
+			y: 1.0d
+			subtitle: "Главный кристалл AE2"
+			description: [
+				"&6Где:&r руда кварца Certus встречается в мире. Ещё кристаллы выращивают на «растущем кварце» из метеорита."
+				"Из кристаллов делают пыль, плату и ячейки."
+			]
+			dependencies: ["0F02EAB4F1126E6C"]
+			id: "722DF6E7D05FCAD3"
+			tasks: [
 				{
-					id: "1E307A81360A661B"
+					id: "4C50E023A913160C"
+					type: "item"
+					item: "ae2:certus_quartz_crystal"
+					count: 8L
+				}
+			]
+			rewards: [
+				{
+					id: "210D80A47784E3B2"
+					type: "item"
+					item: "minecraft:redstone"
+					count: 16
+				}
+			]
+		}
+		{
+			title: "Зарядник"
+			x: 4.0d
+			y: 1.0d
+			subtitle: "Заряжает кварц"
+			description: [
+				"&6Что делает:&r заряжает кристалл Certus (получается заряженный Certus)."
+				"Нужна энергия: либо подключи FE, либо поставь рядом деревянную рукоять (ae2:crank) и крути её правой кнопкой мыши."
+			]
+			dependencies: ["722DF6E7D05FCAD3"]
+			id: "32993C28978E0D05"
+			tasks: [
+				{
+					id: "1460E0B868791C50"
+					type: "item"
+					item: "ae2:charger"
+				}
+			]
+			rewards: [
+				{
+					id: "1B507CC9C31E9373"
 					type: "item"
 					item: "ae2:certus_quartz_crystal"
 					count: 4
@@ -70,90 +126,84 @@
 			]
 		}
 		{
-			id: "3E2BD7050FBADF77"
-			title: "Кремниевое дело"
-			icon: "ae2:silicon"
-			x: 2.0d
+			title: "Заряженный Certus"
+			x: 6.0d
 			y: 1.0d
-			subtitle: "Расходник для процессоров"
-			description: ["Получи кремний — он нужен для всех процессоров."]
-			dependencies: ["24AC1B06407DDE8F"]
+			shape: "circle"
+			subtitle: "Для флюкса"
+			description: [
+				"&6Нужен для:&r кристаллов флюкса (Fluix) и процессоров."
+			]
+			dependencies: ["32993C28978E0D05"]
+			id: "16719F9B10B569A4"
 			tasks: [
 				{
-					id: "3FFBCE8CDC1DF6B3"
+					id: "5CFEEC10B4D3A38F"
 					type: "item"
-					item: "ae2:silicon"
-					count: 3
+					item: "ae2:charged_certus_quartz_crystal"
+					count: 4L
 				}
 			]
 			rewards: [
 				{
-					id: "262AC60050D6D287"
-					type: "xp"
-					xp: 30
+					id: "465CD1F1F44BE530"
+					type: "item"
+					item: "minecraft:redstone"
+					count: 16
 				}
 			]
 		}
 		{
-			id: "0593C856C238D441"
-			title: "Печатный станок"
-			icon: "ae2:inscriber"
-			x: 4.0d
-			y: 1.0d
-			subtitle: "Штампует схемы"
-			description: ["Инскрайбер делает печатные платы и процессоры — вычислительное сердце сети."]
-			dependencies: ["3E2BD7050FBADF77"]
+			title: "Кристалл Fluix"
+			x: 8.0d
+			y: 3.0d
+			subtitle: "Универсальный материал"
+			description: [
+				"&6Как:&r брось в воду заряженный Certus, редстоун и кварц из Незера — получится Fluix."
+				"Из него делают кабели и многие компоненты."
+			]
+			dependencies: ["16719F9B10B569A4"]
+			id: "09EC21318CF090D0"
 			tasks: [
 				{
-					id: "18D414AA61F79FEA"
+					id: "1B81024BB717A7F3"
+					type: "item"
+					item: "ae2:fluix_crystal"
+					count: 4L
+				}
+			]
+			rewards: [
+				{
+					id: "523094A7EF2F4D79"
+					type: "item"
+					item: "minecraft:glowstone_dust"
+					count: 8
+				}
+			]
+		}
+		{
+			title: "Инскрайбер"
+			x: 4.0d
+			y: -1.0d
+			shape: "hexagon"
+			subtitle: "Печатает процессоры"
+			description: [
+				"&6Что делает:&r вдавливает рисунок («пресс») в металл и делает печатные платы."
+				"Пресс-формы находят в сундуках метеоритов (см. JEI)."
+			]
+			dependencies: ["704F626F602B14ED"]
+			size: 1.2d
+			id: "4B23A59EC8D35844"
+			tasks: [
+				{
+					id: "261B036D5696271C"
 					type: "item"
 					item: "ae2:inscriber"
 				}
 			]
 			rewards: [
 				{
-					id: "34C4D2771436BEB9"
-					type: "xp"
-					xp: 60
-				}
-			]
-		}
-		{
-			id: "1A5A7997648B7C97"
-			title: "Мозги сети"
-			icon: "ae2:engineering_processor"
-			x: 6.0d
-			y: 1.0d
-			shape: "hexagon"
-			size: 1.5d
-			subtitle: "Три вида процессоров"
-			description: ["Получи по одному процессору каждого вида: логический, вычислительный и инженерный."]
-			dependencies: ["0593C856C238D441"]
-			tasks: [
-				{
-					id: "1CD096F43F1557AD"
-					type: "item"
-					item: "ae2:logic_processor"
-				}
-				{
-					id: "4ED15AE9C4C1DEB8"
-					type: "item"
-					item: "ae2:calculation_processor"
-				}
-				{
-					id: "42D5924A948B5544"
-					type: "item"
-					item: "ae2:engineering_processor"
-				}
-			]
-			rewards: [
-				{
-					id: "213D45981DA42600"
-					type: "xp"
-					xp: 120
-				}
-				{
-					id: "48819FA4E659F5DD"
+					id: "5076064B6AB18A4C"
 					type: "item"
 					item: "ae2:silicon"
 					count: 4
@@ -161,106 +211,439 @@
 			]
 		}
 		{
-			id: "31510226657C2448"
-			title: "Сердце сети"
-			icon: "ae2:controller"
-			x: 8.0d
-			y: 0.0d
-			subtitle: "Контроллер ME"
-			description: ["Контроллер — центр большой и организованной сети."]
-			dependencies: ["1A5A7997648B7C97"]
+			title: "Кремний"
+			x: 6.0d
+			y: -1.0d
+			shape: "circle"
+			subtitle: "Основа платы"
+			description: [
+				"&6Как:&r в JEI посмотри рецепт кремния (R)."
+			]
+			dependencies: ["4B23A59EC8D35844"]
+			id: "68522E3BC9A1D09A"
 			tasks: [
 				{
-					id: "3BD5F55826AFA985"
+					id: "33C2614F1C7E02F0"
+					type: "item"
+					item: "ae2:silicon"
+					count: 8L
+				}
+			]
+			rewards: [
+				{
+					id: "15CC3479A328DD87"
+					type: "item"
+					item: "minecraft:iron_ingot"
+					count: 4
+				}
+			]
+		}
+		{
+			title: "Логический процессор"
+			x: 8.0d
+			y: -3.0d
+			subtitle: "Мозг сети"
+			description: [
+				"&6Как:&r печатная схема (золото + логический пресс в инскрайбере) + кремний + редстоун. Подробности — в JEI."
+			]
+			dependencies: ["68522E3BC9A1D09A"]
+			id: "2CB57A562378F618"
+			tasks: [
+				{
+					id: "28CB9E4FDA96FF87"
+					type: "item"
+					item: "ae2:logic_processor"
+					count: 4L
+				}
+			]
+			rewards: [
+				{
+					id: "1F8D4D45E62F9A7C"
+					type: "item"
+					item: "ae2:logic_processor"
+				}
+			]
+		}
+		{
+			title: "Вычислительный процессор"
+			x: 8.0d
+			y: -1.0d
+			subtitle: "Для хранилищ"
+			description: [
+				"&6Нужен для:&r ячеек хранения и вычислительных блоков."
+			]
+			dependencies: ["68522E3BC9A1D09A"]
+			id: "66DBF1F8E03E7B3E"
+			tasks: [
+				{
+					id: "18FFD87F63961C69"
+					type: "item"
+					item: "ae2:calculation_processor"
+					count: 4L
+				}
+			]
+			rewards: [
+				{
+					id: "24AB713DAAFA9CCE"
+					type: "item"
+					item: "ae2:calculation_processor"
+				}
+			]
+		}
+		{
+			title: "Инженерный процессор"
+			x: 8.0d
+			y: 1.0d
+			subtitle: "Для сложных блоков"
+			description: [
+				"&6Нужен для:&r терминалов, интерфейсов, беспроводных приборов."
+			]
+			dependencies: ["68522E3BC9A1D09A"]
+			id: "30D7AD3B1CA810B8"
+			tasks: [
+				{
+					id: "426562D05C42956D"
+					type: "item"
+					item: "ae2:engineering_processor"
+					count: 4L
+				}
+			]
+			rewards: [
+				{
+					id: "53A37DAE345B98CD"
+					type: "item"
+					item: "ae2:engineering_processor"
+				}
+			]
+		}
+		{
+			title: "Контроллер ME"
+			x: 10.0d
+			y: 0.0d
+			shape: "hexagon"
+			subtitle: "Сердце сети"
+			description: [
+				"&6Что делает:&r объединяет кабели и устройства в одну сеть."
+				"Без контроллера сеть тоже работает, но небольшая (мало устройств). С контроллером сеть можно расширять."
+			]
+			dependencies: ["09EC21318CF090D0" "30D7AD3B1CA810B8"]
+			size: 1.3d
+			id: "7F3D570D24F09C2C"
+			tasks: [
+				{
+					id: "01824653862207AC"
 					type: "item"
 					item: "ae2:controller"
 				}
 			]
 			rewards: [
 				{
-					id: "4310BB2AD221C0DA"
-					type: "xp"
-					xp: 100
+					id: "2DE2F42E431B11E8"
+					type: "item"
+					item: "ae2:fluix_glass_cable"
+					count: 8
 				}
 			]
 		}
 		{
-			id: "3A610B862F760FF0"
-			title: "Дисковый отсек"
-			icon: "ae2:drive"
-			x: 8.0d
-			y: 2.0d
-			subtitle: "Куда складывать добычу"
-			description: ["ME-привод принимает ячейки хранения."]
-			dependencies: ["1A5A7997648B7C97"]
+			title: "Питание сети"
+			x: 12.0d
+			y: -1.0d
+			shape: "circle"
+			subtitle: "Нужна энергия"
+			description: [
+				"&6Как:&r AE2 питается энергией FE. Используй &bэнергоприёмник (energy acceptor)&r для входа."
+				"Накопитель энергии — энергоячейка. Вибрационная камера — аварийный генератор (сжигает топливо)."
+			]
+			dependencies: ["7F3D570D24F09C2C"]
+			id: "4EE42D22A6AF3FAF"
 			tasks: [
 				{
-					id: "5DDCA1A7E995A21C"
+					id: "5E7C3B90951E00A9"
+					type: "item"
+					item: "ae2:energy_acceptor"
+				}
+			]
+			rewards: [
+				{
+					id: "6BB96F18CE0D02BB"
+					type: "item"
+					item: "ae2:energy_cell"
+				}
+			]
+		}
+		{
+			title: "Кабели ME"
+			x: 12.0d
+			y: 1.0d
+			shape: "circle"
+			subtitle: "Связь"
+			description: [
+				"&6Что делает:&r соединяет устройства сети."
+				"Стеклянный кабель из Fluix — самый простой."
+			]
+			dependencies: ["7F3D570D24F09C2C"]
+			id: "1D9723D301523216"
+			tasks: [
+				{
+					id: "422A5B44E2410433"
+					type: "item"
+					item: "ae2:fluix_glass_cable"
+					count: 16L
+				}
+			]
+			rewards: [
+				{
+					id: "58EB06F816D03C05"
+					type: "item"
+					item: "ae2:fluix_glass_cable"
+					count: 8
+				}
+			]
+		}
+		{
+			title: "ME-привод"
+			x: 14.0d
+			y: -2.0d
+			subtitle: "Слот для дисков"
+			description: [
+				"&6Что делает:&r хранит диски-ячейки."
+				"Каждая ячейка вмещает много предметов (разных типов — ограниченное число)."
+			]
+			dependencies: ["66DBF1F8E03E7B3E" "1D9723D301523216"]
+			id: "4582C5803748473D"
+			tasks: [
+				{
+					id: "18CA0C4BEF82F2EA"
 					type: "item"
 					item: "ae2:drive"
 				}
 			]
 			rewards: [
 				{
-					id: "6049A01B7CD4A3F0"
-					type: "xp"
-					xp: 60
+					id: "0C5834E65C719698"
+					type: "item"
+					item: "ae2:item_cell_housing"
 				}
 			]
 		}
 		{
-			id: "45A301A9C1135A73"
-			title: "Килобайты места"
-			icon: "ae2:item_storage_cell_1k"
-			x: 10.0d
-			y: 2.0d
-			subtitle: "Первая ячейка"
-			description: ["Собери ячейку хранения на 1k и вставь в привод."]
-			dependencies: ["3A610B862F760FF0"]
+			title: "Ячейка 1k"
+			x: 16.0d
+			y: -2.0d
+			shape: "circle"
+			subtitle: "Первый диск"
+			description: [
+				"&6Рецепт:&r корпус + компонент 1k, смотри в JEI."
+				"Положи в привод — предметы начнут храниться в сети."
+			]
+			dependencies: ["4582C5803748473D"]
+			id: "06E3852157062A75"
 			tasks: [
 				{
-					id: "36EE854B096D73E4"
+					id: "0FEADBA2C9D6184A"
 					type: "item"
 					item: "ae2:item_storage_cell_1k"
 				}
 			]
 			rewards: [
 				{
-					id: "292BF01020532C92"
-					type: "xp"
-					xp: 60
+					id: "6159E63A014E9677"
+					type: "item"
+					item: "ae2:cell_component_1k"
 				}
 			]
 		}
 		{
-			id: "43FC6CE470B4B91B"
-			title: "Автоматизация"
-			icon: "ae2:molecular_assembler"
-			x: 12.0d
-			y: 2.0d
-			shape: "octagon"
-			size: 1.5d
-			subtitle: "Начало автокрафта"
-			description: ["Молекулярный сборщик — основа автокрафта. Дальше сеть начнёт работать за тебя."]
-			dependencies: ["45A301A9C1135A73"]
+			title: "ME-терминал"
+			x: 14.0d
+			y: 0.0d
+			shape: "hexagon"
+			subtitle: "Окно в склад"
+			description: [
+				"&6Что делает:&r показывает содержимое сети. Складывай и бери любые предметы."
+			]
+			dependencies: ["1D9723D301523216"]
+			size: 1.2d
+			id: "79428683270407EE"
 			tasks: [
 				{
-					id: "4BA7E53EDFDBFB1C"
+					id: "049C59B31B426D0D"
 					type: "item"
-					item: "ae2:molecular_assembler"
+					item: "ae2:terminal"
 				}
 			]
 			rewards: [
 				{
-					id: "68FCC98FDA2036B0"
-					type: "xp"
-					xp: 250
+					id: "1013687CF8C9428D"
+					type: "item"
+					item: "ae2:fluix_glass_cable"
+					count: 8
+				}
+			]
+		}
+		{
+			title: "Терминал крафта"
+			x: 16.0d
+			y: 0.0d
+			shape: "circle"
+			subtitle: "Верстак в сети"
+			description: [
+				"&6Что делает:&r терминал + верстак. Крафти из того, что лежит в сети."
+			]
+			dependencies: ["79428683270407EE"]
+			id: "41F0AF4D27C0E173"
+			tasks: [
+				{
+					id: "10805ED81A4F023A"
+					type: "item"
+					item: "ae2:crafting_terminal"
+				}
+			]
+			rewards: [
+				{
+					id: "76569322FF5D8D11"
+					type: "item"
+					item: "minecraft:crafting_table"
+				}
+			]
+		}
+		{
+			title: "Автокрафт: образцы"
+			x: 18.0d
+			y: 0.0d
+			subtitle: "Сеть сама крафтит"
+			description: [
+				"&6Как:&r кодируешь рецепт в терминале образцов, кладёшь образец в &bинтерфейс образцов (pattern provider)&r."
+				"Дальше сеть сама делает предметы по запросу. Нужен ещё блок крафта (crafting unit)."
+			]
+			dependencies: ["41F0AF4D27C0E173"]
+			id: "44FB6CD55F733974"
+			tasks: [
+				{
+					id: "0149131FE7A764DE"
+					type: "item"
+					item: "ae2:pattern_encoding_terminal"
+				}
+			]
+			rewards: [
+				{
+					id: "45399AD2F4F0E0BD"
+					type: "item"
+					item: "ae2:blank_pattern"
+					count: 4
+				}
+			]
+		}
+		{
+			title: "Молекулярный сборщик"
+			x: 20.0d
+			y: -1.0d
+			subtitle: "Автоматический верстак"
+			description: [
+				"&6Что делает:&r выполняет образцы: берёт предметы из сети и крафтит."
+			]
+			dependencies: ["44FB6CD55F733974"]
+			id: "3704B476EB808E11"
+			tasks: [
+				{
+					id: "603EDD37F478E860"
+					type: "item"
+					item: "ae2:molecular_assembler"
+					count: 2L
+				}
+			]
+			rewards: [
+				{
+					id: "111E7737543FA490"
+					type: "item"
+					item: "ae2:blank_pattern"
+					count: 4
+				}
+			]
+		}
+		{
+			title: "Беспроводной терминал"
+			x: 16.0d
+			y: 2.0d
+			shape: "circle"
+			subtitle: "Склад в кармане"
+			description: [
+				"&6Что делает:&r даёт доступ к сети откуда угодно, пока она питается и рядом точка доступа."
+				"Мод AE2WTLib добавляет универсальный терминал (все функции сразу)."
+			]
+			dependencies: ["79428683270407EE"]
+			id: "37B4B32F3F1ED1D1"
+			tasks: [
+				{
+					id: "4E5FE81CF18DE4E5"
+					type: "item"
+					item: "ae2:wireless_terminal"
+				}
+			]
+			rewards: [
+				{
+					id: "00DB917E2B4D0FAE"
+					type: "item"
+					item: "ae2:wireless_receiver"
+				}
+			]
+		}
+		{
+			title: "Универсальный терминал"
+			x: 20.0d
+			y: 1.0d
+			subtitle: "Всё в одном"
+			description: [
+				"&6Что делает:&r объединяет терминал, крафт и образцы в одном предмете."
+			]
+			dependencies: ["37B4B32F3F1ED1D1" "44FB6CD55F733974"]
+			id: "725520F9B6CF2605"
+			tasks: [
+				{
+					id: "65C20588A53AC3C3"
+					type: "item"
+					item: "ae2wtlib:wireless_universal_terminal"
+				}
+			]
+			rewards: [
+				{
+					id: "3E08B6262701E5A4"
+					type: "item"
+					item: "ae2:fluix_glass_cable"
+					count: 8
+				}
+			]
+		}
+		{
+			title: "Шины импорта и экспорта"
+			x: 14.0d
+			y: 2.0d
+			subtitle: "Автоматизация"
+			description: [
+				"&6Что делают:&r вставляют предметы в сеть из сундука (импорт) или достают в машину (экспорт)."
+				"Так ты соединяешь сундуки и машины IC2 с AE2."
+			]
+			dependencies: ["1D9723D301523216"]
+			id: "72D2425C0D30F76D"
+			tasks: [
+				{
+					id: "5712EAA8C6B2B0F5"
+					type: "item"
+					item: "ae2:import_bus"
 				}
 				{
-					id: "1862B9CE840DB27B"
+					id: "23D762EA9466BB06"
 					type: "item"
-					item: "minecraft:diamond"
-					count: 2
+					item: "ae2:export_bus"
+				}
+			]
+			rewards: [
+				{
+					id: "2E1627CF5F01EFEE"
+					type: "item"
+					item: "ae2:fluix_glass_cable"
+					count: 8
 				}
 			]
 		}

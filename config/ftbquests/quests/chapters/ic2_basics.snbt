@@ -1,0 +1,726 @@
+{
+	id: "293C11F096F1FB12"
+	group: ""
+	order_index: 2
+	filename: "ic2_basics"
+	title: "IC2: основы"
+	icon: "ic2:generator"
+	subtitle: [
+		"Руды, сплавы, первые машины"
+	]
+	default_quest_shape: "rsquare"
+	quests: [
+		{
+			title: "Электричество IC2"
+			x: 0.0d
+			y: 0.0d
+			shape: "hexagon"
+			subtitle: "Что такое EU"
+			description: [
+				"&6IC2 Classic&r — мод про электричество. Единица энергии — &bEU&r."
+				"Схема всегда одна: &bгенератор&r вырабатывает EU → &bкабель&r передаёт → &bмашина&r тратит."
+				"Мощность делится на ступени (LV, MV, HV, EV…). Каждая следующая примерно в 4 раза сильнее. Слабой машине сильный ток вредит, поэтому нужны трансформаторы."
+				"Дальше мы по шагам соберём всё нужное."
+			]
+			dependencies: ["22B98F3875CFB733"]
+			size: 1.4d
+			id: "0E667C19F954DC30"
+			tasks: [
+				{
+					id: "6A538C9D84E5A890"
+					type: "checkmark"
+					title: "Я прочитал"
+				}
+			]
+			rewards: [
+				{
+					id: "51815649970A0BC7"
+					type: "item"
+					item: "minecraft:redstone"
+					count: 16
+				}
+			]
+		}
+		{
+			title: "Олово"
+			x: 2.0d
+			y: -2.0d
+			subtitle: "Первая руда IC2"
+			description: [
+				"&6Где искать:&r руда олова встречается в пещерах и шахтах."
+				"Выплавь в печи в слитки. Олово идёт в бронзу и в кабели."
+			]
+			dependencies: ["0E667C19F954DC30"]
+			id: "05E04A9D8C821FA1"
+			tasks: [
+				{
+					id: "613763F121C8D566"
+					type: "item"
+					item: "ic2:ingot_tin"
+					count: 4L
+				}
+			]
+			rewards: [
+				{
+					id: "4841B8FB1F8B8354"
+					type: "item"
+					item: "minecraft:coal"
+					count: 8
+				}
+			]
+		}
+		{
+			title: "Медь"
+			x: 2.0d
+			y: 0.0d
+			subtitle: "Проводник"
+			description: [
+				"&6Где искать:&r обычная медная руда из ванили. Выплавь в слитки."
+				"Из меди делают кабели — по ним течёт EU."
+			]
+			dependencies: ["0E667C19F954DC30"]
+			id: "1F1C31856058D18E"
+			tasks: [
+				{
+					id: "13546B772AE3BC26"
+					type: "item"
+					item: "minecraft:copper_ingot"
+					count: 8L
+				}
+			]
+			rewards: [
+				{
+					id: "1BF0BE4F65BCF244"
+					type: "item"
+					item: "minecraft:coal"
+					count: 8
+				}
+			]
+		}
+		{
+			title: "Бронза"
+			x: 4.0d
+			y: -3.0d
+			subtitle: "Сплав меди и олова"
+			description: [
+				"&6Как:&r смотри рецепт в JEI (R на слитке бронзы)."
+				"Бронза нужна для инструментов, брони и многих деталей."
+			]
+			dependencies: ["05E04A9D8C821FA1" "1F1C31856058D18E"]
+			id: "617AB246A7D00E09"
+			tasks: [
+				{
+					id: "37BFE78B1239499F"
+					type: "item"
+					item: "ic2:ingot_bronze"
+					count: 4L
+				}
+			]
+			rewards: [
+				{
+					id: "41B5E7BB4272D27F"
+					type: "item"
+					item: "ic2:ingot_bronze"
+					count: 2
+				}
+			]
+		}
+		{
+			title: "Рафинированное железо"
+			x: 2.0d
+			y: 2.0d
+			subtitle: "Усиленное железо"
+			description: [
+				"&6Как:&r в JEI посмотри рецепт слитка рафинированного железа (R)."
+				"Это главный материал IC2: из него корпуса машин, генераторы, схемы."
+			]
+			dependencies: ["0E667C19F954DC30" "22B98F3875CFB733"]
+			id: "10D9C16D0DFA6EA2"
+			tasks: [
+				{
+					id: "2341234C4527AECF"
+					type: "item"
+					item: "ic2:ingot_refined_iron"
+					count: 8L
+				}
+			]
+			rewards: [
+				{
+					id: "113F8BDF13DA29BD"
+					type: "item"
+					item: "ic2:ingot_refined_iron"
+					count: 4
+				}
+			]
+		}
+		{
+			title: "Кузнечный молот"
+			x: 4.0d
+			y: -1.0d
+			subtitle: "Особый предмет сборки"
+			description: [
+				"&6Рецепт:&r 5 железных слитков + 2 палки (как в старом IC2 Experimental)."
+				"У молота 80 использований. Он нужен, чтобы делать пластины из слитков в верстаке."
+				"&7В обычном IC2 Classic молота нет — мы добавили его сами.&r"
+			]
+			dependencies: ["10D9C16D0DFA6EA2"]
+			id: "0E9B3CF0677BB08D"
+			tasks: [
+				{
+					id: "60F9475ECC264D89"
+					type: "item"
+					item: "kubejs:forge_hammer"
+				}
+			]
+			rewards: [
+				{
+					id: "076D7DE058360092"
+					type: "item"
+					item: "minecraft:iron_ingot"
+					count: 4
+				}
+			]
+		}
+		{
+			title: "Железные пластины"
+			x: 6.0d
+			y: -1.0d
+			subtitle: "Заготовка для корпусов"
+			description: [
+				"&6Рецепт 1:&r железный слиток + молот (бесформенно), молот теряет прочность."
+				"&6Рецепт 2:&r слиток в металлоформовщике (режим прокатки)."
+				"Пластины нужны для металлоформовщика и продвинутого машинного корпуса. Это наша особая правка рецептов."
+				"&7Есть и другие пластины: медные, оловянные, бронзовые, золотые — их делают так же.&r"
+			]
+			dependencies: ["0E9B3CF0677BB08D"]
+			id: "4D0B9722507B27A7"
+			tasks: [
+				{
+					id: "0B517AE25E517EA0"
+					type: "item"
+					item: "kubejs:iron_plate"
+					count: 8L
+				}
+			]
+			rewards: [
+				{
+					id: "1A65284E4E84BC22"
+					type: "item"
+					item: "kubejs:iron_plate"
+					count: 4
+				}
+			]
+		}
+		{
+			title: "Машинный корпус"
+			x: 4.0d
+			y: 1.0d
+			shape: "hexagon"
+			subtitle: "Основа любой машины"
+			description: [
+				"&6Рецепт:&r по кругу из рафинированного железа (в JEI нажми R)."
+				"Корпус — сердце почти всех машин: измельчителя, печи, компрессора."
+			]
+			dependencies: ["10D9C16D0DFA6EA2"]
+			size: 1.2d
+			id: "71F79A86974ECE00"
+			tasks: [
+				{
+					id: "56DDA7241ABD8F96"
+					type: "item"
+					item: "ic2:machine_block"
+					count: 2L
+				}
+			]
+			rewards: [
+				{
+					id: "0F10A05723868454"
+					type: "item"
+					item: "ic2:machine_block"
+				}
+			]
+		}
+		{
+			title: "Металлоформовщик"
+			x: 8.0d
+			y: 0.0d
+			shape: "hexagon"
+			subtitle: "Наша собственная машина"
+			description: [
+				"&6Что это:&r машина из мода bs-machines (в обычном IC2 Classic её нет). Работает на EU и умеет три режима:"
+				"&bпрокатка&r — слиток в пластину; &bвыдавливание&r — слиток в кабель; &bрезка&r — пластина в кабели."
+				"Кнопка смены режима — в окне машины. Рецепт ищи в JEI."
+				"&7Без неё не сделать кабели: сначала собери её.&r"
+			]
+			dependencies: ["71F79A86974ECE00" "4D0B9722507B27A7" "4CF4D7C4777C9BCE"]
+			size: 1.3d
+			id: "336B8FCBA463DA5C"
+			tasks: [
+				{
+					id: "0D885199C65B8A92"
+					type: "item"
+					item: "bs_machines:metal_former"
+				}
+			]
+			rewards: [
+				{
+					id: "128322C1D219FBF2"
+					type: "item"
+					item: "minecraft:copper_ingot"
+					count: 8
+				}
+			]
+		}
+		{
+			title: "Первые кабели"
+			x: 10.0d
+			y: 0.0d
+			shape: "circle"
+			subtitle: "Передают EU"
+			description: [
+				"&6Как:&r в этой сборке кабели из слитков делает &bметаллоформовщик&r (режим выдавливания); в верстаке их не сделать."
+				"Изолированные кабели безопаснее обычных. Для изоляции нужна резина (см. квест «Резина»)."
+			]
+			dependencies: ["336B8FCBA463DA5C"]
+			id: "6C94BA93C04F9E35"
+			tasks: [
+				{
+					id: "3816B222392FF1B2"
+					type: "item"
+					item: "ic2:copper_cable_item"
+					count: 8L
+				}
+			]
+			rewards: [
+				{
+					id: "287ED466B2D97133"
+					type: "item"
+					item: "ic2:copper_cable_item"
+					count: 8
+				}
+			]
+		}
+		{
+			title: "Резина"
+			x: 18.0d
+			y: 1.0d
+			subtitle: "Изоляция"
+			description: [
+				"&6Откуда:&r из каучукового дерева (смола) через экстрактор. Подробности — в JEI на предмете «Резина»."
+				"Резина нужна для изоляции кабелей и многих деталей."
+			]
+			dependencies: ["53D494DCE010D196"]
+			id: "04F55ECDC16D956D"
+			tasks: [
+				{
+					id: "1388B2C004C2BA2E"
+					type: "item"
+					item: "ic2:rubber"
+					count: 8L
+				}
+			]
+			rewards: [
+				{
+					id: "76ACB0FD3CE76052"
+					type: "item"
+					item: "ic2:rubber"
+					count: 4
+				}
+			]
+		}
+		{
+			title: "Генератор"
+			x: 12.0d
+			y: 0.0d
+			shape: "hexagon"
+			subtitle: "Первая энергия"
+			description: [
+				"&6Что делает:&r сжигает топливо (уголь, дерево) и вырабатывает EU."
+				"&6Как пользоваться:&r поставь генератор, засыпь уголь, подключи кабелем к машине."
+				"Это самый простой источник энергии, но топливо расходуется — позже заменим солнечными панелями."
+			]
+			dependencies: ["6C94BA93C04F9E35"]
+			size: 1.2d
+			id: "1D937A85C784EFFB"
+			tasks: [
+				{
+					id: "1E5EDD714C73E338"
+					type: "item"
+					item: "ic2:generator"
+				}
+			]
+			rewards: [
+				{
+					id: "6CB15B4B34415A68"
+					type: "item"
+					item: "minecraft:coal"
+					count: 16
+				}
+			]
+		}
+		{
+			title: "БатБокс"
+			x: 14.0d
+			y: -1.0d
+			subtitle: "Накопитель энергии"
+			description: [
+				"&6Что делает:&r хранит EU, как аккумулятор."
+				"Пока генератор не нужен — энергия лежит в БатБоксе, и машина берёт её оттуда."
+			]
+			dependencies: ["1D937A85C784EFFB"]
+			id: "79F6AD149FBA70E5"
+			tasks: [
+				{
+					id: "580ADA55C1F7C4B4"
+					type: "item"
+					item: "ic2:batbox"
+				}
+			]
+			rewards: [
+				{
+					id: "63BB8950C61D904E"
+					type: "item"
+					item: "ic2:re_battery"
+				}
+			]
+		}
+		{
+			title: "Измельчитель"
+			x: 14.0d
+			y: 1.0d
+			shape: "hexagon"
+			subtitle: "Удваивает руду"
+			description: [
+				"&6Что делает:&r дробит руду в пыль. Из одной руды получается два куска пыли — в два раза больше слитков!"
+				"Руда → измельчитель → печь = удвоенный выход. Один из главных приёмов IC2."
+				"Нужен и для алмазной пыли."
+			]
+			dependencies: ["1D937A85C784EFFB"]
+			size: 1.2d
+			id: "1043627EB5D4BC27"
+			tasks: [
+				{
+					id: "33316F37FD71038F"
+					type: "item"
+					item: "ic2:macerator"
+				}
+			]
+			rewards: [
+				{
+					id: "13C35C4EFC569B94"
+					type: "item"
+					item: "minecraft:iron_ingot"
+					count: 8
+				}
+			]
+		}
+		{
+			title: "Электропечь"
+			x: 16.0d
+			y: -2.0d
+			subtitle: "Печь на EU"
+			description: [
+				"&6Что делает:&r плавит быстрее обычной и не требует топлива, только EU."
+				"Ставь её после измельчителя."
+			]
+			dependencies: ["1043627EB5D4BC27"]
+			id: "63AF9EF412064B23"
+			tasks: [
+				{
+					id: "0D7E115524C63015"
+					type: "item"
+					item: "ic2:electric_furnace"
+				}
+			]
+			rewards: [
+				{
+					id: "4C42663CBA1878DC"
+					type: "item"
+					item: "minecraft:coal"
+					count: 16
+				}
+			]
+		}
+		{
+			title: "Компрессор"
+			x: 16.0d
+			y: 0.0d
+			subtitle: "Сжимает материалы"
+			description: [
+				"&6Что делает:&r сжимает предметы в более плотные."
+				"Тут получают энергетический кристалл из энергетической пыли и углеродные пластины."
+			]
+			dependencies: ["1043627EB5D4BC27"]
+			id: "2F69DAF619448F1F"
+			tasks: [
+				{
+					id: "0682A6726F58BCB6"
+					type: "item"
+					item: "ic2:compressor"
+				}
+			]
+			rewards: [
+				{
+					id: "0C363CC3EEAB617F"
+					type: "item"
+					item: "minecraft:iron_ingot"
+					count: 8
+				}
+			]
+		}
+		{
+			title: "Экстрактор"
+			x: 16.0d
+			y: 2.0d
+			subtitle: "Достаёт содержимое"
+			description: [
+				"&6Что делает:&r извлекает из предметов полезное: из смолы — резину."
+				"Вот почему экстрактор нужен для каучука."
+			]
+			dependencies: ["1043627EB5D4BC27"]
+			id: "53D494DCE010D196"
+			tasks: [
+				{
+					id: "0AFDA3942964FB58"
+					type: "item"
+					item: "ic2:extractor"
+				}
+			]
+			rewards: [
+				{
+					id: "5327E94F780C5AA2"
+					type: "item"
+					item: "minecraft:iron_ingot"
+					count: 8
+				}
+			]
+		}
+		{
+			title: "Электросхема"
+			x: 4.0d
+			y: 3.0d
+			shape: "hexagon"
+			subtitle: "Мозги машин"
+			description: [
+				"&6Рецепт:&r рафинированное железо + редстоун + изолированные медные кабели (медь и резина, их делают в верстаке из слитков). Точную раскладку смотри в JEI."
+				"Схемы нужны почти во всех машинах следующего уровня, в том числе в металлоформовщике."
+			]
+			dependencies: ["10D9C16D0DFA6EA2"]
+			size: 1.2d
+			id: "4CF4D7C4777C9BCE"
+			tasks: [
+				{
+					id: "0AED5EBE67037016"
+					type: "item"
+					item: "ic2:circuit"
+					count: 4L
+				}
+			]
+			rewards: [
+				{
+					id: "56702C6210D92375"
+					type: "item"
+					item: "ic2:circuit"
+					count: 2
+				}
+			]
+		}
+		{
+			title: "Продвинутая схема"
+			x: 6.0d
+			y: 1.0d
+			subtitle: "Для сложной техники"
+			description: [
+				"&6Рецепт:&r схема + редстоун + светящаяся пыль + лазурит (по рецепту в JEI)."
+				"Без неё не сделать лапотронный кристалл и многие поздние машины."
+			]
+			dependencies: ["4CF4D7C4777C9BCE"]
+			id: "6E96558F861EFCF1"
+			tasks: [
+				{
+					id: "05895F57AEDA3D18"
+					type: "item"
+					item: "ic2:advanced_circuit"
+					count: 2L
+				}
+			]
+			rewards: [
+				{
+					id: "548F74670B584EC1"
+					type: "item"
+					item: "ic2:advanced_circuit"
+				}
+			]
+		}
+		{
+			title: "Энергетическая пыль"
+			x: 16.0d
+			y: 4.0d
+			subtitle: "Наш особый рецепт"
+			description: [
+				"&6Как:&r 4 алмазные пыли + 5 редстоуна в верстаке → 9 энергетической пыли."
+				"Алмазную пыль делает измельчитель из алмаза (ты нашёл их в главе «Ваниль»)."
+				"&7Это рецепт из IC2 Experimental: в этой сборке он усложнён.&r"
+			]
+			dependencies: ["1043627EB5D4BC27" "3A990520D3B2D421"]
+			id: "03AE9E856807AB4C"
+			tasks: [
+				{
+					id: "206B126AAD9E3AD4"
+					type: "item"
+					item: "kubejs:energium_dust"
+					count: 9L
+				}
+			]
+			rewards: [
+				{
+					id: "7B987ADB3DFB7218"
+					type: "item"
+					item: "minecraft:diamond"
+				}
+			]
+		}
+		{
+			title: "Энергетический кристалл"
+			x: 18.0d
+			y: 3.0d
+			shape: "hexagon"
+			subtitle: "Мощная батарея"
+			description: [
+				"&6Как:&r 9 энергетической пыли в компрессоре."
+				"Кристалл хранит много EU и нужен для лапотрона, МФЭ и других машин."
+			]
+			dependencies: ["03AE9E856807AB4C" "2F69DAF619448F1F"]
+			size: 1.3d
+			id: "0033EBE18E9CE255"
+			tasks: [
+				{
+					id: "4BFD8A38916B1520"
+					type: "item"
+					item: "ic2:energy_crystal"
+				}
+			]
+			rewards: [
+				{
+					id: "2C60D3F93914E656"
+					type: "item"
+					item: "minecraft:redstone"
+					count: 32
+				}
+			]
+		}
+		{
+			title: "Углепластик"
+			x: 18.0d
+			y: -1.0d
+			subtitle: "Лёгкий и прочный"
+			description: [
+				"&6Как:&r уголь → пыль → волокно → сетка → пластина. Полный путь смотри в JEI."
+				"Карбоновые пластины нужны для продвинутого корпуса."
+			]
+			dependencies: ["2F69DAF619448F1F"]
+			id: "7809231CF03EA9C9"
+			tasks: [
+				{
+					id: "78F078BA726921DC"
+					type: "item"
+					item: "ic2:carbon_plate"
+					count: 2L
+				}
+			]
+			rewards: [
+				{
+					id: "682D16BDAB4995BF"
+					type: "item"
+					item: "ic2:carbon_plate"
+					count: 2
+				}
+			]
+		}
+		{
+			title: "Продвинутый сплав"
+			x: 18.0d
+			y: -3.0d
+			subtitle: "Сплав трёх металлов"
+			description: [
+				"&6Как:&r смесь рафинированного железа, бронзы и олова обрабатывается компрессором."
+				"Нужен для продвинутого корпуса."
+			]
+			dependencies: ["617AB246A7D00E09" "2F69DAF619448F1F"]
+			id: "09368F7A3FDD9688"
+			tasks: [
+				{
+					id: "0CCF63111FF32506"
+					type: "item"
+					item: "ic2:plate_advanced_alloy"
+					count: 2L
+				}
+			]
+			rewards: [
+				{
+					id: "3E4755718A02D581"
+					type: "item"
+					item: "ic2:plate_advanced_alloy"
+					count: 2
+				}
+			]
+		}
+		{
+			title: "Продвинутый корпус"
+			x: 20.0d
+			y: 0.0d
+			shape: "hexagon"
+			subtitle: "Корпус для серьёзных машин"
+			description: [
+				"&6Рецепт:&r корпус + 2 продвинутых сплава + 2 углепластика + 4 &bжелезные пластины&r по углам."
+				"&7В обычном IC2 Classic тут иначе — рецепт изменён в сборке. Смотри в JEI.&r"
+				"Нужен для самых мощных машин, например массового фабрикатора (смотри в JEI)."
+			]
+			dependencies: ["7809231CF03EA9C9" "09368F7A3FDD9688"]
+			size: 1.3d
+			id: "45DA98458BF8AD7B"
+			tasks: [
+				{
+					id: "19663937167D9C3C"
+					type: "item"
+					item: "ic2:advanced_machine_block"
+				}
+			]
+			rewards: [
+				{
+					id: "4E4C838DA25EF085"
+					type: "item"
+					item: "minecraft:diamond"
+					count: 2
+				}
+			]
+		}
+		{
+			title: "Многоразовая батарейка"
+			x: 16.0d
+			y: -4.0d
+			shape: "circle"
+			subtitle: "Для инструментов"
+			description: [
+				"&6Что это:&r маленький аккумулятор: заряжается и используется в инструментах."
+				"Ставь в слот инструмента или в зарядное устройство."
+			]
+			dependencies: ["79F6AD149FBA70E5"]
+			id: "5B0B38F946799BE0"
+			tasks: [
+				{
+					id: "660A687DC3F9051F"
+					type: "item"
+					item: "ic2:re_battery"
+				}
+			]
+			rewards: [
+				{
+					id: "4E4202DDE6201127"
+					type: "item"
+					item: "ic2:re_battery"
+				}
+			]
+		}
+	]
+}
