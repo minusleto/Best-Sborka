@@ -108,16 +108,19 @@ ServerEvents.recipes(event => {
     c: 'ic2:energy_crystal'
   })
 
-  // Nano Helmet — the Nightvision Goggles must be consumed in its recipe,
-  // as specified by the Russian Minecraft Wiki for the nano helmet.
-  // Replace the IC2C recipe with a shapeless recipe containing the same
-  // core components plus the goggles; the goggles are not returned.
+  // Nano Helmet — shaped recipe matching the wiki layout:
+  // carbon plates in the four corners, Energy Crystal top-center,
+  // Nightvision Goggles center. Ingredients are consumed.
   event.remove({ output: 'ic2:nano_suit_helmet' })
-  event.shapeless('ic2:nano_suit_helmet', [
-    'ic2:carbon_plate',
-    'ic2:energy_crystal',
-    'ic2:nightvision_goggles'
-  ])
+  event.shaped('ic2:nano_suit_helmet', [
+    'CEC',
+    'CGC',
+    '   '
+  ], {
+    C: 'ic2:carbon_plate',
+    E: 'ic2:energy_crystal',
+    G: 'ic2:nightvision_goggles'
+  })
 
   // Metal Former machine (mod: mods-src/bs-machines, block bs_machines:metal_former)
   event.shaped('bs_machines:metal_former', [' C ', 'PMP', 'WWW'], {
