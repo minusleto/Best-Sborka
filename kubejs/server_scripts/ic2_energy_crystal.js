@@ -106,16 +106,15 @@ ServerEvents.recipes(event => {
   // ---------------------------------------------------------------
   // Mining Laser — add a second Advanced Circuit by replacing one
   // composite/advanced-alloy ingredient in the IC2 Experimental recipe.
-  // Original layout: RRc / AAC / AA
-  // Adapted layout:  RRc / ACC / AA
+  // Requested layout: Rcc / AAC / AA
   // R = redstone, A = advanced alloy plate (composite), C = advanced circuit,
   // c = Energy Crystal. Recipe verified against IC2 Experimental 1.12.2
   // shaped_recipes.ini; test in JEI in the 1.19.2 pack.
   // ---------------------------------------------------------------
   event.remove({ output: 'ic2:mining_laser' })
   event.shaped('ic2:mining_laser', [
-    'RRc',
-    'ACC',
+    'Rcc',
+    'AAC',
     ' AA'
   ], {
     R: 'minecraft:redstone',
