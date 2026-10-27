@@ -129,7 +129,7 @@ ServerEvents.recipes(event => {
     'LGC'
   ], {
     H: 'ic2:heat_exchanger_advanced',
-    L: 'ic2:lamp',
+    L: 'ic2:construction_light',
     R: 'ic2:rubber',
     B: 'ic2:re_battery',
     G: 'ic2:reinforced_glass',
