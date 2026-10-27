@@ -37,6 +37,10 @@
 | mezz_config | `mezz_config-1.19.2-forge-0.6.9.jar` |
 | Naturalist | `naturalist-forge-4.0.3-1.19.2.jar` |
 | Rhino | `rhino-forge-1902.2.3-build.284.jar` |
-| The One Probe | `theoneprobe-1.19-6.2.2.jar` |
 | Xaero’s Minimap | `xaerominimap-forge-1.19.2-26.6.0.jar` |
 | Xaero’s World Map | `xaeroworldmap-forge-1.19.2-1.47.0.jar` |
+
+
+## Удалённые моды
+
+- **The One Probe** (`theoneprobe-1.19-6.2.2.jar`): убран 2026-10-28, дублировал подсказку у блока из Jade (две панели сразу). Остаётся Jade. Другие моды сборки The One Probe не требуют.
