@@ -34,6 +34,13 @@ StartupEvents.registry('item', event => {
       .tag('forge:plates/' + metal)
   })
 
+  // IC2 Experimental 1.12.2 Tin Item Casing (IC2C 1.19.2 and IC2C Extras have none).
+  // Used by the Electric Motor, Canner, RE Battery, Fluid Cell... in 1.12.2 (see docs/recipe-changes.md).
+  event.create('tin_item_casing')
+    .displayName('Tin Item Casing')
+    .tag('forge:casings')
+    .tag('forge:casings/tin')
+
   // IC2 Experimental 1.12.2 Forge Hammer (IC2C 1.19.2 has none). 80 uses.
   event.create('forge_hammer')
     .maxDamage(80)

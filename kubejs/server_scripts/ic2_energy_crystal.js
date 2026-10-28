@@ -71,6 +71,11 @@ ServerEvents.recipes(event => {
       .damageIngredient('kubejs:forge_hammer', 1)
   })
 
+  // Tin Item Casing (1.12.2): tin plate + hammer -> 2 casings.
+  // The Metal Former rolls it too: data/ic2/ic2_recipes/metal_former_rolling/tin_item_casing.json
+  event.shapeless('2x kubejs:tin_item_casing', ['kubejs:tin_plate', 'kubejs:forge_hammer'])
+    .damageIngredient('kubejs:forge_hammer', 1)
+
   // Cables: require the Metal Former, as in IC2 Experimental 1.12.2.
   ;[
     'ic2:copper_cable_item',
