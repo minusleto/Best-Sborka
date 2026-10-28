@@ -76,14 +76,13 @@ ServerEvents.recipes(event => {
     'ic2:iron_cable_item'
   ].forEach(cable => event.remove({ output: cable }))
 
-  // Wire cutters (IC2 Experimental 1.12.2 Cutter): 3 iron plates + 2 iron ingots
-  // (the wiki gives the ingredients but not the grid; scissors shape is our choice).
-  // Plate + cutters -> cables, the cutters lose 1 durability. Cable counts per
-  // plate follow the Metal Former cutting values (docs/recipe-changes.md).
+  // Wire cutters (IC2 Experimental 1.12.2 Cutter, grid "A A| A |I I" from the jar):
+  // 3 iron plates + 2 iron ingots. Plate + cutters -> cables, the cutters lose
+  // 1 durability (60 uses, as in 1.12.2). Cable counts per plate: 1.12.2 shapeless recipes.
   event.shaped('kubejs:wire_cutters', [
-    'I I',
+    'P P',
     ' P ',
-    'P P'
+    'I I'
   ], {
     I: 'minecraft:iron_ingot',
     P: 'kubejs:iron_plate'
