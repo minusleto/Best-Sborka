@@ -332,7 +332,7 @@ IC2C локализация показывает Crop Harvester, WeedEx, Hydrati
 
 - [ ] [#13 Электромотор и применения Experimental](https://github.com/minusleto/Best-Sborka/issues/13)
 - [ ] [#14 Tin Item Casing](https://github.com/minusleto/Best-Sborka/issues/14)
-- [ ] [#16 Replication / Pattern Storage](https://github.com/minusleto/Best-Sborka/issues/16)
+- [x] [#16 Replication / Pattern Storage](https://github.com/minusleto/Best-Sborka/issues/16)
 - [ ] [#17 Кинетические машины](https://github.com/minusleto/Best-Sborka/issues/17)
 - [ ] [#18 Miner / Advanced Miner](https://github.com/minusleto/Best-Sborka/issues/18)
 - [ ] [#19 Block Cutting Machine / Advanced RE-Battery](https://github.com/minusleto/Best-Sborka/issues/19)
@@ -415,7 +415,7 @@ IC2C локализация показывает Crop Harvester, WeedEx, Hydrati
 2. Дописать Scanner, Pattern Storage и Replicator в `bs-machines`: энергия и хранение шаблонов в NBT, вместо жидкости использовать предмет/число UU-Matter Classic. Крупная задача с тестом в игре.
 3. Поискать готовый аддон-репликатор для 1.19.2.
 
-Статус: **подтверждено, что Replication из Experimental отсутствует**; решение за владельцем сборки. В игре проверить: Mass Fabricator, UU Expansion, список UU-рецептов в JEI.
+Статус: **подтверждено, что Replication из Experimental отсутствует**. Решение владельца сборки: вариант 1, оставить схему Classic (UU-Matter и UU-рецепты в Workbench), Replicator не делаем. В игре проверить: Mass Fabricator, UU Expansion, список UU-рецептов в JEI.
 
 ## 13. Отдельный аудит локализации модов
 
