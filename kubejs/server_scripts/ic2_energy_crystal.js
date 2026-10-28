@@ -65,17 +65,21 @@ ServerEvents.recipes(event => {
     'kubejs:tin_plate': 'ic2:ingot_tin',
     'kubejs:bronze_plate': 'ic2:ingot_bronze',
     'kubejs:gold_plate': 'minecraft:gold_ingot',
-    'kubejs:aluminium_plate': 'ic2:ingot_aluminium'
+    'kubejs:aluminium_plate': 'ic2:ingot_aluminium',
+    'kubejs:lead_plate': 'ic2c_extras:lead_ingot'
   }
   Object.keys(hammerPlates).forEach(plate => {
     event.shapeless(plate, [hammerPlates[plate], 'kubejs:forge_hammer'])
       .damageIngredient('kubejs:forge_hammer', 1)
   })
 
-  // Tin Item Casing (1.12.2): tin plate + hammer -> 2 casings.
-  // The Metal Former rolls it too: data/ic2/ic2_recipes/metal_former_rolling/tin_item_casing.json
-  event.shapeless('2x kubejs:tin_item_casing', ['kubejs:tin_plate', 'kubejs:forge_hammer'])
-    .damageIngredient('kubejs:forge_hammer', 1)
+  // Item casings (1.12.2): plate + hammer -> 2 casings.
+  // The Metal Former rolls them too: data/ic2/ic2_recipes/metal_former_rolling/<metal>_item_casing.json
+  const casingMetals = ['copper', 'tin', 'bronze', 'gold', 'iron', 'lead']
+  casingMetals.forEach(metal => {
+    event.shapeless('2x kubejs:' + metal + '_item_casing', ['kubejs:' + metal + '_plate', 'kubejs:forge_hammer'])
+      .damageIngredient('kubejs:forge_hammer', 1)
+  })
 
   // Composite (advanced alloy) ingot: IC2 Experimental 1.12.2 recipe from plates
   // (III/BBB/TTT iron/bronze/tin plates -> 2 ingots), with aluminium instead of tin.
@@ -205,5 +209,46 @@ ServerEvents.recipes(event => {
     P: 'kubejs:iron_plate',
     M: 'ic2:machine_block',
     W: 'minecraft:copper_ingot'
+  })
+
+  // ---------------------------------------------------------------
+  // Electric Motor and its 1.12.2 uses (issues #13, #14)
+  // 1.12.2: coils + tin casings + iron ingot, two layouts.
+  // Coil: ic2c_extras:coil (IC2C Extras). Not restored (no equivalent in this pack):
+  // Kinetic/Electric Kinetic Generator, Power Unit, Small Power Unit, Scanner machine,
+  // Fluid Regulator, Block Cutting Machine, Electric Boat, Fluid Ejector/Pulling upgrades.
+  // ---------------------------------------------------------------
+  const motorKeys = { X: 'minecraft:iron_ingot', C: 'ic2c_extras:coil', T: 'kubejs:tin_item_casing' }
+  event.shaped('kubejs:electric_motor', [' T ', 'CXC', ' T '], motorKeys)
+  event.shaped('kubejs:electric_motor', [' C ', 'TXT', ' C '], motorKeys)
+
+  // Heat Vent: 1.12.2 puts the motor in the middle of iron plates and iron bars.
+  // Only the base recipe is replaced (the vent upgrade conversions stay).
+  event.remove({ id: 'ic2:vent_heat_0' })
+  event.shaped('ic2:heat_vent', ['BIB', 'IMI', 'BIB'], {
+    B: 'minecraft:iron_bars',
+    I: 'kubejs:iron_plate',
+    M: 'kubejs:electric_motor'
+  })
+
+  // Thermal Centrifuge (IC2C Extras): same layout as 1.12.2, motor instead of the heat conductor.
+  // Refined iron ingots stay (this pack's iron ingot). 1.12.2: CMC/RAR/RER.
+  event.remove({ output: 'ic2c_extras:thermal_centrifuge' })
+  event.shaped('ic2c_extras:thermal_centrifuge', ['CLC', 'RMR', 'RER'], {
+    C: 'ic2c_extras:coil',
+    L: 'ic2:mining_laser',
+    R: 'ic2:ingot_refined_iron',
+    M: 'ic2:advanced_machine_block',
+    E: 'kubejs:electric_motor'
+  })
+
+  // Ore Washing Plant (IC2C Extras): 1.12.2 recipe III/BAB/EWE (iron plates, buckets, machine, motors, circuit).
+  event.remove({ output: 'ic2c_extras:ore_washing_plant' })
+  event.shaped('ic2c_extras:ore_washing_plant', ['III', 'BAB', 'EWE'], {
+    I: 'kubejs:iron_plate',
+    B: 'minecraft:bucket',
+    A: 'ic2:machine_block',
+    E: 'kubejs:electric_motor',
+    W: 'ic2:circuit'
   })
 })

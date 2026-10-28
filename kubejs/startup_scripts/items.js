@@ -26,6 +26,7 @@ StartupEvents.registry('item', event => {
     tin: 'Tin Plate',
     bronze: 'Bronze Plate',
     gold: 'Gold Plate',
+    lead: 'Lead Plate',
     // Not in IC2 1.12.2: aluminium replaces tin in the composite recipe
     aluminium: 'Aluminium Plate'
   }
@@ -36,12 +37,27 @@ StartupEvents.registry('item', event => {
       .tag('forge:plates/' + metal)
   })
 
-  // IC2 Experimental 1.12.2 Tin Item Casing (IC2C 1.19.2 and IC2C Extras have none).
+  // IC2 Experimental 1.12.2 item casings (IC2C 1.19.2 and IC2C Extras have none).
+  // 1.12.2 also has a steel casing; there is no steel in this pack, so it is skipped.
   // Used by the Electric Motor, Canner, RE Battery, Fluid Cell... in 1.12.2 (see docs/recipe-changes.md).
-  event.create('tin_item_casing')
-    .displayName('Tin Item Casing')
-    .tag('forge:casings')
-    .tag('forge:casings/tin')
+  const casings = {
+    copper: 'Copper Item Casing',
+    tin: 'Tin Item Casing',
+    bronze: 'Bronze Item Casing',
+    gold: 'Gold Item Casing',
+    iron: 'Iron Item Casing',
+    lead: 'Lead Item Casing'
+  }
+  Object.keys(casings).forEach(metal => {
+    event.create(metal + '_item_casing')
+      .displayName(casings[metal])
+      .tag('forge:casings')
+      .tag('forge:casings/' + metal)
+  })
+
+  // IC2 Experimental 1.12.2 Electric Motor (IC2C 1.19.2 has none): 2 coils + 2 tin casings + iron ingot.
+  event.create('electric_motor')
+    .displayName('Electric Motor')
 
   // IC2 Experimental 1.12.2 Forge Hammer (IC2C 1.19.2 has none). 80 uses.
   event.create('forge_hammer')

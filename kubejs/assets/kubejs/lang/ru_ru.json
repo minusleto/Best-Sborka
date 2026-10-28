@@ -9,5 +9,12 @@
   "item.kubejs.gold_plate": "Золотая пластина",
   "item.kubejs.aluminium_plate": "Алюминиевая пластина",
   "item.kubejs.lapis_dust": "Лазуритовая пыль",
-  "item.kubejs.tin_item_casing": "Оловянная оболочка"
+  "item.kubejs.tin_item_casing": "Оловянная оболочка",
+  "item.kubejs.copper_item_casing": "Медная оболочка",
+  "item.kubejs.bronze_item_casing": "Бронзовая оболочка",
+  "item.kubejs.gold_item_casing": "Золотая оболочка",
+  "item.kubejs.iron_item_casing": "Железная оболочка",
+  "item.kubejs.lead_item_casing": "Свинцовая оболочка",
+  "item.kubejs.lead_plate": "Свинцовая пластина",
+  "item.kubejs.electric_motor": "Электромотор"
 }
