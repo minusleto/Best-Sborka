@@ -1,0 +1,52 @@
+{
+	id: "63A32250E578A75E"
+	order_index: 4
+	title: "IC2: середина пути"
+	loot_size: 1
+	rewards: [
+		{
+			item: "ic2:circuit"
+			count: 3
+			weight: 3
+		}
+		{
+			item: "ic2:ingot_bronze"
+			count: 4
+			weight: 2
+		}
+		{
+			item: "ic2:ingot_silver"
+			count: 2
+			weight: 2
+		}
+		{
+			item: "ic2:dust_gold"
+			count: 3
+			weight: 2
+		}
+		{
+			item: "kubejs:copper_plate"
+			count: 4
+			weight: 2
+		}
+		{
+			item: "kubejs:bronze_plate"
+			count: 3
+		}
+		{
+			item: "ic2:re_battery"
+			weight: 2
+		}
+		{
+			item: "ic2:plate_advanced_alloy"
+		}
+		{
+			item: "ic2:carbon_fiber"
+			count: 2
+			weight: 2
+		}
+		{
+			item: "ic2:industrial_diamond"
+		}
+	]
+}

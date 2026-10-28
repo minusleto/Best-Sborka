@@ -1,0 +1,1037 @@
+{
+	id: "234F19C2B7E239E1"
+	group: ""
+	order_index: 0
+	filename: "vanilla"
+	title: "Ванила"
+	icon: "minecraft:grass_block"
+	subtitle: ["Выживание, которое никто не отменял"]
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			id: "5C94667F7B5C4880"
+			title: "Добро пожаловать в Best-Sborka"
+			icon: "minecraft:compass"
+			x: 0.0d
+			y: 0.0d
+			shape: "gear"
+			size: 1.5d
+			subtitle: "Путь инженера начинается здесь"
+			description: [
+				"Это сборка про технику: IndustrialCraft 2 Classic, Applied Energistics 2 и мешок аддонов."
+				"Главы: Ванила (ты здесь), Техника IC2, Сеть ME и финальная Легенда."
+				"Жми на галочку, забирай стартовый набор и книгу квестов. Всё остальное придётся делать самому, как и положено инженерам."
+			]
+			tasks: [
+				{
+					id: "046E29F961388E49"
+					type: "checkmark"
+				}
+			]
+			rewards: [
+				{
+					id: "622B6C43DBF680DC"
+					type: "item"
+					item: "minecraft:bread"
+					count: 12
+				}
+				{
+					id: "49539487F00E1B83"
+					type: "item"
+					item: "minecraft:torch"
+					count: 32
+				}
+				{
+					id: "77210CB6FBA5C468"
+					type: "item"
+					item: "minecraft:iron_ingot"
+					count: 4
+				}
+				{
+					id: "45E3197D979007A6"
+					type: "item"
+					item: "ftbquests:book"
+				}
+			]
+		}
+		{
+			id: "5AA74B19B63BEC98"
+			title: "Бей дерево"
+			icon: "minecraft:oak_log"
+			x: 2.0d
+			y: 0.0d
+			subtitle: "Все начинали с этого"
+			description: [
+				"Добудь древесину. Из неё выйдет верстак, палки и всё, что стоит между тобой и первым заводом."
+				"Да, начинаем с голых кулаков. Любая империя когда-то колотила деревья."
+			]
+			dependencies: ["5C94667F7B5C4880"]
+			tasks: [
+				{
+					id: "60CEB93342E83FC1"
+					type: "item"
+					item: "minecraft:oak_log"
+					count: 4
+				}
+			]
+			rewards: [
+				{
+					id: "2BEEBE1DFB13C0D2"
+					type: "random"
+					table_id: 2641968476662968934L
+				}
+			]
+		}
+		{
+			id: "6B93BFDC50958FF1"
+			title: "Верстак"
+			icon: "minecraft:crafting_table"
+			x: 4.0d
+			y: 0.0d
+			subtitle: "Рабочее место"
+			description: [
+				"Верстак даёт сетку 3×3, а значит почти все рецепты сборки."
+				"Положи его куда-нибудь, чтобы потом не искать. Серьёзно: люди теряют их чаще, чем носки."
+			]
+			dependencies: ["5AA74B19B63BEC98"]
+			tasks: [
+				{
+					id: "45AC57A06E1BC5E8"
+					type: "item"
+					item: "minecraft:crafting_table"
+				}
+			]
+			rewards: [
+				{
+					id: "65C5597130D63D94"
+					type: "random"
+					table_id: 2641968476662968934L
+				}
+			]
+		}
+		{
+			id: "6D1D415881225333"
+			title: "Первый склад"
+			icon: "minecraft:chest"
+			x: 6.0d
+			y: 3.0d
+			subtitle: "Инвентарь не резиновый"
+			description: [
+				"Сундук нужен, чтобы хлам не мешал думать. Позже его заменит ME-сеть, но начинать приходится с дерева."
+				"Правило инженера: если сундук не подписан, в нём лежит не то, что ты ищешь."
+			]
+			dependencies: ["6B93BFDC50958FF1"]
+			tasks: [
+				{
+					id: "1725FDE635E8537A"
+					type: "item"
+					item: "minecraft:chest"
+				}
+			]
+			rewards: [
+				{
+					id: "6B2F63C10BA89977"
+					type: "random"
+					table_id: 2641968476662968934L
+				}
+			]
+		}
+		{
+			id: "1F1C54378626496A"
+			title: "Деревянная кирка"
+			icon: "minecraft:wooden_pickaxe"
+			x: 6.0d
+			y: 0.0d
+			subtitle: "Открываем камень"
+			description: [
+				"Деревянная кирка берёт булыжник, а булыжник даёт всё остальное."
+				"Прочности хватит ровно на то, чтобы ты успел ей обрадоваться."
+			]
+			dependencies: ["6B93BFDC50958FF1"]
+			tasks: [
+				{
+					id: "7761755B1BA0EC61"
+					type: "item"
+					item: "minecraft:wooden_pickaxe"
+				}
+			]
+			rewards: [
+				{
+					id: "43C6A5ECE09AB8B5"
+					type: "random"
+					table_id: 2641968476662968934L
+				}
+			]
+		}
+		{
+			id: "2C408A672E309F56"
+			title: "Камень к камню"
+			icon: "minecraft:cobblestone"
+			x: 8.0d
+			y: 0.0d
+			subtitle: "Основа основ"
+			description: [
+				"Булыжник идёт на печь, инструменты и баррикады от ночных гостей."
+				"Его бесконечно много. И почему-то всё равно не хватает."
+			]
+			dependencies: ["1F1C54378626496A"]
+			tasks: [
+				{
+					id: "0A14BABCFA2D62BB"
+					type: "item"
+					item: "minecraft:cobblestone"
+					count: 16
+				}
+			]
+			rewards: [
+				{
+					id: "0C2920820B85217D"
+					type: "random"
+					table_id: 2641968476662968934L
+				}
+			]
+		}
+		{
+			id: "79E03438DAB89B06"
+			title: "Печь"
+			icon: "minecraft:furnace"
+			x: 10.0d
+			y: 3.0d
+			subtitle: "Плавка и жарка"
+			description: [
+				"Печь плавит руду и жарит еду. IC2 потом предложит печи умнее, но эта не просит ни единого EU."
+				"Лёгкий запах гари: так пахнет прогресс."
+			]
+			dependencies: ["2C408A672E309F56"]
+			tasks: [
+				{
+					id: "201F4A9A38EECEEB"
+					type: "item"
+					item: "minecraft:furnace"
+				}
+			]
+			rewards: [
+				{
+					id: "5D73033B2E53FE53"
+					type: "random"
+					table_id: 2641968476662968934L
+				}
+			]
+		}
+		{
+			id: "0DAA50E0B9CAB0A1"
+			title: "Каменная кирка"
+			icon: "minecraft:stone_pickaxe"
+			x: 10.0d
+			y: -3.0d
+			subtitle: "Ступень выше"
+			description: [
+				"Каменная кирка наконец-то берёт железо."
+				"Деревянную можно подарить врагу, пусть тоже порадуется."
+			]
+			dependencies: ["2C408A672E309F56"]
+			tasks: [
+				{
+					id: "7B8B89FBAC71EA87"
+					type: "item"
+					item: "minecraft:stone_pickaxe"
+				}
+			]
+			rewards: [
+				{
+					id: "0C80993034248944"
+					type: "random"
+					table_id: 2641968476662968934L
+				}
+			]
+		}
+		{
+			id: "4D05E7AAA9292E9E"
+			title: "Чёрное золото"
+			icon: "minecraft:coal"
+			x: 12.0d
+			y: -3.0d
+			subtitle: "Топливо и факелы"
+			description: [
+				"Уголь греет печь и превращается в факелы. Пока в сборке нет EU, весь прогресс идёт на нём."
+				"Запасай больше, чем кажется разумным. Потом всё равно не хватит."
+			]
+			dependencies: ["0DAA50E0B9CAB0A1"]
+			tasks: [
+				{
+					id: "0809E17BFEDBCF83"
+					type: "item"
+					item: "minecraft:coal"
+					count: 8
+				}
+			]
+			rewards: [
+				{
+					id: "0EBC8C632F03553A"
+					type: "random"
+					table_id: 2641968476662968934L
+				}
+			]
+		}
+		{
+			id: "27266A8106881C4D"
+			title: "Да будет свет"
+			icon: "minecraft:torch"
+			x: 14.0d
+			y: -3.0d
+			subtitle: "Мобы любят темноту"
+			description: [
+				"Враждебные мобы появляются только в темноте. Расставь факелы, и твоя пещера станет вежливой."
+				"Факел в руке — лучший аргумент в споре с пауком."
+			]
+			dependencies: ["4D05E7AAA9292E9E"]
+			tasks: [
+				{
+					id: "6931B72FC545B1DB"
+					type: "item"
+					item: "minecraft:torch"
+					count: 16
+				}
+			]
+			rewards: [
+				{
+					id: "035646B889D0E4E8"
+					type: "random"
+					table_id: 2641968476662968934L
+				}
+			]
+		}
+		{
+			id: "06EAA00AF50C94F6"
+			title: "Железная жила"
+			icon: "minecraft:raw_iron"
+			x: 12.0d
+			y: -6.0d
+			subtitle: "Добыча"
+			description: [
+				"Железная руда даёт сырое железо. Его нужно переплавить в печи."
+				"Если нашёл жилу, значит, ты в двух шагах от инженерной карьеры."
+			]
+			dependencies: ["0DAA50E0B9CAB0A1"]
+			tasks: [
+				{
+					id: "053DDF30E837584A"
+					type: "item"
+					item: "minecraft:raw_iron"
+					count: 3
+				}
+			]
+			rewards: [
+				{
+					id: "6D3CDA7357EBD2C5"
+					type: "random"
+					table_id: 2641968476662968934L
+				}
+			]
+		}
+		{
+			id: "295303B81E398C5F"
+			title: "Железный век"
+			icon: "minecraft:iron_ingot"
+			x: 14.0d
+			y: -6.0d
+			shape: "hexagon"
+			size: 1.5d
+			subtitle: "Валюта сборки"
+			description: [
+				"Слиток железа: из него куют молот, пластины и корпуса машин. В Best-Sborka железо значит больше, чем золото."
+				"Принято считать: кто не копил железо, тот ещё не начинал."
+			]
+			dependencies: [
+				"06EAA00AF50C94F6"
+				"79E03438DAB89B06"
+			]
+			tasks: [
+				{
+					id: "33F2A5CEEB4DE141"
+					type: "item"
+					item: "minecraft:iron_ingot"
+					count: 5
+				}
+			]
+			rewards: [
+				{
+					id: "0298544FC90984E1"
+					type: "random"
+					table_id: 2641968476662968934L
+				}
+				{
+					id: "6B0447EDCC3CEF37"
+					type: "xp"
+					xp: 20
+				}
+			]
+		}
+		{
+			id: "4DE8D9689FDC0050"
+			title: "Железная кирка"
+			icon: "minecraft:iron_pickaxe"
+			x: 16.0d
+			y: -6.0d
+			subtitle: "Алмазы уже близко"
+			description: [
+				"Железная кирка берёт алмазы, золото, редстоун и лазурит. Без неё глубокие пещеры бесполезны."
+				"Береги её: поломка в глубине не лечится словами."
+			]
+			dependencies: ["295303B81E398C5F"]
+			tasks: [
+				{
+					id: "40FE652AC526E689"
+					type: "item"
+					item: "minecraft:iron_pickaxe"
+				}
+			]
+			rewards: [
+				{
+					id: "6079BB64A63F626B"
+					type: "random"
+					table_id: 3201421197648354270L
+				}
+			]
+		}
+		{
+			id: "3D39EC28BE11AF0B"
+			title: "Ведро"
+			icon: "minecraft:bucket"
+			x: 16.0d
+			y: -9.0d
+			subtitle: "Вода, лава и молоко"
+			description: [
+				"Ведро таскает жидкости. Лава потом пригодится геотермальному генератору, вода — ещё где-нибудь."
+				"Совет: не пей из него лаву. Результат не впечатляет."
+			]
+			dependencies: ["295303B81E398C5F"]
+			tasks: [
+				{
+					id: "5ABB4C5D1D6FCAD2"
+					type: "item"
+					item: "minecraft:bucket"
+				}
+			]
+			rewards: [
+				{
+					id: "6F20460ED204D114"
+					type: "random"
+					table_id: 2641968476662968934L
+				}
+			]
+		}
+		{
+			id: "583701BAC331E8D3"
+			title: "Щит"
+			icon: "minecraft:shield"
+			x: 16.0d
+			y: -3.0d
+			subtitle: "От стрел и недоразумений"
+			description: [
+				"Щит блокирует стрелы скелетов и взрывы крипера (частично). С ним жизнь заметно длиннее."
+				"Крипер всё равно вежливо попрощается."
+			]
+			dependencies: ["295303B81E398C5F"]
+			tasks: [
+				{
+					id: "7C007DCE47FD1A53"
+					type: "item"
+					item: "minecraft:shield"
+				}
+			]
+			rewards: [
+				{
+					id: "372849445BCA4BF1"
+					type: "random"
+					table_id: 2641968476662968934L
+				}
+			]
+		}
+		{
+			id: "2A8B308A7A3C8095"
+			title: "Фермерская жизнь"
+			icon: "minecraft:wheat"
+			x: 6.0d
+			y: 6.0d
+			subtitle: "Еда на потом"
+			description: [
+				"Пшеница: хлеб, корм для скота и первый шаг от охотника к земледельцу."
+				"Растёт сама, пока ты не смотришь. Как и всё хорошее."
+			]
+			dependencies: ["6B93BFDC50958FF1"]
+			tasks: [
+				{
+					id: "2C0B2D5C23463F3F"
+					type: "item"
+					item: "minecraft:wheat"
+					count: 6
+				}
+			]
+			rewards: [
+				{
+					id: "702E15AF1B552EF0"
+					type: "random"
+					table_id: 2641968476662968934L
+				}
+			]
+		}
+		{
+			id: "381097C147A6B5B2"
+			title: "Хлеб насущный"
+			icon: "minecraft:bread"
+			x: 8.0d
+			y: 6.0d
+			subtitle: "Голодный инженер — плохой инженер"
+			description: [
+				"Хлеб утоляет голод и стоит копейки. Три пшеницы в ряд, и ты сыт."
+				"Даже квантовый реактор не накормит."
+			]
+			dependencies: ["2A8B308A7A3C8095"]
+			tasks: [
+				{
+					id: "1BA40915DE4DAA44"
+					type: "item"
+					item: "minecraft:bread"
+					count: 3
+				}
+			]
+			rewards: [
+				{
+					id: "49CCB8E384BF6599"
+					type: "random"
+					table_id: 2641968476662968934L
+				}
+			]
+		}
+		{
+			id: "43991E9DEADDC682"
+			title: "Стейк"
+			icon: "minecraft:cooked_beef"
+			x: 12.0d
+			y: 4.5d
+			subtitle: "Сытнее хлеба"
+			description: [
+				"Жареное мясо восстанавливает больше голода, чем хлеб. Одна печь, одна корова, ноль угрызений."
+				"Для идеальной прожарки нужна печь поближе к дому."
+			]
+			dependencies: ["79E03438DAB89B06"]
+			tasks: [
+				{
+					id: "3BCAFD8D36EB1217"
+					type: "item"
+					item: "minecraft:cooked_beef"
+					count: 4
+				}
+			]
+			rewards: [
+				{
+					id: "08A1E30E53DC26E6"
+					type: "random"
+					table_id: 2641968476662968934L
+				}
+			]
+		}
+		{
+			id: "54798A623EC1ECFE"
+			title: "Медь"
+			icon: "minecraft:copper_ingot"
+			x: 12.0d
+			y: 6.0d
+			subtitle: "Начало проводки"
+			description: [
+				"Медь нужна для проводки и схем: IC2 использует её по полной. Переплавь сырую медь в печи."
+				"Позеленеет со временем. Как и ты, если не выспишься."
+			]
+			dependencies: ["79E03438DAB89B06"]
+			tasks: [
+				{
+					id: "2F57C5CA47750DCC"
+					type: "item"
+					item: "minecraft:copper_ingot"
+					count: 4
+				}
+			]
+			rewards: [
+				{
+					id: "67F3079494EA426A"
+					type: "random"
+					table_id: 2641968476662968934L
+				}
+			]
+		}
+		{
+			id: "790C05DA7835720F"
+			title: "В глубину!"
+			icon: "minecraft:deepslate"
+			x: 18.0d
+			y: -6.0d
+			subtitle: "Ниже Y = -40"
+			description: [
+				"Спустись под землю ниже Y = -40. Там начинаются глубинные сланцы, алмазы и редстоун."
+				"Не забудь обратную дорогу. Хорошо бы и факелы."
+			]
+			dependencies: ["4DE8D9689FDC0050"]
+			tasks: [
+				{
+					id: "50BC04F5DB5FCC19"
+					type: "location"
+					dimension: "minecraft:overworld"
+					ignore_dimension: false
+					position: [I; -30000000, -64, -30000000]
+					size: [I; 60000000, 24, 60000000]
+				}
+			]
+			rewards: [
+				{
+					id: "1C85157CA79AA11D"
+					type: "random"
+					table_id: 3201421197648354270L
+				}
+				{
+					id: "7F2C3728DBE8F737"
+					type: "xp"
+					xp: 40
+				}
+			]
+		}
+		{
+			id: "55D8E157CA3EEF26"
+			title: "Алмазная лихорадка"
+			icon: "minecraft:diamond"
+			x: 20.0d
+			y: -9.0d
+			shape: "diamond"
+			size: 1.5d
+			subtitle: "Для пыли и кристаллов"
+			description: [
+				"Алмаз нужен для алмазной пыли, а из неё делают энергокристалл. Добывай с запасом."
+				"Заметил блеск в стене? Не беги, бери."
+			]
+			dependencies: ["790C05DA7835720F"]
+			tasks: [
+				{
+					id: "7DA5E6BE020268A1"
+					type: "item"
+					item: "minecraft:diamond"
+					count: 2
+				}
+			]
+			rewards: [
+				{
+					id: "0EE9CFD59E7D588D"
+					type: "random"
+					table_id: 3201421197648354270L
+				}
+				{
+					id: "00478EE4FDD301A4"
+					type: "xp"
+					xp: 60
+				}
+			]
+		}
+		{
+			id: "19F41055AAB6CFEC"
+			title: "Красная пыль"
+			icon: "minecraft:redstone"
+			x: 20.0d
+			y: -6.0d
+			subtitle: "Схемы и батареи"
+			description: [
+				"Редстоун идёт в схемы, батареи и половину рецептов сборки. Его всегда мало."
+				"Не наступай: он не взрывается, но выглядит так, будто хочет."
+			]
+			dependencies: ["790C05DA7835720F"]
+			tasks: [
+				{
+					id: "2E17D2629C7AD7A2"
+					type: "item"
+					item: "minecraft:redstone"
+					count: 16
+				}
+			]
+			rewards: [
+				{
+					id: "750A8272C9EDC6FA"
+					type: "random"
+					table_id: 3201421197648354270L
+				}
+			]
+		}
+		{
+			id: "101D8AFD3ECACA56"
+			title: "Лазурит"
+			icon: "minecraft:lapis_lazuli"
+			x: 20.0d
+			y: -3.0d
+			subtitle: "Синий камень"
+			description: [
+				"Лазурит нужен для зачарований и продвинутых схем IC2."
+				"Красивый, но без него схема так и останется обычной."
+			]
+			dependencies: ["790C05DA7835720F"]
+			tasks: [
+				{
+					id: "602970C3A46D9805"
+					type: "item"
+					item: "minecraft:lapis_lazuli"
+					count: 8
+				}
+			]
+			rewards: [
+				{
+					id: "1D66019323F9CDFD"
+					type: "random"
+					table_id: 3201421197648354270L
+				}
+			]
+		}
+		{
+			id: "67B00B5CB98BE6D8"
+			title: "Золото"
+			icon: "minecraft:gold_ingot"
+			x: 20.0d
+			y: 0.0d
+			subtitle: "Для кабелей и пластин"
+			description: [
+				"Золото проводит ток лучше многих и идёт на кабели и золотые пластины. Руда прячется в глубине и в бесплодных землях."
+				"Блестит всё золото, но не всякая жила стоит риска."
+			]
+			dependencies: ["790C05DA7835720F"]
+			tasks: [
+				{
+					id: "47EEEFDC0D9B5CC4"
+					type: "item"
+					item: "minecraft:gold_ingot"
+					count: 3
+				}
+			]
+			rewards: [
+				{
+					id: "71DE6CB0869904FB"
+					type: "random"
+					table_id: 3201421197648354270L
+				}
+			]
+		}
+		{
+			id: "415197D81A064FA6"
+			title: "Тишина... подозрительная"
+			icon: "minecraft:sculk_shrieker"
+			x: 20.0d
+			y: -12.0d
+			shape: "heart"
+			size: 1.5d
+			subtitle: "Не шуми"
+			description: [
+				"Спустись в Тёмные глубины (Deep Dark). Двигайся тихо: шерсть глушит вибрации, а Хранитель такого не прощает."
+				"Если услышишь звон, это он. Беги."
+			]
+			dependencies: ["790C05DA7835720F"]
+			tasks: [
+				{
+					id: "2E890B0DCEB483D6"
+					type: "biome"
+					biome: "minecraft:deep_dark"
+				}
+			]
+			rewards: [
+				{
+					id: "07BB250B8228397F"
+					type: "random"
+					table_id: 4611833123636207672L
+				}
+				{
+					id: "191FC4FD00E770F1"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "41790E5338225C58"
+					type: "item"
+					item: "minecraft:white_wool"
+					count: 8
+				}
+			]
+		}
+		{
+			id: "03C973DA0DB6534E"
+			title: "Дверь в ад"
+			icon: "minecraft:obsidian"
+			x: 22.0d
+			y: -9.0d
+			subtitle: "Портал и Незер"
+			description: [
+				"Построй портал из обсидиана и зайди в Незер. Там много лавы, тёплый приём и алюминиевая руда для IC2."
+				"Не забудь про золотую броню: пиглины любят блестящее."
+			]
+			dependencies: ["55D8E157CA3EEF26"]
+			tasks: [
+				{
+					id: "5FA0C3570527B691"
+					type: "dimension"
+					dimension: "minecraft:the_nether"
+				}
+			]
+			rewards: [
+				{
+					id: "2EDFD49FEE21CCF5"
+					type: "random"
+					table_id: 3201421197648354270L
+				}
+				{
+					id: "7DAD629891A2988E"
+					type: "xp"
+					xp: 80
+				}
+			]
+		}
+		{
+			id: "33BF1454ECD6C2C6"
+			title: "Древние обломки"
+			icon: "minecraft:ancient_debris"
+			x: 24.0d
+			y: -9.0d
+			shape: "pentagon"
+			size: 1.5d
+			subtitle: "Для редких материалов"
+			description: [
+				"Древние обломки — основа незеритовых изделий. Ищи их у Y 15; кровати и взрывы тут в помощь."
+				"Добыча медленная. Зато честная."
+			]
+			dependencies: ["03C973DA0DB6534E"]
+			tasks: [
+				{
+					id: "4ADB0221B19302DB"
+					type: "item"
+					item: "minecraft:ancient_debris"
+				}
+			]
+			rewards: [
+				{
+					id: "32336E9F26623A5E"
+					type: "random"
+					table_id: 4611833123636207672L
+				}
+				{
+					id: "1A76F546CF19129E"
+					type: "xp"
+					xp: 150
+				}
+			]
+		}
+		{
+			id: "13B53E922C725BB7"
+			title: "Огненный стержень"
+			icon: "minecraft:blaze_rod"
+			x: 24.0d
+			y: -12.0d
+			subtitle: "Добыча в крепости"
+			description: [
+				"Огненные стержни дают тепло, зелья и топливо. Ищи их в крепостях Незера."
+				"Блейз стреляет огнём, так что приведи с собой воды побольше."
+			]
+			dependencies: ["03C973DA0DB6534E"]
+			tasks: [
+				{
+					id: "3B2A21320934E260"
+					type: "item"
+					item: "minecraft:blaze_rod"
+					count: 2
+				}
+			]
+			rewards: [
+				{
+					id: "6FCCB126FAC49C2F"
+					type: "random"
+					table_id: 4611833123636207672L
+				}
+			]
+		}
+		{
+			id: "49D15ECB0A35CDC6"
+			title: "Эндер-жемчуг"
+			icon: "minecraft:ender_pearl"
+			x: 24.0d
+			y: -6.0d
+			subtitle: "Телепорт на ладони"
+			description: [
+				"Эндер-жемчуг телепортирует тебя куда кинешь. Лови эндерменов осторожно: они не любят взгляд в упор."
+				"Бросить и пожалеть — классика жанра."
+			]
+			dependencies: ["03C973DA0DB6534E"]
+			tasks: [
+				{
+					id: "276F5884CF0FAF7B"
+					type: "item"
+					item: "minecraft:ender_pearl"
+					count: 2
+				}
+			]
+			rewards: [
+				{
+					id: "7E74B6010DEEAC1A"
+					type: "random"
+					table_id: 4611833123636207672L
+				}
+			]
+		}
+		{
+			id: "1DAB7DF7C27441D3"
+			title: "Совет: JEI"
+			icon: "minecraft:book"
+			x: 2.0d
+			y: 9.0d
+			subtitle: "Рецепты всегда под рукой"
+			description: [
+				"Наведи курсор на предмет и нажми R, чтобы увидеть рецепт, или U, чтобы узнать, где он используется. Тут же видны рецепты IC2 и AE2: у каждой машины своя вкладка."
+				"Лучший друг инженера. Читай рецепт, а не гадай."
+			]
+			dependencies: ["5C94667F7B5C4880"]
+			tasks: [
+				{
+					id: "6F19C9CEA5842E26"
+					type: "checkmark"
+				}
+			]
+			rewards: [
+				{
+					id: "2EF4934B1ED3F40F"
+					type: "random"
+					table_id: 2641968476662968934L
+				}
+			]
+		}
+		{
+			id: "43F56C7F62E6D7D1"
+			title: "Совет: Jade и TOP"
+			icon: "minecraft:spyglass"
+			x: 2.0d
+			y: 10.5d
+			subtitle: "Что за блок передо мной"
+			description: [
+				"Jade и The One Probe показывают, на что ты смотришь: название, мод, содержимое. С плагином IC2 у машин видна и энергия."
+				"Оба стоят в сборке, так что можно выбрать любимую подпись."
+			]
+			dependencies: ["5C94667F7B5C4880"]
+			tasks: [
+				{
+					id: "5D97A34B287F398F"
+					type: "checkmark"
+				}
+			]
+			rewards: [
+				{
+					id: "70A866E41511DA84"
+					type: "random"
+					table_id: 2641968476662968934L
+				}
+			]
+		}
+		{
+			id: "641E5F8962828BF2"
+			title: "Совет: карта"
+			icon: "minecraft:map"
+			x: 2.0d
+			y: 12.0d
+			subtitle: "Чтобы не заблудиться"
+			description: [
+				"Xaero's Minimap и World Map рисуют карту, ставят метки на базу и шахты. Клавиши смотри в настройках управления."
+				"Метка на дом стоит дешевле, чем потерянные вещи."
+			]
+			dependencies: ["5C94667F7B5C4880"]
+			tasks: [
+				{
+					id: "566B161D5F208883"
+					type: "checkmark"
+				}
+			]
+			rewards: [
+				{
+					id: "3CC9CB5E12FD7317"
+					type: "random"
+					table_id: 2641968476662968934L
+				}
+			]
+		}
+		{
+			id: "4BE19C7D6DD69773"
+			title: "Совет: Crafting Tweaks"
+			icon: "minecraft:crafting_table"
+			x: 2.0d
+			y: 13.5d
+			subtitle: "Крафт без боли"
+			description: [
+				"Рядом с сеткой крафта появляются кнопки: повернуть, сбалансировать, очистить. Они экономят время, а время экономит нервы."
+				"Баланс ингредиентов в один клик, магия налицо."
+			]
+			dependencies: ["5C94667F7B5C4880"]
+			tasks: [
+				{
+					id: "44485E939FE90D87"
+					type: "checkmark"
+				}
+			]
+			rewards: [
+				{
+					id: "5F212615BB0C6038"
+					type: "random"
+					table_id: 2641968476662968934L
+				}
+			]
+		}
+		{
+			id: "6F5578F783406E4F"
+			title: "Совет: Curios"
+			icon: "minecraft:leather_chestplate"
+			x: 2.0d
+			y: 15.0d
+			subtitle: "Дополнительные слоты"
+			description: [
+				"Curios добавляет в инвентарь слоты для экипировки: аксессуары и модули. Кнопка открытия рядом с обычными слотами."
+				"Место под шапку-ушанку так и не нашлось."
+			]
+			dependencies: ["5C94667F7B5C4880"]
+			tasks: [
+				{
+					id: "437E39C8815AFA81"
+					type: "checkmark"
+				}
+			]
+			rewards: [
+				{
+					id: "184F1E1A984BE1D2"
+					type: "random"
+					table_id: 2641968476662968934L
+				}
+			]
+		}
+		{
+			id: "43AB7AB3305B6CD4"
+			title: "Совет: листва"
+			icon: "minecraft:oak_leaves"
+			x: 2.0d
+			y: 16.5d
+			subtitle: "Дерево рубишь, листья уходят"
+			description: [
+				"Fast Leaf Decay заставляет листву быстро исчезать после того, как срубишь дерево. Больше никакого висящего в воздухе кустарника."
+				"Лесоруб счастлив."
+			]
+			dependencies: ["5C94667F7B5C4880"]
+			tasks: [
+				{
+					id: "74CE1937F09D8C4D"
+					type: "checkmark"
+				}
+			]
+			rewards: [
+				{
+					id: "3FDB0D0882234384"
+					type: "random"
+					table_id: 2641968476662968934L
+				}
+			]
+		}
+	]
+}

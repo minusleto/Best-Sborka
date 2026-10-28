@@ -1,113 +1,118 @@
 {
-	id: "977E5CBE544CCEEA"
+	id: "177E5CBE544CCEEA"
 	group: ""
 	order_index: 1
 	filename: "ic2"
 	title: "Техника IC2"
-	icon: "ic2:energy_crystal"
-	subtitle: ["Энергия и корпуса машин"]
+	icon: "ic2:machine_block"
+	subtitle: ["Энергия, машины и корпуса"]
 	default_quest_shape: ""
 	default_hide_dependency_lines: false
 	quests: [
 		{
-			id: "848CD6BE0A4210F0"
-			title: "Алмазная пыль"
-			icon: "ic2:dust_diamond"
+			id: "08A2DEDF829F6C0A"
+			title: "Эпоха пара кончилась"
+			icon: "ic2:energy_crystal"
 			x: 0.0d
 			y: 0.0d
-			subtitle: "Первый шаг к кристаллу"
+			shape: "gear"
+			size: 1.5d
+			subtitle: "Добро пожаловать в IC2"
 			description: [
-				"Измельчи алмаз в дробилке (Macerator). Алмазная пыль нужна для энергетической пыли."
-				"Пригодятся 4 штуки на одну партию."
+				"IC2 Classic: всё работает на EU (энергетические единицы). Генераторы дают EU, кабели возят, машины тратят."
+				"Неизолированный кабель бьёт током, поэтому изоляцию не экономь."
+				"Рецепты местами другие, чем в старом IC2 1.12.2: посмотри в JEI и не гадай."
 			]
-			dependencies: ["9ABC313820DECB53"]
+			dependencies: ["295303B81E398C5F"]
 			tasks: [
 				{
-					id: "2584E6DD065EA37B"
+					id: "7B4841EDDD9250BF"
+					type: "checkmark"
+				}
+			]
+			rewards: [
+				{
+					id: "3DB37A8A05C0D88B"
+					type: "random"
+					table_id: 6998042322771818542L
+				}
+			]
+		}
+		{
+			id: "65C3658023763B22"
+			title: "Хватка кузнеца"
+			icon: "kubejs:forge_hammer"
+			x: 2.0d
+			y: 0.0d
+			subtitle: "Рецепт IC2 Experimental"
+			description: [
+				"Кузнечный молот: 5 слитков железа и 2 палки. Выдерживает 80 ударов, так что береги."
+				"Это не мебель. Это инструмент без инструкции и с большими последствиями."
+			]
+			dependencies: ["08A2DEDF829F6C0A"]
+			tasks: [
+				{
+					id: "700E280EC5F62FC7"
 					type: "item"
-					item: "ic2:dust_diamond"
+					item: "kubejs:forge_hammer"
+				}
+			]
+			rewards: [
+				{
+					id: "51395AE2B8817595"
+					type: "random"
+					table_id: 6998042322771818542L
+				}
+				{
+					id: "34A4D98549DD8697"
+					type: "xp"
+					xp: 30
+				}
+				{
+					id: "49CD35F381A3F7BD"
+					type: "item"
+					item: "minecraft:iron_ingot"
+					count: 5
+				}
+			]
+		}
+		{
+			id: "6D2D94956734944F"
+			title: "Прокат"
+			icon: "kubejs:iron_plate"
+			x: 4.0d
+			y: 0.0d
+			shape: "hexagon"
+			size: 1.5d
+			subtitle: "Слиток + молот = пластина"
+			description: [
+				"Положи железный слиток и молот рядом в верстаке — получится пластина (молот теряет прочность). Она же делается в компрессоре без износа."
+				"Пластины идут в корпуса машин, поэтому закладывай запас."
+			]
+			dependencies: ["65C3658023763B22"]
+			tasks: [
+				{
+					id: "494EE2ED5E3AAFC9"
+					type: "item"
+					item: "kubejs:iron_plate"
 					count: 4
 				}
 			]
 			rewards: [
 				{
-					id: "55575BEF4DDF8678"
+					id: "21781EE857465FC0"
+					type: "random"
+					table_id: 6998042322771818542L
+				}
+				{
+					id: "1514012794EB8749"
 					type: "xp"
-					xp: 40
+					xp: 30
 				}
 				{
-					id: "E46BC0D1A78E656C"
+					id: "42BCBFB86916175F"
 					type: "item"
-					item: "minecraft:redstone"
-					count: 5
-				}
-			]
-		}
-		{
-			id: "B95EF3B8FFCA521F"
-			title: "Энергетическая пыль"
-			icon: "kubejs:energium_dust"
-			x: 2.0d
-			y: 0.0d
-			subtitle: "Рецепт сборки"
-			description: [
-				"4 алмазной пыли и 5 редстоуна «крестиком» на верстаке дают сразу 9 энергетической пыли."
-				"Схема: R D R / D R D / R D R, где R — редстоун, D — алмазная пыль."
-			]
-			dependencies: ["848CD6BE0A4210F0"]
-			tasks: [
-				{
-					id: "41A86162383836CE"
-					type: "item"
-					item: "kubejs:energium_dust"
-					count: 9
-				}
-			]
-			rewards: [
-				{
-					id: "D0C0FC246E9F3A88"
-					type: "xp"
-					xp: 50
-				}
-				{
-					id: "1F43031F1E264DAE"
-					type: "item"
-					item: "minecraft:redstone"
-					count: 5
-				}
-			]
-		}
-		{
-			id: "893EB51EEF55529B"
-			title: "Энергокристалл"
-			icon: "ic2:energy_crystal"
-			x: 4.0d
-			y: 0.0d
-			shape: "diamond"
-			size: 1.5d
-			subtitle: "Первый серьёзный аккумулятор"
-			description: [
-				"Положи 9 энергетической пыли в компрессор — получишь энергокристалл."
-				"Крафт на верстаке отключён: теперь только через пыль."
-			]
-			dependencies: ["B95EF3B8FFCA521F"]
-			tasks: [
-				{
-					id: "8EA76BFAE3CA284D"
-					type: "item"
-					item: "ic2:energy_crystal"
-				}
-			]
-			rewards: [
-				{
-					id: "61B1B5D9973633F6"
-					type: "xp"
-					xp: 150
-				}
-				{
-					id: "1C0031A5A0F60D81"
-					type: "item"
-					item: "minecraft:diamond"
+					item: "kubejs:iron_plate"
 					count: 2
 				}
 			]
@@ -116,14 +121,17 @@
 			id: "22DF1D96C92E3660"
 			title: "Каркас машины"
 			icon: "ic2:machine_block"
-			x: 0.0d
-			y: 2.0d
+			x: 6.0d
+			y: 0.0d
 			subtitle: "Основа любого механизма"
-			description: ["Базовый корпус машины IC2. Из него строится почти вся техника."]
-			dependencies: ["9ABC313820DECB53"]
+			description: [
+				"Машинный корпус: из него собирается почти вся техника IC2. Это скелет, на котором держится завод."
+				"Начальный вес: тяжёлый. Начальный вид: серый. Начальный потенциал: огромный."
+			]
+			dependencies: ["6D2D94956734944F"]
 			tasks: [
 				{
-					id: "B475E4C62B7EA689"
+					id: "3475E4C62B7EA689"
 					type: "item"
 					item: "ic2:machine_block"
 				}
@@ -131,38 +139,1286 @@
 			rewards: [
 				{
 					id: "69D02A33CD9AECD0"
+					type: "random"
+					table_id: 6998042322771818542L
+				}
+				{
+					id: "1AA38E136EC8B031"
+					type: "xp"
+					xp: 40
+				}
+			]
+		}
+		{
+			id: "4A627EF1621BC41B"
+			title: "Оловянная жила"
+			icon: "ic2:raw_tin"
+			x: 2.0d
+			y: -6.0d
+			subtitle: "Ищем второй металл"
+			description: [
+				"IC2 добавляет оловянную руду: она нужна для батарей, бронзы и банок. Копай и не забывай про вторую кирку."
+				"Олово блестит скромнее железа, но на заводе оно нужнее."
+			]
+			dependencies: ["08A2DEDF829F6C0A"]
+			tasks: [
+				{
+					id: "303D1315E404233D"
+					type: "item"
+					item: "ic2:raw_tin"
+					count: 3
+				}
+			]
+			rewards: [
+				{
+					id: "5902C9D5F6FAD54F"
+					type: "random"
+					table_id: 6998042322771818542L
+				}
+			]
+		}
+		{
+			id: "30254FC6E506A7CD"
+			title: "Слиток олова"
+			icon: "ic2:ingot_tin"
+			x: 4.0d
+			y: -6.0d
+			subtitle: "Плавка"
+			description: [
+				"Переплавь сырое олово в слиток: оно пойдёт в батареи, кабели и бронзу."
+				"Печь, огонь и немного терпения."
+			]
+			dependencies: ["4A627EF1621BC41B"]
+			tasks: [
+				{
+					id: "36738CCB8B941D3B"
+					type: "item"
+					item: "ic2:ingot_tin"
+					count: 3
+				}
+			]
+			rewards: [
+				{
+					id: "038C09D571A9B81D"
+					type: "random"
+					table_id: 6998042322771818542L
+				}
+				{
+					id: "48EB40D1716E8DD1"
+					type: "xp"
+					xp: 20
+				}
+			]
+		}
+		{
+			id: "7F9B7ECB80018163"
+			title: "Бронза"
+			icon: "ic2:ingot_bronze"
+			x: 6.0d
+			y: -6.0d
+			subtitle: "Сплав меди и олова"
+			description: [
+				"Бронза прочнее железа и идёт на инструменты, броню и пластины. Сплавляется из меди и олова."
+				"Бронзовый век был долгим, не торопись."
+			]
+			dependencies: [
+				"30254FC6E506A7CD"
+				"54798A623EC1ECFE"
+			]
+			tasks: [
+				{
+					id: "20D03D66297D26C4"
+					type: "item"
+					item: "ic2:ingot_bronze"
+					count: 3
+				}
+			]
+			rewards: [
+				{
+					id: "4634A4ECCF87865C"
+					type: "random"
+					table_id: 6998042322771818542L
+				}
+				{
+					id: "0EC339EA8F722495"
+					type: "xp"
+					xp: 30
+				}
+			]
+		}
+		{
+			id: "2E9E8AB4675617DF"
+			title: "Бронзовая кирка"
+			icon: "ic2:tool_pickaxe_bronze"
+			x: 8.0d
+			y: -7.5d
+			subtitle: "Инструменты на сплаве"
+			description: [
+				"Бронзовая кирка прочнее каменной и не хуже железной. Хороший способ приучить руки к новому металлу."
+				"Если есть кирка, зачем искать повод её не использовать?"
+			]
+			dependencies: ["7F9B7ECB80018163"]
+			tasks: [
+				{
+					id: "3AF256AD933F8F36"
+					type: "item"
+					item: "ic2:tool_pickaxe_bronze"
+				}
+			]
+			rewards: [
+				{
+					id: "0866C9B50EFFFEC6"
+					type: "random"
+					table_id: 6998042322771818542L
+				}
+			]
+		}
+		{
+			id: "146B42E2ABA6C569"
+			title: "Плиты из цветных"
+			icon: "kubejs:copper_plate"
+			x: 6.0d
+			y: -3.0d
+			subtitle: "Медь и олово под молотом"
+			description: [
+				"Медные и оловянные пластины делаются так же, как железные: слиток + молот. Нужны для поздних рецептов и для металлоформовщика."
+				"Молот изнашивается. Как и терпение."
+			]
+			dependencies: [
+				"65C3658023763B22"
+				"30254FC6E506A7CD"
+				"54798A623EC1ECFE"
+			]
+			tasks: [
+				{
+					id: "7A4C203C56863F34"
+					type: "item"
+					item: "kubejs:copper_plate"
+				}
+				{
+					id: "16E29EAEE0007A38"
+					type: "item"
+					item: "kubejs:tin_plate"
+				}
+			]
+			rewards: [
+				{
+					id: "1B3D599C2F7ED4BF"
+					type: "random"
+					table_id: 6998042322771818542L
+				}
+				{
+					id: "4943A3030093F5E4"
+					type: "xp"
+					xp: 30
+				}
+			]
+		}
+		{
+			id: "6B916C41317F592B"
+			title: "Серебро"
+			icon: "ic2:ingot_silver"
+			x: 6.0d
+			y: -9.0d
+			subtitle: "Для стекловолокна"
+			description: [
+				"Серебряная руда лежит глубоко. Слитки и пыль идут на стекловолоконный кабель и электронику."
+				"Серебро любит нечисть. Ты про вампиров? Нет, про схемы."
+			]
+			dependencies: ["30254FC6E506A7CD"]
+			tasks: [
+				{
+					id: "20266797916E9F5A"
+					type: "item"
+					item: "ic2:ingot_silver"
+					count: 2
+				}
+			]
+			rewards: [
+				{
+					id: "09580FF3882BEF4E"
+					type: "random"
+					table_id: 7179619961801320286L
+				}
+			]
+		}
+		{
+			id: "6ACF8048D3C33CD2"
+			title: "Алюминий из Незера"
+			icon: "ic2:ingot_aluminium"
+			x: 6.0d
+			y: -10.5d
+			subtitle: "Лёгкий металл"
+			description: [
+				"Алюминиевая руда живёт в Незере. Из неё выходят лёгкие инструменты и кабели."
+				"Идти за алюминием в ад ради ложки? Именно так и выглядит прогресс."
+			]
+			dependencies: [
+				"03C973DA0DB6534E"
+				"30254FC6E506A7CD"
+			]
+			tasks: [
+				{
+					id: "3A4040F1A6586A65"
+					type: "item"
+					item: "ic2:ingot_aluminium"
+					count: 2
+				}
+			]
+			rewards: [
+				{
+					id: "2A05BE1DE2BBB826"
+					type: "random"
+					table_id: 7179619961801320286L
+				}
+				{
+					id: "1397652078498BB3"
+					type: "xp"
+					xp: 40
+				}
+			]
+		}
+		{
+			id: "42B6B29049A73BD8"
+			title: "Гаечный ключ"
+			icon: "ic2:wrench"
+			x: 8.0d
+			y: -1.5d
+			subtitle: "Снимаем машины целиком"
+			description: [
+				"Ключом разбирают машины без потери содержимого: он возвращает блок целым. Без него ломка техники превращается в лотерею."
+				"Не вздумай бить машину киркой. Машина обидится."
+			]
+			dependencies: ["7F9B7ECB80018163"]
+			tasks: [
+				{
+					id: "2936DFFEAFCB24A6"
+					type: "item"
+					item: "ic2:wrench"
+				}
+			]
+			rewards: [
+				{
+					id: "1758C9BEE9390742"
+					type: "random"
+					table_id: 6998042322771818542L
+				}
+				{
+					id: "19BB988CBB12252F"
+					type: "xp"
+					xp: 30
+				}
+			]
+		}
+		{
+			id: "18C843890D3E5755"
+			title: "Схема"
+			icon: "ic2:circuit"
+			x: 6.0d
+			y: 3.0d
+			subtitle: "Электроника для начинающих"
+			description: [
+				"Электросхема — сердце любой машины. Без неё ни генератор не заведёшь, ни дробилку не соберёшь."
+				"Стоит дороже, чем кажется. Работает лучше, чем ждёшь."
+			]
+			dependencies: [
+				"6D2D94956734944F"
+				"54798A623EC1ECFE"
+			]
+			tasks: [
+				{
+					id: "30937CE6040079CA"
+					type: "item"
+					item: "ic2:circuit"
+					count: 4
+				}
+			]
+			rewards: [
+				{
+					id: "4700895C3B34EF69"
+					type: "random"
+					table_id: 6998042322771818542L
+				}
+				{
+					id: "6709FAAC9C662A58"
+					type: "xp"
+					xp: 30
+				}
+			]
+		}
+		{
+			id: "4F4ED29DF1349DF6"
+			title: "Медная проводка"
+			icon: "ic2:copper_cable_item"
+			x: 2.0d
+			y: 4.5d
+			subtitle: "Провода под EU"
+			description: [
+				"Медный кабель возит EU от генератора к машине. Неизолированный кабель бьёт током, так что аккуратнее."
+				"Правило: если из кабеля торчит медь, значит, изоляции там нет."
+			]
+			dependencies: [
+				"54798A623EC1ECFE"
+				"08A2DEDF829F6C0A"
+			]
+			tasks: [
+				{
+					id: "6FD26D1651D58EB1"
+					type: "item"
+					item: "ic2:copper_cable_item"
+					count: 6
+				}
+			]
+			rewards: [
+				{
+					id: "4B5359AB80ED2924"
+					type: "random"
+					table_id: 6998042322771818542L
+				}
+			]
+		}
+		{
+			id: "4521CDDDB99532D7"
+			title: "Аккумулятор"
+			icon: "ic2:re_battery"
+			x: 6.0d
+			y: 4.5d
+			subtitle: "Первая батарея"
+			description: [
+				"RE-батарея хранит немного EU и нужна для старта генератора и первых машин."
+				"Заряжается, разряжается, и снова по кругу. Мини-аккумулятор мини-завода."
+			]
+			dependencies: [
+				"30254FC6E506A7CD"
+				"4F4ED29DF1349DF6"
+				"19F41055AAB6CFEC"
+			]
+			tasks: [
+				{
+					id: "1EB14F06AEDCD8F2"
+					type: "item"
+					item: "ic2:re_battery"
+				}
+			]
+			rewards: [
+				{
+					id: "39D6E33E9BCDD939"
+					type: "random"
+					table_id: 6998042322771818542L
+				}
+				{
+					id: "182BD2E6B2FB5157"
+					type: "xp"
+					xp: 30
+				}
+			]
+		}
+		{
+			id: "782AC3FCE1503D4B"
+			title: "Генератор"
+			icon: "ic2:generator"
+			x: 8.0d
+			y: 1.5d
+			shape: "hexagon"
+			size: 1.5d
+			subtitle: "Огонь в EU"
+			description: [
+				"Генератор сжигает топливо (уголь, дерево и прочее) и отдаёт EU. Скучный, шумный и всё же главный на старте."
+				"Включи его и слушай, как твой завод наконец ожил."
+			]
+			dependencies: [
+				"22DF1D96C92E3660"
+				"4521CDDDB99532D7"
+			]
+			tasks: [
+				{
+					id: "687518CD7036B23E"
+					type: "item"
+					item: "ic2:generator"
+				}
+			]
+			rewards: [
+				{
+					id: "4614BC0F00193A94"
+					type: "random"
+					table_id: 6998042322771818542L
+				}
+				{
+					id: "418B7C466E0CEF94"
+					type: "xp"
+					xp: 40
+				}
+			]
+		}
+		{
+			id: "2E7AD33227F15996"
+			title: "Железная печь"
+			icon: "ic2:iron_furnace"
+			x: 6.0d
+			y: 6.0d
+			subtitle: "Печь для умных"
+			description: [
+				"Железная печь плавит быстрее обычной и не ест EU. Хороший апгрейд в начале пути."
+				"Не для эстетов: просто тёплый железный сундук."
+			]
+			dependencies: ["6D2D94956734944F"]
+			tasks: [
+				{
+					id: "2CD0C7F9FFA36FF9"
+					type: "item"
+					item: "ic2:iron_furnace"
+				}
+			]
+			rewards: [
+				{
+					id: "72ABA5547143C6EE"
+					type: "random"
+					table_id: 6998042322771818542L
+				}
+			]
+		}
+		{
+			id: "7A09DC154EAF185F"
+			title: "Дробилка"
+			icon: "ic2:macerator"
+			x: 10.0d
+			y: 0.0d
+			subtitle: "Больше руды из жилы"
+			description: [
+				"Дробилка превращает руду в двойное количество пыли и перемалывает прочее по мелочи. Главный закон инженера: бери от жилы больше."
+				"Громко, жадно, эффективно."
+			]
+			dependencies: [
+				"782AC3FCE1503D4B"
+				"18C843890D3E5755"
+			]
+			tasks: [
+				{
+					id: "5462142A3293C855"
+					type: "item"
+					item: "ic2:macerator"
+				}
+			]
+			rewards: [
+				{
+					id: "3A3A34BF748CBE8D"
+					type: "random"
+					table_id: 6998042322771818542L
+				}
+				{
+					id: "7A8DA04AD86AAF3D"
+					type: "xp"
+					xp: 40
+				}
+			]
+		}
+		{
+			id: "75F8964D5E5AA3EC"
+			title: "Компрессор"
+			icon: "ic2:compressor"
+			x: 10.0d
+			y: 3.0d
+			subtitle: "Давление решает"
+			description: [
+				"Компрессор сжимает: пластины продвинутого сплава, углеродные материалы и энергетический кристалл (по нашему рецепту). Ценное рождается под давлением."
+				"Не включай его, если у тебя в сумке ценная вещь. Или включай, ты же инженер."
+			]
+			dependencies: [
+				"782AC3FCE1503D4B"
+				"18C843890D3E5755"
+			]
+			tasks: [
+				{
+					id: "4710C56B68D1E645"
+					type: "item"
+					item: "ic2:compressor"
+				}
+			]
+			rewards: [
+				{
+					id: "00823D6B0816F6DF"
+					type: "random"
+					table_id: 6998042322771818542L
+				}
+				{
+					id: "1734B2E984C4BEC5"
+					type: "xp"
+					xp: 40
+				}
+			]
+		}
+		{
+			id: "5B6BDC5C48C675D9"
+			title: "Экстрактор"
+			icon: "ic2:extractor"
+			x: 10.0d
+			y: 6.0d
+			subtitle: "Выжимаем всё"
+			description: [
+				"Экстрактор вытягивает из предметов полезное: из смолы получают резину. Соковыжималка для техники."
+				"Из каждой вещи хоть что-то да выжмет."
+			]
+			dependencies: [
+				"782AC3FCE1503D4B"
+				"18C843890D3E5755"
+			]
+			tasks: [
+				{
+					id: "516CE8831DD59D18"
+					type: "item"
+					item: "ic2:extractor"
+				}
+			]
+			rewards: [
+				{
+					id: "0B49CA93B635B4BA"
+					type: "random"
+					table_id: 6998042322771818542L
+				}
+				{
+					id: "6DA78951D52AF210"
+					type: "xp"
+					xp: 40
+				}
+			]
+		}
+		{
+			id: "60461A9FD18336B9"
+			title: "Электропечь"
+			icon: "ic2:electric_furnace"
+			x: 10.0d
+			y: 10.5d
+			subtitle: "Плавка на EU"
+			description: [
+				"Электропечь плавит быстрее обычной и не требует топлива, только EU. Хорошо, когда уголь кончился."
+				"Угольный склад больше не главный по вкусу."
+			]
+			dependencies: [
+				"2E7AD33227F15996"
+				"782AC3FCE1503D4B"
+				"18C843890D3E5755"
+			]
+			tasks: [
+				{
+					id: "4B33DF61522482D0"
+					type: "item"
+					item: "ic2:electric_furnace"
+				}
+			]
+			rewards: [
+				{
+					id: "582A642FDF87E44D"
+					type: "random"
+					table_id: 6998042322771818542L
+				}
+				{
+					id: "5AD4C0B6ABCCF5FC"
+					type: "xp"
+					xp: 40
+				}
+			]
+		}
+		{
+			id: "08AB9A42F696D3C0"
+			title: "Рециклер"
+			icon: "ic2:recycler"
+			x: 12.0d
+			y: 1.5d
+			subtitle: "Всё в скрап"
+			description: [
+				"Рециклер превращает почти любой предмет в скрап. Да, почти любой. Мусор превращается в ресурс."
+				"Твой лишний булыжник наконец нашёл применение."
+			]
+			dependencies: ["75F8964D5E5AA3EC"]
+			tasks: [
+				{
+					id: "2B050A0F10073DC8"
+					type: "item"
+					item: "ic2:recycler"
+				}
+			]
+			rewards: [
+				{
+					id: "4EF1EDAF3F0786CD"
+					type: "random"
+					table_id: 7179619961801320286L
+				}
+				{
+					id: "3DC9B0026CD5B141"
+					type: "xp"
+					xp: 40
+				}
+			]
+		}
+		{
+			id: "067DBB904BF41BAC"
+			title: "Скрап"
+			icon: "ic2:scrap"
+			x: 14.0d
+			y: 1.5d
+			subtitle: "Топливо для UU-материи"
+			description: [
+				"Скрап идёт в массовый фабрикатор: из него делают UU-материю. Рециклер — его главный поставщик."
+				"Ценный мусор: и выбросить жалко, и копить странно."
+			]
+			dependencies: ["08AB9A42F696D3C0"]
+			tasks: [
+				{
+					id: "453A9C8F5B7F6594"
+					type: "item"
+					item: "ic2:scrap"
+					count: 8
+				}
+			]
+			rewards: [
+				{
+					id: "0F775D1095345F3C"
+					type: "random"
+					table_id: 7179619961801320286L
+				}
+			]
+		}
+		{
+			id: "72474DE42AFCD93B"
+			title: "Резиновое дерево"
+			icon: "ic2:rubber_sapling"
+			x: 2.0d
+			y: 7.5d
+			subtitle: "Источник резины"
+			description: [
+				"Резиновое дерево растёт как обычное, но с характером: из его ствола добывают смолу."
+				"Вырастет не сразу. Не жди, а сажай сразу несколько."
+			]
+			dependencies: ["08A2DEDF829F6C0A"]
+			tasks: [
+				{
+					id: "61CA878C052A4956"
+					type: "item"
+					item: "ic2:rubber_sapling"
+				}
+			]
+			rewards: [
+				{
+					id: "17505C60902E0AD2"
+					type: "random"
+					table_id: 6998042322771818542L
+				}
+			]
+		}
+		{
+			id: "723DBD7D7C8E0E55"
+			title: "Кран для дерева"
+			icon: "ic2:tree_tap"
+			x: 4.0d
+			y: 7.5d
+			subtitle: "Тот самый тап"
+			description: [
+				"Кран (Tree Tap) добывает смолу из резинового дерева. Без него дерево останется просто деревом."
+				"Краник капает, а у тебя копится резина."
+			]
+			dependencies: ["72474DE42AFCD93B"]
+			tasks: [
+				{
+					id: "3928541ED8085835"
+					type: "item"
+					item: "ic2:tree_tap"
+				}
+			]
+			rewards: [
+				{
+					id: "4B604005E07B63BC"
+					type: "random"
+					table_id: 6998042322771818542L
+				}
+			]
+		}
+		{
+			id: "34265F0195B9D96C"
+			title: "Липкая смола"
+			icon: "ic2:sticky_resin"
+			x: 6.0d
+			y: 7.5d
+			subtitle: "Сырьё"
+			description: [
+				"Смола сочится из ствола, если дотронуться краном. В экстракторе из неё получается резина."
+				"Липкая, как заказ на последний рецепт."
+			]
+			dependencies: ["723DBD7D7C8E0E55"]
+			tasks: [
+				{
+					id: "3AF473802AE21825"
+					type: "item"
+					item: "ic2:sticky_resin"
+					count: 4
+				}
+			]
+			rewards: [
+				{
+					id: "566E84696D985217"
+					type: "random"
+					table_id: 6998042322771818542L
+				}
+			]
+		}
+		{
+			id: "6B1DF0601648BADE"
+			title: "Резина"
+			icon: "ic2:rubber"
+			x: 12.0d
+			y: 7.5d
+			subtitle: "Изоляция и не только"
+			description: [
+				"Резина идёт на изоляцию проводов, броню и многое другое. Получай её из смолы в экстракторе."
+				"Резиновый век длится недолго, но очень полезно."
+			]
+			dependencies: [
+				"34265F0195B9D96C"
+				"5B6BDC5C48C675D9"
+			]
+			tasks: [
+				{
+					id: "08A275DB79D18E54"
+					type: "item"
+					item: "ic2:rubber"
+					count: 4
+				}
+			]
+			rewards: [
+				{
+					id: "2255ADD7C93CF0E0"
+					type: "random"
+					table_id: 6998042322771818542L
+				}
+				{
+					id: "490BFB1939F5CDCF"
+					type: "xp"
+					xp: 30
+				}
+			]
+		}
+		{
+			id: "10F20A3C45CA0A08"
+			title: "Изоляция"
+			icon: "ic2:copper_insulated_cable_item"
+			x: 14.0d
+			y: 6.0d
+			subtitle: "Кабель, который не кусается"
+			description: [
+				"Изолированный кабель не бьёт током и спокойно лежит под ногами. Сделай его из медного кабеля и резины."
+				"Безопасность прежде всего. Или хотя бы после первого удара током."
+			]
+			dependencies: ["6B1DF0601648BADE"]
+			tasks: [
+				{
+					id: "6625FAC46BCFDBFB"
+					type: "item"
+					item: "ic2:copper_insulated_cable_item"
+					count: 4
+				}
+			]
+			rewards: [
+				{
+					id: "2200BB48FAEA8282"
+					type: "random"
+					table_id: 6998042322771818542L
+				}
+				{
+					id: "0B556AF0E18990CF"
+					type: "xp"
+					xp: 30
+				}
+			]
+		}
+		{
+			id: "43CC7D88945DADAD"
+			title: "Батбокс"
+			icon: "ic2:batbox"
+			x: 16.0d
+			y: 4.5d
+			subtitle: "Склад для EU"
+			description: [
+				"Батбокс — коробка на батарейках: копит энергию и раздаёт машинам ровно. Один из первых буферов электросети."
+				"Без него даже самый добрый генератор работает рывками."
+			]
+			dependencies: ["10F20A3C45CA0A08"]
+			tasks: [
+				{
+					id: "2ABDF3284C4F3F78"
+					type: "item"
+					item: "ic2:batbox"
+				}
+			]
+			rewards: [
+				{
+					id: "79DE21E0D593D73F"
+					type: "random"
+					table_id: 6998042322771818542L
+				}
+				{
+					id: "5EB31FB8400D2645"
+					type: "xp"
+					xp: 40
+				}
+			]
+		}
+		{
+			id: "449CBA9AC8E2DC63"
+			title: "МФЭ"
+			icon: "ic2:mfe"
+			x: 18.0d
+			y: 4.5d
+			subtitle: "Хранилище побольше"
+			description: [
+				"МФЭ (MFE) вмещает больше EU, чем батбокс, и держит напряжение выше. Хватает на солидную фабрику."
+				"Размер имеет значение, особенно для хранилищ."
+			]
+			dependencies: ["43CC7D88945DADAD"]
+			tasks: [
+				{
+					id: "42BAFAD45C2321CF"
+					type: "item"
+					item: "ic2:mfe"
+				}
+			]
+			rewards: [
+				{
+					id: "74830A9AE88D51B4"
+					type: "random"
+					table_id: 7179619961801320286L
+				}
+				{
+					id: "6A11BAC53A21F061"
+					type: "xp"
+					xp: 50
+				}
+			]
+		}
+		{
+			id: "5DE2744475B2F17D"
+			title: "Трансформатор"
+			icon: "ic2:transformer_lv"
+			x: 18.0d
+			y: 6.0d
+			subtitle: "Меняем напряжение"
+			description: [
+				"Трансформатор переводит энергию между уровнями напряжения. Без него высокое напряжение сжигает слабые машины."
+				"Один неверный провод, и ты запоминаешь урок надолго."
+			]
+			dependencies: ["43CC7D88945DADAD"]
+			tasks: [
+				{
+					id: "1B42ED734CEA986D"
+					type: "item"
+					item: "ic2:transformer_lv"
+				}
+			]
+			rewards: [
+				{
+					id: "167EAF9D991BDDBC"
+					type: "random"
+					table_id: 7179619961801320286L
+				}
+			]
+		}
+		{
+			id: "2B6453DB849F9243"
+			title: "Солнечная панель"
+			icon: "ic2:solar_panel"
+			x: 10.0d
+			y: 4.5d
+			subtitle: "Энергия от неба"
+			description: [
+				"Солнечная панель даёт EU днём, пока ей виден небосвод. Ночью она отдыхает, значит, к ней нужен накопитель."
+				"Свет бесплатен, но не всегда."
+			]
+			dependencies: ["782AC3FCE1503D4B"]
+			tasks: [
+				{
+					id: "6759CD04D6C08056"
+					type: "item"
+					item: "ic2:solar_panel"
+				}
+			]
+			rewards: [
+				{
+					id: "784F402B39DBE986"
+					type: "random"
+					table_id: 7179619961801320286L
+				}
+				{
+					id: "3B2AF5C3E3CEF437"
+					type: "xp"
+					xp: 40
+				}
+			]
+		}
+		{
+			id: "19E48D2159794A5B"
+			title: "Геотермальный генератор"
+			icon: "ic2:geothermal_generator"
+			x: 10.0d
+			y: 7.5d
+			subtitle: "Лава в энергию"
+			description: [
+				"Геотермальный генератор перерабатывает лаву в EU. Пригодится ведро и смелость."
+				"Идея: тёплая лава остывает, а ты греешься у батареи."
+			]
+			dependencies: [
+				"782AC3FCE1503D4B"
+				"3D39EC28BE11AF0B"
+			]
+			tasks: [
+				{
+					id: "462A4D7B873CD6C0"
+					type: "item"
+					item: "ic2:geothermal_generator"
+				}
+			]
+			rewards: [
+				{
+					id: "30247E255F231DE7"
+					type: "random"
+					table_id: 7179619961801320286L
+				}
+				{
+					id: "6114923CE3D03406"
+					type: "xp"
+					xp: 40
+				}
+			]
+		}
+		{
+			id: "1FC0AF40C5E6B4E4"
+			title: "Водяная мельница"
+			icon: "ic2:water_mill"
+			x: 10.0d
+			y: 9.0d
+			subtitle: "Течёт, значит работает"
+			description: [
+				"Водяная мельница крутится от воды рядом и даёт немного EU без топлива. Тихая и скромная."
+				"Река рядом, значит, ты уже в плюсе."
+			]
+			dependencies: ["782AC3FCE1503D4B"]
+			tasks: [
+				{
+					id: "73B53E0EBCC73193"
+					type: "item"
+					item: "ic2:water_mill"
+				}
+			]
+			rewards: [
+				{
+					id: "49E34243436EAF42"
+					type: "random"
+					table_id: 7179619961801320286L
+				}
+			]
+		}
+		{
+			id: "76262090F8091A5A"
+			title: "Ветряная турбина"
+			icon: "ic2:wind_turbine"
+			x: 10.0d
+			y: 1.5d
+			subtitle: "Чем выше, тем лучше"
+			description: [
+				"Ветряк даёт больше энергии на высоте. Ставь его на холм, а не в подвал."
+				"Ветер дует где хочет. Турбина старается успеть."
+			]
+			dependencies: ["782AC3FCE1503D4B"]
+			tasks: [
+				{
+					id: "1557F701D3880C8D"
+					type: "item"
+					item: "ic2:wind_turbine"
+				}
+			]
+			rewards: [
+				{
+					id: "47A66C20ABE34094"
+					type: "random"
+					table_id: 7179619961801320286L
+				}
+			]
+		}
+		{
+			id: "52B19837545ECD9F"
+			title: "Металлоформовщик"
+			icon: "bs_machines:metal_former"
+			x: 8.0d
+			y: 9.0d
+			shape: "octagon"
+			size: 1.5d
+			subtitle: "Машина этой сборки"
+			description: [
+				"Наш собственный блок: катает слитки в пластины, выдавливает кабели и режет пластины на проволоку. Три режима переключаются кнопкой в интерфейсе."
+				"Если надоело махать молотом, поставь машину. Рецепт: схема, 2 железные пластины, корпус и 3 медных кабеля."
+			]
+			dependencies: [
+				"18C843890D3E5755"
+				"22DF1D96C92E3660"
+				"4F4ED29DF1349DF6"
+			]
+			tasks: [
+				{
+					id: "4B4F0EB5EED19795"
+					type: "item"
+					item: "bs_machines:metal_former"
+				}
+			]
+			rewards: [
+				{
+					id: "78E5250B77145AE3"
+					type: "random"
+					table_id: 7179619961801320286L
+				}
+				{
+					id: "10E6BFA0A03A9F87"
+					type: "xp"
+					xp: 60
+				}
+			]
+		}
+		{
+			id: "29EA0C04972E9A1A"
+			title: "Алмазная пыль"
+			icon: "ic2:dust_diamond"
+			x: 12.0d
+			y: -4.5d
+			subtitle: "Первый шаг к кристаллу"
+			description: [
+				"Измельчи алмаз в дробилке. Четыре порции алмазной пыли нужны для энергетической пыли."
+				"Алмазы в пыль — расточительно, но так принято в IC2."
+			]
+			dependencies: [
+				"55D8E157CA3EEF26"
+				"7A09DC154EAF185F"
+			]
+			tasks: [
+				{
+					id: "6D0212CA6030A318"
+					type: "item"
+					item: "ic2:dust_diamond"
+					count: 4
+				}
+			]
+			rewards: [
+				{
+					id: "65D517F014FDD650"
+					type: "random"
+					table_id: 7179619961801320286L
+				}
+				{
+					id: "7B287EAD3010FCF0"
 					type: "xp"
 					xp: 40
 				}
 				{
-					id: "9AA38E136EC8B031"
+					id: "3D271C9EA98BB03C"
 					type: "item"
-					item: "kubejs:iron_plate"
+					item: "minecraft:redstone"
+					count: 5
+				}
+			]
+		}
+		{
+			id: "1CD8C596E7625DA9"
+			title: "Энергетическая пыль"
+			icon: "kubejs:energium_dust"
+			x: 14.0d
+			y: -4.5d
+			subtitle: "Рецепт сборки"
+			description: [
+				"4 алмазной пыли и 5 редстоуна «крестиком» в верстаке дают сразу 9 энергетической пыли. Схема: R D R / D R D / R D R."
+				"Блестит красиво, а уходит в дело быстро."
+			]
+			dependencies: ["29EA0C04972E9A1A"]
+			tasks: [
+				{
+					id: "245AB3AAFD3FA976"
+					type: "item"
+					item: "kubejs:energium_dust"
+					count: 9
+				}
+			]
+			rewards: [
+				{
+					id: "21033C448D8F538B"
+					type: "random"
+					table_id: 7179619961801320286L
+				}
+				{
+					id: "39BDC63CD9D327A3"
+					type: "xp"
+					xp: 50
+				}
+				{
+					id: "058AE739E823F34D"
+					type: "item"
+					item: "minecraft:redstone"
+					count: 5
+				}
+			]
+		}
+		{
+			id: "093EB51EEF55529B"
+			title: "Энергокристалл"
+			icon: "ic2:energy_crystal"
+			x: 16.0d
+			y: -4.5d
+			shape: "diamond"
+			size: 1.5d
+			subtitle: "Первый серьёзный аккумулятор"
+			description: [
+				"Положи 9 энергетической пыли в компрессор и получишь кристалл. Крафт на верстаке отключён: теперь только через пыль."
+				"Один кристалл вмещает столько энергии, что хватит на любую фабрику первого дня."
+			]
+			dependencies: [
+				"1CD8C596E7625DA9"
+				"75F8964D5E5AA3EC"
+			]
+			tasks: [
+				{
+					id: "0EA76BFAE3CA284D"
+					type: "item"
+					item: "ic2:energy_crystal"
+				}
+			]
+			rewards: [
+				{
+					id: "61B1B5D9973633F6"
+					type: "random"
+					table_id: 2902623939942413556L
+				}
+				{
+					id: "0C0031A5A0F60D81"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "19A7EDEEE9414E7B"
+					type: "item"
+					item: "minecraft:diamond"
 					count: 2
 				}
 			]
 		}
 		{
-			id: "7F4E9EC419391DAC"
-			title: "Передовые материалы"
-			icon: "ic2:plate_advanced_alloy"
-			x: 2.0d
-			y: 2.0d
-			subtitle: "Две детали для корпуса"
+			id: "25B210C9E7D96E8F"
+			title: "МФСУ"
+			icon: "ic2:mfsu"
+			x: 20.0d
+			y: -4.5d
+			shape: "octagon"
+			size: 1.5d
+			subtitle: "Серьёзное хранилище"
 			description: [
-				"Для продвинутого корпуса нужны пластина улучшенного сплава и углеродная пластина."
-				"Бери по две штуки каждой."
+				"МФСУ хранит ещё больше, чем МФЭ, и берётся за большие проекты. Требует кристалл и терпение."
+				"Тут уже не батарейка: целый склад."
 			]
-			dependencies: ["22DF1D96C92E3660"]
+			dependencies: [
+				"449CBA9AC8E2DC63"
+				"093EB51EEF55529B"
+			]
 			tasks: [
 				{
-					id: "7315980CE75B3CDC"
+					id: "67CE10473E4AC72C"
+					type: "item"
+					item: "ic2:mfsu"
+				}
+			]
+			rewards: [
+				{
+					id: "54F3E88C5AD0D1DD"
+					type: "random"
+					table_id: 2902623939942413556L
+				}
+				{
+					id: "5C4CE748DB3C9A93"
+					type: "xp"
+					xp: 80
+				}
+			]
+		}
+		{
+			id: "24CAFB1DFBD97303"
+			title: "Продвинутый сплав"
+			icon: "ic2:plate_advanced_alloy"
+			x: 12.0d
+			y: -3.0d
+			subtitle: "Композит под давлением"
+			description: [
+				"Пластина улучшенного сплава делается в компрессоре. Идёт в продвинутые корпуса и многие поздние механизмы."
+				"Лёгкая, прочная и страшно нужная."
+			]
+			dependencies: ["75F8964D5E5AA3EC"]
+			tasks: [
+				{
+					id: "0859F56A7333F810"
 					type: "item"
 					item: "ic2:plate_advanced_alloy"
 					count: 2
 				}
+			]
+			rewards: [
 				{
-					id: "35F0375798AD34F1"
+					id: "4883001274CE8EDD"
+					type: "random"
+					table_id: 7179619961801320286L
+				}
+				{
+					id: "69DDD69F6C617A6F"
+					type: "xp"
+					xp: 40
+				}
+			]
+		}
+		{
+			id: "7E08CE1F8A6C6343"
+			title: "Углеволокно"
+			icon: "ic2:carbon_fiber"
+			x: 12.0d
+			y: -1.5d
+			subtitle: "Из угля в нить"
+			description: [
+				"Углеродные материалы получают из угля под давлением и после обработки. Идут в карбоновые пластины, ротор и броню."
+				"Если у тебя на складе гора угля, она нашла призвание."
+			]
+			dependencies: [
+				"75F8964D5E5AA3EC"
+				"4D05E7AAA9292E9E"
+			]
+			tasks: [
+				{
+					id: "1F8646D26C309130"
+					type: "item"
+					item: "ic2:carbon_fiber"
+					count: 2
+				}
+			]
+			rewards: [
+				{
+					id: "3AEEC13F58C4BDC2"
+					type: "random"
+					table_id: 7179619961801320286L
+				}
+			]
+		}
+		{
+			id: "502BEF5FB886D2F2"
+			title: "Углеродная пластина"
+			icon: "ic2:carbon_plate"
+			x: 14.0d
+			y: -1.5d
+			subtitle: "Лёгкая броня и корпуса"
+			description: [
+				"Углеродная пластина нужна для продвинутого корпуса, нано-брони и многого поздно-игрового. Делается из волокна."
+				"Чёрная, лёгкая, дорогая. Вылитая элита."
+			]
+			dependencies: ["7E08CE1F8A6C6343"]
+			tasks: [
+				{
+					id: "3FA8804CC2D52D29"
 					type: "item"
 					item: "ic2:carbon_plate"
 					count: 2
@@ -170,32 +1426,71 @@
 			]
 			rewards: [
 				{
-					id: "E8F4646F8E5723F6"
-					type: "xp"
-					xp: 60
+					id: "54433118ECEEFA16"
+					type: "random"
+					table_id: 7179619961801320286L
 				}
 				{
-					id: "4CD3EDC1A58993FD"
-					type: "item"
-					item: "kubejs:iron_plate"
-					count: 2
+					id: "625DB7BC33B7F903"
+					type: "xp"
+					xp: 40
 				}
 			]
 		}
 		{
-			id: "84AF9EE788E75C97"
+			id: "2B7C1C6D15663181"
+			title: "Продвинутая схема"
+			icon: "ic2:advanced_circuit"
+			x: 8.0d
+			y: 3.0d
+			subtitle: "Электроника выше классом"
+			description: [
+				"Улучшенная схема: обычная схема, редстоун и лазурит. Нужна для лапотрона, лазера и поздних машин."
+				"Красная, синяя, умная."
+			]
+			dependencies: [
+				"18C843890D3E5755"
+				"19F41055AAB6CFEC"
+				"101D8AFD3ECACA56"
+			]
+			tasks: [
+				{
+					id: "3B932931442F862E"
+					type: "item"
+					item: "ic2:advanced_circuit"
+					count: 2
+				}
+			]
+			rewards: [
+				{
+					id: "7420762CD4282703"
+					type: "random"
+					table_id: 7179619961801320286L
+				}
+				{
+					id: "7492BFAC19A19920"
+					type: "xp"
+					xp: 50
+				}
+			]
+		}
+		{
+			id: "04AF9EE788E75C97"
 			title: "Продвинутый корпус"
 			icon: "ic2:advanced_machine_block"
-			x: 4.0d
-			y: 2.0d
+			x: 16.0d
+			y: -1.5d
 			shape: "octagon"
 			size: 1.5d
 			subtitle: "Дорога к серьёзным машинам"
 			description: [
-				"Корпус машины + 2 улучшенных сплава + 2 углеродные пластины + 4 железные пластины."
-				"Два рецепта: железные пластины по углам, сплавы сверху и снизу, углерод по бокам от корпуса, либо наоборот."
+				"Корпус машины + 2 улучшенных сплава + 2 углеродные пластины + 4 железные пластины. Два рецепта: SAS/CMC/SAS или SCS/AMA/SCS, где S — железная пластина."
+				"Без него поздние машины не соберёшь. Хорошая причина запастись пластинами."
 			]
-			dependencies: ["7F4E9EC419391DAC"]
+			dependencies: [
+				"24CAFB1DFBD97303"
+				"502BEF5FB886D2F2"
+			]
 			tasks: [
 				{
 					id: "641C599D354112C8"
@@ -205,21 +1500,548 @@
 			]
 			rewards: [
 				{
-					id: "C788CC17B41A2ED6"
+					id: "4788CC17B41A2ED6"
+					type: "random"
+					table_id: 2902623939942413556L
+				}
+				{
+					id: "538A547025AD9E3B"
 					type: "xp"
 					xp: 250
 				}
 				{
-					id: "538A547025AD9E3B"
+					id: "6242B283BC9C2026"
 					type: "item"
 					item: "minecraft:diamond"
 					count: 2
 				}
 				{
-					id: "E242B283BC9C2026"
+					id: "135777FB7E3978B3"
 					type: "item"
 					item: "minecraft:redstone"
 					count: 8
+				}
+			]
+		}
+		{
+			id: "3911A14B6AE08B4F"
+			title: "Стабилизированный корпус"
+			icon: "ic2:stabilized_machine_block"
+			x: 18.0d
+			y: -1.5d
+			subtitle: "Для массфаба"
+			description: [
+				"Стабилизированный корпус дороже продвинутого и нужен массовому фабрикатору. Серьёзные вещи требуют серьёзных каркасов."
+				"Кому-то пришлось заплатить за его надёжность."
+			]
+			dependencies: ["04AF9EE788E75C97"]
+			tasks: [
+				{
+					id: "48BCFCC144198577"
+					type: "item"
+					item: "ic2:stabilized_machine_block"
+				}
+			]
+			rewards: [
+				{
+					id: "3A26AA3207D7E85F"
+					type: "random"
+					table_id: 2902623939942413556L
+				}
+				{
+					id: "3BD4EB78373240BA"
+					type: "xp"
+					xp: 100
+				}
+			]
+		}
+		{
+			id: "0B2AAFBB65E72FBF"
+			title: "Лапотронный кристалл"
+			icon: "ic2:lapatron_crystal"
+			x: 18.0d
+			y: 3.0d
+			shape: "diamond"
+			size: 1.5d
+			subtitle: "Лазурит, схема и кристалл"
+			description: [
+				"Лапотронный кристалл: лазурит, улучшенная схема и энергокристалл (по рецепту сборки). Вмещает в десять раз больше, чем простой."
+				"Синий, тяжёлый и дорогой, как хорошая идея."
+			]
+			dependencies: [
+				"093EB51EEF55529B"
+				"2B7C1C6D15663181"
+			]
+			tasks: [
+				{
+					id: "3A86A316E4148059"
+					type: "item"
+					item: "ic2:lapatron_crystal"
+				}
+			]
+			rewards: [
+				{
+					id: "3531825C3FB8F726"
+					type: "random"
+					table_id: 2902623939942413556L
+				}
+				{
+					id: "276DC0C84A3E5D28"
+					type: "xp"
+					xp: 150
+				}
+			]
+		}
+		{
+			id: "145ACE08896648F1"
+			title: "Плавильня сплавов"
+			icon: "ic2:alloy_smelter"
+			x: 12.0d
+			y: 6.0d
+			subtitle: "Для металлов потолще"
+			description: [
+				"Плавильня сплавов делает слитки сплавов быстрее и без хлопот, когда обычной печи уже мало."
+				"Каждому металлу своя температура и свой характер."
+			]
+			dependencies: ["60461A9FD18336B9"]
+			tasks: [
+				{
+					id: "02D2865A2C8A0120"
+					type: "item"
+					item: "ic2:alloy_smelter"
+				}
+			]
+			rewards: [
+				{
+					id: "4861AD984A3ED407"
+					type: "random"
+					table_id: 7179619961801320286L
+				}
+				{
+					id: "61B6BC638E07A112"
+					type: "xp"
+					xp: 40
+				}
+			]
+		}
+		{
+			id: "1D96DC0043E6B29B"
+			title: "Индукционная печь"
+			icon: "ic2:induction_furnace"
+			x: 18.0d
+			y: 7.5d
+			subtitle: "Старшая сестра электропечи"
+			description: [
+				"Индукционная печь работает мощнее электропечи и ест больше EU. Хороший выбор для больших объёмов."
+				"Не включай её в тесноте: слишком горячая компания."
+			]
+			dependencies: [
+				"60461A9FD18336B9"
+				"04AF9EE788E75C97"
+			]
+			tasks: [
+				{
+					id: "0FF75803561ACBA0"
+					type: "item"
+					item: "ic2:induction_furnace"
+				}
+			]
+			rewards: [
+				{
+					id: "231536F4BD30F0AE"
+					type: "random"
+					table_id: 2902623939942413556L
+				}
+				{
+					id: "4E3F2797EB78F94D"
+					type: "xp"
+					xp: 60
+				}
+			]
+		}
+		{
+			id: "0F385B60C3E84008"
+			title: "Помпа"
+			icon: "ic2:pump"
+			x: 8.0d
+			y: 10.5d
+			subtitle: "Качаем жидкости"
+			description: [
+				"Помпа качает воду, лаву и всё, что течёт. Ведёт жидкости по трубам к машинам."
+				"Для труб она работает как сердце, только не бьётся."
+			]
+			dependencies: [
+				"22DF1D96C92E3660"
+				"18C843890D3E5755"
+				"3D39EC28BE11AF0B"
+			]
+			tasks: [
+				{
+					id: "1F9497B764389E81"
+					type: "item"
+					item: "ic2:pump"
+				}
+			]
+			rewards: [
+				{
+					id: "073C2FA53C47F268"
+					type: "random"
+					table_id: 7179619961801320286L
+				}
+				{
+					id: "34CDA86C0C025520"
+					type: "xp"
+					xp: 40
+				}
+			]
+		}
+		{
+			id: "3BCE891305F362FA"
+			title: "Электролизёр"
+			icon: "ic2:electrolyzer"
+			x: 10.0d
+			y: 12.0d
+			subtitle: "Разбираем жидкость"
+			description: [
+				"Электролизёр раскладывает жидкости на составляющие: например, воду на газы. Нужен для химии позднего этапа."
+				"Школьная химия внезапно пригодилась."
+			]
+			dependencies: [
+				"0F385B60C3E84008"
+				"2B7C1C6D15663181"
+			]
+			tasks: [
+				{
+					id: "2C88A6E7615FCE46"
+					type: "item"
+					item: "ic2:electrolyzer"
+				}
+			]
+			rewards: [
+				{
+					id: "2646185CAD2BE7B6"
+					type: "random"
+					table_id: 7179619961801320286L
+				}
+				{
+					id: "7FC63168C84141C9"
+					type: "xp"
+					xp: 40
+				}
+			]
+		}
+		{
+			id: "6E5661349EA01C2C"
+			title: "Майнер"
+			icon: "ic2:miner"
+			x: 18.0d
+			y: 10.5d
+			shape: "octagon"
+			size: 1.5d
+			subtitle: "Копает сам"
+			description: [
+				"Майнер сам копает вниз и добывает всё, что найдёт. Нужны питание, трубы и мудрость в расстановке."
+				"Если ты это не автоматизировал, ты просто работаешь не по-инженерному."
+			]
+			dependencies: [
+				"04AF9EE788E75C97"
+				"0F385B60C3E84008"
+			]
+			tasks: [
+				{
+					id: "584DE6967E0F14A3"
+					type: "item"
+					item: "ic2:miner"
+				}
+			]
+			rewards: [
+				{
+					id: "5E72157A6377D170"
+					type: "random"
+					table_id: 2902623939942413556L
+				}
+				{
+					id: "6D352FDD6934A6B4"
+					type: "xp"
+					xp: 80
+				}
+			]
+		}
+		{
+			id: "537B1258738DBC58"
+			title: "Блок-сканер руд"
+			icon: "ic2:ore_scanner"
+			x: 18.0d
+			y: 12.0d
+			subtitle: "Видит сквозь камень"
+			description: [
+				"Блок-сканер показывает, какие руды лежат вокруг. Хорош для планирования шахт."
+				"Знание, где копать, дороже кирки."
+			]
+			dependencies: [
+				"04AF9EE788E75C97"
+				"2B7C1C6D15663181"
+			]
+			tasks: [
+				{
+					id: "5896FCA32CD8A14D"
+					type: "item"
+					item: "ic2:ore_scanner"
+				}
+			]
+			rewards: [
+				{
+					id: "131ABED8F8B1E376"
+					type: "random"
+					table_id: 7179619961801320286L
+				}
+				{
+					id: "44B6CCF52E97CD48"
+					type: "xp"
+					xp: 50
+				}
+			]
+		}
+		{
+			id: "1C58E753C940B0DC"
+			title: "Массовый фабрикатор"
+			icon: "ic2:mass_fabricator"
+			x: 20.0d
+			y: 0.0d
+			shape: "octagon"
+			size: 1.5d
+			subtitle: "Материя из EU"
+			description: [
+				"Массфаб превращает скрап и огромное количество EU в UU-материю. Нужен стабилизированный корпус."
+				"Электричество, мусор и немного магии."
+			]
+			dependencies: [
+				"3911A14B6AE08B4F"
+				"067DBB904BF41BAC"
+			]
+			tasks: [
+				{
+					id: "23FB0DD5DEB1CC53"
+					type: "item"
+					item: "ic2:mass_fabricator"
+				}
+			]
+			rewards: [
+				{
+					id: "2E3634E9F9392328"
+					type: "random"
+					table_id: 2902623939942413556L
+				}
+				{
+					id: "3B9F4E4A9531A912"
+					type: "xp"
+					xp: 120
+				}
+			]
+		}
+		{
+			id: "7EA1AF4DDC4283A6"
+			title: "UU-материя"
+			icon: "ic2:uumatter"
+			x: 22.0d
+			y: 0.0d
+			shape: "heart"
+			subtitle: "Почти магия"
+			description: [
+				"UU-материя — универсальная основа: из неё моды делают чуть ли не что угодно. Копи её и следи за рецептами."
+				"Нет, она не превращает кошку в собаку. Пока."
+			]
+			dependencies: ["1C58E753C940B0DC"]
+			tasks: [
+				{
+					id: "150E8CAE10B00B6E"
+					type: "item"
+					item: "ic2:uumatter"
+				}
+			]
+			rewards: [
+				{
+					id: "713526D27AF44429"
+					type: "random"
+					table_id: 2902623939942413556L
+				}
+				{
+					id: "45A33299073F3979"
+					type: "xp"
+					xp: 150
+				}
+			]
+		}
+		{
+			id: "1C3ADBACC91631D3"
+			title: "Шахтёрский лазер"
+			icon: "ic2:mining_laser"
+			x: 18.0d
+			y: -7.5d
+			subtitle: "Копает светом"
+			description: [
+				"Лазер режет камень на расстоянии и тратит заряд кристаллов. Рецепт в сборке усложнён: схема и композиты на месте."
+				"Громко пискнет и сделает дыру ровно там, где надо."
+			]
+			dependencies: [
+				"093EB51EEF55529B"
+				"2B7C1C6D15663181"
+				"24CAFB1DFBD97303"
+			]
+			tasks: [
+				{
+					id: "34D1505418F650C0"
+					type: "item"
+					item: "ic2:mining_laser"
+				}
+			]
+			rewards: [
+				{
+					id: "00F1F52314127A6F"
+					type: "random"
+					table_id: 2902623939942413556L
+				}
+				{
+					id: "4729A970539D057A"
+					type: "xp"
+					xp: 120
+				}
+			]
+		}
+		{
+			id: "68C5156E9ED60AFE"
+			title: "Нано-шлем"
+			icon: "ic2:nano_suit_helmet"
+			x: 18.0d
+			y: -3.0d
+			subtitle: "Броня будущего"
+			description: [
+				"Нано-шлем в сборке требует углеродную пластину, энергокристалл и прибор ночного видения. Видит в темноте и держит удар."
+				"Из шапки с ночником получилась лучшая каска во всём Minecraft."
+			]
+			dependencies: [
+				"093EB51EEF55529B"
+				"502BEF5FB886D2F2"
+			]
+			tasks: [
+				{
+					id: "4130758EFB924765"
+					type: "item"
+					item: "ic2:nano_suit_helmet"
+				}
+			]
+			rewards: [
+				{
+					id: "67FC616735070516"
+					type: "random"
+					table_id: 2902623939942413556L
+				}
+				{
+					id: "6C7F63E9627EB6C2"
+					type: "xp"
+					xp: 120
+				}
+			]
+		}
+		{
+			id: "21C4AEBC7A4F40C1"
+			title: "Защита от радиации"
+			icon: "ic2:armor_hazmat_helmet"
+			x: 14.0d
+			y: 7.5d
+			subtitle: "Обязательное снаряжение"
+			description: [
+				"Хазмат-шлем: резиновый, жёлтый, нужен рядом с радиоактивными материалами и реактором. Не снимай его, пока не отойдёшь."
+				"Выглядит нелепо. Зато жив."
+			]
+			dependencies: ["6B1DF0601648BADE"]
+			tasks: [
+				{
+					id: "094A66950D18C571"
+					type: "item"
+					item: "ic2:armor_hazmat_helmet"
+				}
+			]
+			rewards: [
+				{
+					id: "68F004AA1EC30D8D"
+					type: "random"
+					table_id: 7179619961801320286L
+				}
+				{
+					id: "7657B53E336E2D5D"
+					type: "xp"
+					xp: 40
+				}
+			]
+		}
+		{
+			id: "31F7B5938C63B050"
+			title: "Уран"
+			icon: "ic2:ingot_uranium"
+			x: 16.0d
+			y: 9.0d
+			subtitle: "Топливо реактора"
+			description: [
+				"Урановые слитки питают ядерный реактор. Копай осторожно и носи хазмат."
+				"Светится в темноте? Ты уверен, что хочешь спать рядом?"
+			]
+			dependencies: ["21C4AEBC7A4F40C1"]
+			tasks: [
+				{
+					id: "291BB115A59CE0DF"
+					type: "item"
+					item: "ic2:ingot_uranium"
+					count: 2
+				}
+			]
+			rewards: [
+				{
+					id: "5C482CBCAF68692F"
+					type: "random"
+					table_id: 2902623939942413556L
+				}
+				{
+					id: "6BA6AB16667A4093"
+					type: "xp"
+					xp: 60
+				}
+			]
+		}
+		{
+			id: "61F79D1B0121130F"
+			title: "Ядерный реактор"
+			icon: "ic2:nuclear_reactor"
+			x: 18.0d
+			y: 9.0d
+			shape: "heart"
+			size: 2.0d
+			subtitle: "Очень много EU"
+			description: [
+				"Реактор даёт огромную мощность и требует точной настройки охлаждения. Для начала почитай, как расставлять топливные стержни."
+				"Ошибка стоит дорого. Не будь героем, будь инженером."
+			]
+			dependencies: [
+				"04AF9EE788E75C97"
+				"31F7B5938C63B050"
+			]
+			tasks: [
+				{
+					id: "1279EB284FF31963"
+					type: "item"
+					item: "ic2:nuclear_reactor"
+				}
+			]
+			rewards: [
+				{
+					id: "2CA60B76443133CC"
+					type: "random"
+					table_id: 2902623939942413556L
+				}
+				{
+					id: "45B6A15BDB05B287"
+					type: "xp"
+					xp: 200
 				}
 			]
 		}

@@ -1,7 +1,7 @@
 {
 	id: "3596142607514ADB"
 	group: ""
-	order_index: 4
+	order_index: 3
 	filename: "finale"
 	title: "Легенда"
 	icon: "minecraft:nether_star"
@@ -10,7 +10,7 @@
 	default_hide_dependency_lines: false
 	quests: [
 		{
-			id: "A96D8BAC42AF8B13"
+			id: "296D8BAC42AF8B13"
 			title: "Легенда Best-Sborka"
 			icon: "minecraft:nether_star"
 			x: 0.0d
@@ -20,12 +20,12 @@
 			subtitle: "Путь инженера пройден"
 			description: [
 				"Заверши главные дела: энергокристалл, продвинутый корпус, молекулярный сборщик и Тёмные глубины."
-				""
-				"Награда — алмазы и зачарованное золотое яблоко."
+				"Награда: алмазы, зачарованное золотое яблоко и звание Легенды."
+				"Ты построил то, что другие только планировали. Поздравляю!"
 			]
 			dependencies: [
-				"893EB51EEF55529B"
-				"84AF9EE788E75C97"
+				"093EB51EEF55529B"
+				"04AF9EE788E75C97"
 				"43FC6CE470B4B91B"
 				"415197D81A064FA6"
 			]
@@ -37,18 +37,18 @@
 			]
 			rewards: [
 				{
-					id: "F89177A6021CD2BE"
+					id: "789177A6021CD2BE"
 					type: "xp"
 					xp: 1000
 				}
 				{
-					id: "8944D64E92647217"
+					id: "0944D64E92647217"
 					type: "item"
 					item: "minecraft:diamond"
 					count: 4
 				}
 				{
-					id: "BDAC1F6C01D8EA85"
+					id: "3DAC1F6C01D8EA85"
 					type: "item"
 					item: "minecraft:enchanted_golden_apple"
 				}

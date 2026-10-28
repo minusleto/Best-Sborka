@@ -1,5 +1,5 @@
 {
-	id: "A437228F9674062E"
+	id: "2437228F9674062E"
 	group: ""
 	order_index: 2
 	filename: "ae2"
@@ -10,14 +10,17 @@
 	default_hide_dependency_lines: false
 	quests: [
 		{
-			id: "A4AC1B06407DDE8F"
+			id: "24AC1B06407DDE8F"
 			title: "Кварц Certus"
 			icon: "ae2:certus_quartz_crystal"
 			x: 0.0d
 			y: 0.0d
-			subtitle: "Основа всей сети"
-			description: ["Найди залежи кварца Certus под землёй и добудь кристалл."]
-			dependencies: ["5C94667F7B5C4880"]
+			subtitle: "Основа сети"
+			description: [
+				"Найди залежи кварца Certus под землёй и добудь кристалл. Из него делают почти всё в Applied Energistics."
+				"Светится слегка, как будто знает что-то."
+			]
+			dependencies: ["790C05DA7835720F"]
 			tasks: [
 				{
 					id: "49C42BDA85C94994"
@@ -27,30 +30,32 @@
 			]
 			rewards: [
 				{
-					id: "E62A08FC81290584"
-					type: "xp"
-					xp: 30
+					id: "662A08FC81290584"
+					type: "random"
+					table_id: 3928829488754957609L
 				}
 				{
-					id: "953BCBCE8BC5B844"
-					type: "item"
-					item: "minecraft:coal"
-					count: 4
+					id: "153BCBCE8BC5B844"
+					type: "xp"
+					xp: 30
 				}
 			]
 		}
 		{
-			id: "116F73383C862D44"
+			id: "016F73383C862D44"
 			title: "Заряженный кварц"
 			icon: "ae2:charged_certus_quartz_crystal"
 			x: 2.0d
-			y: -1.0d
+			y: -3.0d
 			subtitle: "Нужна энергия"
-			description: ["Зарядь кристалл Certus в зарядном устройстве AE2 (Charger)."]
-			dependencies: ["A4AC1B06407DDE8F"]
+			description: [
+				"Зарядь кристалл Certus в зарядном устройстве AE2 (Charger). Заряженный кварц нужен для станков и схем."
+				"Один раз подзарядил, и он светится ярче всех."
+			]
+			dependencies: ["24AC1B06407DDE8F"]
 			tasks: [
 				{
-					id: "85F1B0745D42C87F"
+					id: "05F1B0745D42C87F"
 					type: "item"
 					item: "ae2:charged_certus_quartz_crystal"
 				}
@@ -58,14 +63,13 @@
 			rewards: [
 				{
 					id: "36676211CAFA240F"
-					type: "xp"
-					xp: 50
+					type: "random"
+					table_id: 3928829488754957609L
 				}
 				{
-					id: "9E307A81360A661B"
-					type: "item"
-					item: "ae2:certus_quartz_crystal"
-					count: 4
+					id: "1E307A81360A661B"
+					type: "xp"
+					xp: 50
 				}
 			]
 		}
@@ -74,10 +78,13 @@
 			title: "Кремниевое дело"
 			icon: "ae2:silicon"
 			x: 2.0d
-			y: 1.0d
+			y: 3.0d
 			subtitle: "Расходник для процессоров"
-			description: ["Получи кремний — он нужен для всех процессоров."]
-			dependencies: ["A4AC1B06407DDE8F"]
+			description: [
+				"Кремний идёт на все процессоры сети. Получи его из кварцевого песка в печи."
+				"Если не знаешь, что такое кремний, тебе скоро объяснят."
+			]
+			dependencies: ["24AC1B06407DDE8F"]
 			tasks: [
 				{
 					id: "3FFBCE8CDC1DF6B3"
@@ -88,20 +95,28 @@
 			]
 			rewards: [
 				{
-					id: "A62AC60050D6D287"
+					id: "262AC60050D6D287"
+					type: "random"
+					table_id: 3928829488754957609L
+				}
+				{
+					id: "1B128E6923260923"
 					type: "xp"
 					xp: 30
 				}
 			]
 		}
 		{
-			id: "8593C856C238D441"
+			id: "0593C856C238D441"
 			title: "Печатный станок"
 			icon: "ae2:inscriber"
 			x: 4.0d
-			y: 1.0d
+			y: 3.0d
 			subtitle: "Штампует схемы"
-			description: ["Инскрайбер делает печатные платы и процессоры — вычислительное сердце сети."]
+			description: [
+				"Инскрайбер печатает платы и процессоры: вычислительное сердце сети."
+				"Маленький станок с огромным влиянием."
+			]
 			dependencies: ["3E2BD7050FBADF77"]
 			tasks: [
 				{
@@ -113,25 +128,33 @@
 			rewards: [
 				{
 					id: "34C4D2771436BEB9"
+					type: "random"
+					table_id: 3928829488754957609L
+				}
+				{
+					id: "5F598664ADD41746"
 					type: "xp"
 					xp: 60
 				}
 			]
 		}
 		{
-			id: "1A5A7997648B7C97"
+			id: "0A5A7997648B7C97"
 			title: "Мозги сети"
 			icon: "ae2:engineering_processor"
 			x: 6.0d
-			y: 1.0d
+			y: 3.0d
 			shape: "hexagon"
 			size: 1.5d
 			subtitle: "Три вида процессоров"
-			description: ["Получи по одному процессору каждого вида: логический, вычислительный и инженерный."]
-			dependencies: ["8593C856C238D441"]
+			description: [
+				"Получи по одному процессору каждого вида: логический, вычислительный и инженерный. Из них собирается вся электроника сети."
+				"Выглядят маленькими, ценятся как золото."
+			]
+			dependencies: ["0593C856C238D441"]
 			tasks: [
 				{
-					id: "1CD096F43F1557AD"
+					id: "0CD096F43F1557AD"
 					type: "item"
 					item: "ae2:logic_processor"
 				}
@@ -149,14 +172,13 @@
 			rewards: [
 				{
 					id: "213D45981DA42600"
-					type: "xp"
-					xp: 120
+					type: "random"
+					table_id: 2903685716489049031L
 				}
 				{
-					id: "C8819FA4E659F5DD"
-					type: "item"
-					item: "ae2:silicon"
-					count: 4
+					id: "48819FA4E659F5DD"
+					type: "xp"
+					xp: 120
 				}
 			]
 		}
@@ -167,42 +189,58 @@
 			x: 8.0d
 			y: 0.0d
 			subtitle: "Контроллер ME"
-			description: ["Контроллер — центр большой и организованной сети."]
-			dependencies: ["1A5A7997648B7C97"]
+			description: [
+				"Контроллер — центр большой и организованной ME-сети: даёт каналы и порядок."
+				"Без него сеть растёт как сорняк."
+			]
+			dependencies: ["0A5A7997648B7C97"]
 			tasks: [
 				{
-					id: "BBD5F55826AFA985"
+					id: "3BD5F55826AFA985"
 					type: "item"
 					item: "ae2:controller"
 				}
 			]
 			rewards: [
 				{
-					id: "C310BB2AD221C0DA"
+					id: "4310BB2AD221C0DA"
+					type: "random"
+					table_id: 2903685716489049031L
+				}
+				{
+					id: "17D46D279D0AEAF9"
 					type: "xp"
 					xp: 100
 				}
 			]
 		}
 		{
-			id: "BA610B862F760FF0"
+			id: "3A610B862F760FF0"
 			title: "Дисковый отсек"
 			icon: "ae2:drive"
 			x: 8.0d
-			y: 2.0d
+			y: 6.0d
 			subtitle: "Куда складывать добычу"
-			description: ["ME-привод принимает ячейки хранения."]
-			dependencies: ["1A5A7997648B7C97"]
+			description: [
+				"ME-привод принимает ячейки хранения и превращает их в склад без дна. Сундуки, пока вы разговаривали, уже ушли на покой."
+				"Следи, чтобы привод был подключён к сети. Иначе он просто красивый."
+			]
+			dependencies: ["0A5A7997648B7C97"]
 			tasks: [
 				{
-					id: "DDDCA1A7E995A21C"
+					id: "5DDCA1A7E995A21C"
 					type: "item"
 					item: "ae2:drive"
 				}
 			]
 			rewards: [
 				{
-					id: "E049A01B7CD4A3F0"
+					id: "6049A01B7CD4A3F0"
+					type: "random"
+					table_id: 3928829488754957609L
+				}
+				{
+					id: "6B5E659BBFD025A9"
 					type: "xp"
 					xp: 60
 				}
@@ -213,20 +251,28 @@
 			title: "Килобайты места"
 			icon: "ae2:item_storage_cell_1k"
 			x: 10.0d
-			y: 2.0d
+			y: 6.0d
 			subtitle: "Первая ячейка"
-			description: ["Собери ячейку хранения на 1k и вставь в привод."]
-			dependencies: ["BA610B862F760FF0"]
+			description: [
+				"Собери ячейку хранения на 1k и вставь в привод. Дальше растёт 4k, 16k и так далее."
+				"1k — это немного, но с чего-то начинать надо."
+			]
+			dependencies: ["3A610B862F760FF0"]
 			tasks: [
 				{
-					id: "B6EE854B096D73E4"
+					id: "36EE854B096D73E4"
 					type: "item"
 					item: "ae2:item_storage_cell_1k"
 				}
 			]
 			rewards: [
 				{
-					id: "A92BF01020532C92"
+					id: "292BF01020532C92"
+					type: "random"
+					table_id: 3928829488754957609L
+				}
+				{
+					id: "600DB09443BCA45B"
 					type: "xp"
 					xp: 60
 				}
@@ -237,11 +283,14 @@
 			title: "Автоматизация"
 			icon: "ae2:molecular_assembler"
 			x: 12.0d
-			y: 2.0d
+			y: 6.0d
 			shape: "octagon"
 			size: 1.5d
 			subtitle: "Начало автокрафта"
-			description: ["Молекулярный сборщик — основа автокрафта. Дальше сеть начнёт работать за тебя."]
+			description: [
+				"Молекулярный сборщик — основа автокрафта. Дальше сеть начнёт работать за тебя."
+				"Ты сказал «сделай мне всё». Сеть услышала."
+			]
 			dependencies: ["45A301A9C1135A73"]
 			tasks: [
 				{
@@ -252,12 +301,17 @@
 			]
 			rewards: [
 				{
-					id: "E8FCC98FDA2036B0"
+					id: "68FCC98FDA2036B0"
+					type: "random"
+					table_id: 2903685716489049031L
+				}
+				{
+					id: "1862B9CE840DB27B"
 					type: "xp"
 					xp: 250
 				}
 				{
-					id: "1862B9CE840DB27B"
+					id: "36FC423EDD6CB008"
 					type: "item"
 					item: "minecraft:diamond"
 					count: 2
