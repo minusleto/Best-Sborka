@@ -373,3 +373,14 @@ IC2C локализация показывает Crop Harvester, WeedEx, Hydrati
 - [ ] Найти регистрацию и реализации всех звеньев Replication (Mass Fabricator, UU-Liquid, Scanner, Memory Crystal, Pattern Storage, Replicator).
 - [ ] Проверить параметры Miner/Rocket Miner и Advanced Miner по коду и тесту в игре.
 - [ ] Не закрывать аудит категории из 89 страниц, пока не составлена постраничная классификация и не отмечены все непроверенные пункты.
+
+
+### 12.6 Уточнение по IC2 Classic: есть аналоги отдельных звеньев, но не всей Experimental-системы
+
+В JAR IC2 Classic 2.1.3.4 найдены конкретные классы и локализационные ключи:
+- `ic2:mass_fabricator` (локализация “Mass Fabricator” / «Генератор материи»), `MassFabricatorTileEntity` и `MassFabricatorComponent`;
+- `IUUMatterRegistry` / `UUMatterRegistry` — отдельный API/реестр UU-Matter;
+- `ic2:miner` и отдельный `ic2:rocket_miner`, с классами `MinerTileEntity`, `RocketMinerTileEntity` и компонентами;
+- семейство `ic2:od_scanner`, `ic2:ov_scanner`, варианты ranged/big-ranged, а также `ic2:filtered_scanner` и `ic2:quarry_scanner`.
+
+Это важная поправка к отрицательному поиску по именам: Classic действительно имеет собственные Mass Fabricator, UU-Matter API, Miner/Rocket Miner и разные сканеры. Однако найденные названия и классы **не подтверждают** наличие Experimental Replicator/Pattern Storage/Memory Crystal и не доказывают, что Rocket Miner функционально равен Advanced Miner. Для этих пунктов нужно исследовать поведение и рецепты, а не просто сравнивать названия. Также нельзя автоматически считать обычный `ic2:re_battery` эквивалентом Experimental Advanced RE-Battery: надо сравнить ёмкость, EU/t и допустимый tier по фактическим параметрам предмета.
