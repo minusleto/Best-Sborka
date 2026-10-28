@@ -1,0 +1,51 @@
+{
+	id: "6EC8AE9580D47609"
+	group: ""
+	order_index: 7
+	filename: "finale"
+	title: "Легенда"
+	icon: "minecraft:nether_star"
+	subtitle: ["Финал: всё, что ты построил"]
+	default_quest_shape: "rsquare"
+	quests: [
+		{
+			title: "Легенда Best-Sborka"
+			x: 0.0d
+			y: 0.0d
+			shape: "octagon"
+			subtitle: "Путь инженера пройден"
+			description: [
+				"&6Что нужно:&r энергетический кристалл, продвинутый корпус, молекулярный сборщик и Тёмные глубины."
+				"Выполни все четыре дела, и книга признает в тебе инженера."
+				"&7Ты построил то, что другие только планировали. Поздравляю!&r"
+			]
+			size: 2.0d
+			dependencies: [
+				"0033EBE18E9CE255"
+				"45DA98458BF8AD7B"
+				"3704B476EB808E11"
+				"6E71C8F20B81A3B6"
+			]
+			id: "6F8A8B919BEFA92B"
+			tasks: [
+				{
+					id: "2AA77D6B6A7C77B8"
+					type: "checkmark"
+				}
+			]
+			rewards: [
+				{
+					id: "7B051551C816819D"
+					type: "item"
+					item: "minecraft:diamond"
+					count: 4
+				}
+				{
+					id: "586C34FE96147273"
+					type: "item"
+					item: "minecraft:enchanted_golden_apple"
+				}
+			]
+		}
+	]
+}

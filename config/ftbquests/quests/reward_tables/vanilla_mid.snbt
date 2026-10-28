@@ -1,0 +1,49 @@
+{
+	id: "50C254AF34BC3789"
+	order_index: 1
+	title: "Ваниль: неплохо"
+	loot_size: 1
+	rewards: [
+		{
+			item: "minecraft:iron_ingot"
+			count: 8
+			weight: 3
+		}
+		{
+			item: "minecraft:gold_ingot"
+			count: 3
+			weight: 2
+		}
+		{
+			item: "minecraft:redstone"
+			count: 12
+			weight: 3
+		}
+		{
+			item: "minecraft:lapis_lazuli"
+			count: 8
+			weight: 2
+		}
+		{
+			item: "minecraft:golden_carrot"
+			count: 6
+			weight: 2
+		}
+		{
+			item: "minecraft:experience_bottle"
+			count: 6
+			weight: 2
+		}
+		{
+			item: "minecraft:diamond"
+		}
+		{
+			item: "minecraft:ender_pearl"
+			count: 2
+		}
+		{
+			item: "minecraft:obsidian"
+			count: 4
+		}
+	]
+}

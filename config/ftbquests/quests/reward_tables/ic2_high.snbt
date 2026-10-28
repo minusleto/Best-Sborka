@@ -1,0 +1,47 @@
+{
+	id: "4BAF1A78FFF71DEE"
+	order_index: 5
+	title: "IC2: поздний этап"
+	loot_size: 1
+	rewards: [
+		{
+			item: "ic2:advanced_circuit"
+			count: 2
+			weight: 3
+		}
+		{
+			item: "ic2:plate_advanced_alloy"
+			count: 2
+			weight: 3
+		}
+		{
+			item: "ic2:carbon_plate"
+			count: 2
+			weight: 3
+		}
+		{
+			item: "ic2:industrial_diamond"
+			count: 2
+			weight: 2
+		}
+		{
+			item: "ic2:dust_diamond"
+			count: 2
+			weight: 2
+		}
+		{
+			item: "ic2:re_battery"
+			count: 2
+			weight: 2
+		}
+		{
+			item: "ic2:ingot_uranium"
+			count: 2
+		}
+		{
+			item: "ic2:carbon_mesh"
+			count: 3
+			weight: 2
+		}
+	]
+}

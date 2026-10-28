@@ -1,0 +1,56 @@
+{
+	id: "3A9D2782D5058090"
+	order_index: 0
+	title: "Ваниль: мелочи"
+	loot_size: 1
+	rewards: [
+		{
+			item: "minecraft:bread"
+			count: 8
+			weight: 3
+		}
+		{
+			item: "minecraft:torch"
+			count: 16
+			weight: 3
+		}
+		{
+			item: "minecraft:coal"
+			count: 8
+			weight: 3
+		}
+		{
+			item: "minecraft:cooked_beef"
+			count: 4
+			weight: 3
+		}
+		{
+			item: "minecraft:iron_ingot"
+			count: 3
+			weight: 2
+		}
+		{
+			item: "minecraft:copper_ingot"
+			count: 4
+			weight: 2
+		}
+		{
+			item: "minecraft:cobblestone"
+			count: 32
+			weight: 2
+		}
+		{
+			item: "minecraft:oak_log"
+			count: 16
+			weight: 2
+		}
+		{
+			item: "minecraft:redstone"
+			count: 6
+		}
+		{
+			item: "minecraft:experience_bottle"
+			count: 3
+		}
+	]
+}

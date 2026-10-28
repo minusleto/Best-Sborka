@@ -25,6 +25,7 @@
 				"&bGravisuit, Advanced Solars&r и другие — дополнения к IC2."
 				""
 				"Не пытайся пройти всё за вечер. Стрелки между квестами показывают, что открывает что."
+				"&6Подарок:&r книга квестов. Потерялся? Открой её из инвентаря или по кнопке FTB Quests."
 			]
 			size: 1.4d
 			id: "35807CC5C9D4092C"
@@ -41,6 +42,11 @@
 					type: "item"
 					item: "minecraft:bread"
 					count: 8
+				}
+				{
+					id: "7CAA17F1AD7D673F"
+					type: "item"
+					item: "ftbquests:book"
 				}
 			]
 		}
