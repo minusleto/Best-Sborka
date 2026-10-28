@@ -18,7 +18,7 @@
 | E4Steam | `e4steam-forge-mc1.18.2-1.20.2-v0.3.2.jar` |
 | FTB Library | `ftb-library-forge-1902.4.2-build.701.jar` |
 | FTB Quests | `ftb-quests-forge-1902.5.10-build.497.jar` (квесты, см. [quests.md](quests.md)) |
-| **Item Filters** | **нужно добавить**: `itemfilters` не ниже `1902.2.9-build.46`, обязательная зависимость FTB Quests, без неё игра не запустится |
+| **Item Filters** | уже стоит в сборке (подтвердил владелец); `itemfilters` не ниже `1902.2.9-build.46`, обязательная зависимость FTB Quests |
 | Fast Leaf Decay | Файл JAR добавлен пользователем отдельно; точное имя и версия пока не зафиксированы |
 | FTB Teams | `ftb-teams-forge-1902.2.14-build.123.jar` |
 | GeckoLib | `geckolib-forge-1.19-3.1.40.jar` |
