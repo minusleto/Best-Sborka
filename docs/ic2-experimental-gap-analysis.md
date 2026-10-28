@@ -370,7 +370,7 @@ IC2C локализация показывает Crop Harvester, WeedEx, Hydrati
 - [ ] Извлечь из IC2 Classic и дополнений точные registry IDs и список всех machine recipe lists; сопоставить с Experimental category.
 - [ ] Проверить поля/регистрации предметов для Electric Motor и Tin Item Casing; поиск текста сам по себе не является достаточным отрицательным доказательством.
 - [ ] Декодировать рецепты Metal Former по каждому из трёх режимов и сопоставить с Block Cutting Machine и стандартными IC2 Experimental recipes.
-- [ ] Найти регистрацию и реализации всех звеньев Replication (Mass Fabricator, UU-Liquid, Scanner, Memory Crystal, Pattern Storage, Replicator).
+- [x] Найти регистрацию и реализации всех звеньев Replication: сделано, см. 12.7 (в IC2C только Mass Fabricator и UU Expansion).
 - [ ] Проверить параметры Miner/Rocket Miner и Advanced Miner по коду и тесту в игре.
 - [ ] Не закрывать аудит категории из 89 страниц, пока не составлена постраничная классификация и не отмечены все непроверенные пункты.
 
@@ -385,6 +385,37 @@ IC2C локализация показывает Crop Harvester, WeedEx, Hydrati
 
 Это важная поправка к отрицательному поиску по именам: Classic действительно имеет собственные Mass Fabricator, UU-Matter API, Miner/Rocket Miner и разные сканеры. Однако найденные названия и классы **не подтверждают** наличие Experimental Replicator/Pattern Storage/Memory Crystal и не доказывают, что Rocket Miner функционально равен Advanced Miner. Для этих пунктов нужно исследовать поведение и рецепты, а не просто сравнивать названия. Также нельзя автоматически считать обычный `ic2:re_battery` эквивалентом Experimental Advanced RE-Battery: надо сравнить ёмкость, EU/t и допустимый tier по фактическим параметрам предмета.
 
+
+### 12.7 Replication / Pattern Storage (#16): результат аудита по JAR
+
+Сверены `IC2Classic-1.19.2-2.1.3.4.jar`, `ic2cuumatter-1.19.2-1.3.2.jar` и `industrialcraft-2-2.8.222-ex112.jar` (Experimental 1.12.2). Игровой тест не проводился.
+
+**Цепочка Experimental 1.12.2** (рецепты из `shaped_recipes.ini`, значения из `uu_scan_values.ini`, 134 записи):
+- Mass Fabricator (`ic2:te#matter_generator`) → жидкость UU-Matter;
+- Scanner (`ic2:te#scanner`) сканирует предмет в Crystal Memory (`ic2:crystal_memory`, делается из `raw_crystal_memory`);
+- Pattern Storage (`ic2:te#pattern_storage`) хранит шаблоны (классы `TileEntityPatternStorage`, `ContainerPatternStorage`);
+- Replicator (`ic2:te#replicator`) по шаблону делает копию предмета за жидкость UU-Matter и энергию (`TileEntityReplicator`);
+- отдельно: UU-рецепты в верстаке (`uu_recipes.ini`, 41 рецепт, предмет `misc_resource#matter`).
+
+**Что есть в IC2 Classic 1.19.2:**
+- `ic2:mass_fabricator` (`MassFabricatorTileEntity`): расходует scrap как усилитель, в классе константа 7 100 000 (по-видимому, энергия на единицу; смысл не проверен), выход предмет `ic2:uumatter`, а не жидкость;
+- UU Matter Expansion (`UUMatterExpansionTileEntity`, блок `UU_EXPANSION`): расширение Industrial Workbench, хранит UU-Matter числом и делает по нему крафт; есть слот «Take UUMatter»;
+- реестр `UUMatterRegistry` и 57 рецептов «по форме» (`*_uum`: кобблстоун, камень, стекло, брёвна, руды железа/золота/меди/олова/серебра, алмаз, изумруд, редстоун, обсидиан, иридиевая руда, элитры, шалкер и др.);
+- `UU_CROP_LIBRARY`, `PlasmafierTileEntity`, `MEMORY_EXPANSION`, `MEMORY_STICK` (память для Workbench, не Crystal Memory);
+- Ore/Fluid Scanner'ы: это сканеры руды и жидкости, а не Scanner Experimental.
+
+**Нет** в IC2C: блоков Scanner и Replicator, Pattern Storage, Crystal Memory, жидкого UU-Matter, списка стоимости сканирования. Поиск по именам классов и реестров, регистраций с такими именами нет.
+
+**ic2cuumatter 1.3.2:** только JEI-страницы Mass Fabricator и Plasmafier (классы `JEIPlugin`, `MassFabricatorCategory`, `PlasmafierCategory`), ни предметов, ни блоков, ни рецептов. Функциональную цепочку он не добавляет.
+
+**Вывод:** в Classic UU-Matter есть, но схема другая: Mass Fabricator → предмет UU-Matter → UU Expansion у Industrial Workbench → крафт по форме. Replicator-цепочки (сканирование любого предмета) нет. Одним рецептом KubeJS она не воспроизводится: нужен Java-мод (подходящее место: `mods-src/bs-machines`) или готовый аддон.
+
+**Варианты:**
+1. Оставить схему Classic как есть: UU-Matter и UU-рецепты в Workbench, без Replicator (ничего делать не нужно).
+2. Дописать Scanner, Pattern Storage и Replicator в `bs-machines`: энергия и хранение шаблонов в NBT, вместо жидкости использовать предмет/число UU-Matter Classic. Крупная задача с тестом в игре.
+3. Поискать готовый аддон-репликатор для 1.19.2.
+
+Статус: **подтверждено, что Replication из Experimental отсутствует**; решение за владельцем сборки. В игре проверить: Mass Fabricator, UU Expansion, список UU-рецептов в JEI.
 
 ## 13. Отдельный аудит локализации модов
 
