@@ -110,6 +110,14 @@
 - Файлы: `kubejs/startup_scripts/items.js`, `kubejs/server_scripts/ic2_energy_crystal.js`, `kubejs/assets/kubejs/textures/item/wire_cutters.png`, `kubejs/assets/kubejs/lang/ru_ru.json`.
 - Источник: https://wiki.industrial-craft.net/index.php/Cutter
 
+### Композитный сплав и алюминиевая пластина
+- [x] Рецепт IC2C (слитки: рафинированное железо, бронза, алюминий) удалён. Вместо него рецепт IC2 Experimental 1.12.2 из пластин: `III/BBB/AAA` из железных, бронзовых и **алюминиевых** пластин → 2 слитка композита (`ic2:ingot_advanced_alloy`). В оригинале нижний ряд оловянные пластины, алюминий взят вместо олова по решению владельца сборки.
+- [x] Добавлена `kubejs:aluminium_plate` («Алюминиевая пластина», теги `forge:plates`, `forge:plates/aluminium`): слиток алюминия IC2C (`ic2:ingot_aluminium`) + кузнечный молот, бесформенно. Текстура: перекрашенная оловянная пластина, нарисована нами. В 1.12.2 такой пластины нет.
+- [x] Слиток композита → пластина (`ic2:plate_advanced_alloy`) делает компрессор IC2C, рецепт не менялся.
+- [ ] Проверить в игре: рецепт в JEI один, молот делает алюминиевую пластину, слиток сплава даёт 2 штуки.
+- Алюминиевая руда в IC2C есть только в Незере.
+- Файлы: `kubejs/startup_scripts/items.js`, `kubejs/server_scripts/ic2_energy_crystal.js`, `kubejs/assets/kubejs/textures/item/aluminium_plate.png`, `kubejs/assets/kubejs/lang/ru_ru.json`.
+
 ### Металлоформовщик (Metal Former)
 - [x] Мод `bs_machines` (папка `mods-src/bs-machines/`): блок `bs_machines:metal_former`, LV, 10 EU/t, 200 тиков на операцию, три режима (прокатка, экструзия, резка), кнопка режима в GUI, категории JEI. Проверено в игре: мод загружается, блок и название видны.
 - [x] Сборка jar идёт через GitHub Actions (`.github/workflows/build-bs-machines.yml`), готовый файл лежит в Releases (`bs-machines-latest`).

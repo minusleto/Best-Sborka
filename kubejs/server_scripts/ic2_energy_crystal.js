@@ -64,7 +64,8 @@ ServerEvents.recipes(event => {
     'kubejs:copper_plate': 'minecraft:copper_ingot',
     'kubejs:tin_plate': 'ic2:ingot_tin',
     'kubejs:bronze_plate': 'ic2:ingot_bronze',
-    'kubejs:gold_plate': 'minecraft:gold_ingot'
+    'kubejs:gold_plate': 'minecraft:gold_ingot',
+    'kubejs:aluminium_plate': 'ic2:ingot_aluminium'
   }
   Object.keys(hammerPlates).forEach(plate => {
     event.shapeless(plate, [hammerPlates[plate], 'kubejs:forge_hammer'])
@@ -75,6 +76,20 @@ ServerEvents.recipes(event => {
   // The Metal Former rolls it too: data/ic2/ic2_recipes/metal_former_rolling/tin_item_casing.json
   event.shapeless('2x kubejs:tin_item_casing', ['kubejs:tin_plate', 'kubejs:forge_hammer'])
     .damageIngredient('kubejs:forge_hammer', 1)
+
+  // Composite (advanced alloy) ingot: IC2 Experimental 1.12.2 recipe from plates
+  // (III/BBB/TTT iron/bronze/tin plates -> 2 ingots), with aluminium instead of tin.
+  // IC2C 1.19.2 uses ingots (refined iron/bronze/aluminium); that recipe is removed.
+  event.remove({ output: 'ic2:ingot_advanced_alloy' })
+  event.shaped('2x ic2:ingot_advanced_alloy', [
+    'III',
+    'BBB',
+    'AAA'
+  ], {
+    I: 'kubejs:iron_plate',
+    B: 'kubejs:bronze_plate',
+    A: 'kubejs:aluminium_plate'
+  })
 
   // Cables: require the Metal Former, as in IC2 Experimental 1.12.2.
   ;[

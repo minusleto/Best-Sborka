@@ -25,7 +25,9 @@ StartupEvents.registry('item', event => {
     copper: 'Copper Plate',
     tin: 'Tin Plate',
     bronze: 'Bronze Plate',
-    gold: 'Gold Plate'
+    gold: 'Gold Plate',
+    // Not in IC2 1.12.2: aluminium replaces tin in the composite recipe
+    aluminium: 'Aluminium Plate'
   }
   Object.keys(plates).forEach(metal => {
     event.create(metal + '_plate')
