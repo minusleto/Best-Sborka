@@ -326,3 +326,15 @@ IC2C локализация показывает Crop Harvester, WeedEx, Hydrati
 - [ ] Для каждого «покрыто аналогом» описано функциональное сравнение, а не только совпадение названия.
 - [ ] Вынесены отдельные Issue для систем, требующих кода или отдельной реализации.
 - [ ] В игровом тесте подтверждены рецепты и GUI; непроверенные пункты остаются явно открытыми.
+
+
+### 11.6 Декомпозиция в GitHub Issues
+
+- [ ] [#13 Электромотор и применения Experimental](https://github.com/minusleto/Best-Sborka/issues/13)
+- [ ] [#14 Tin Item Casing](https://github.com/minusleto/Best-Sborka/issues/14)
+- [ ] [#16 Replication / Pattern Storage](https://github.com/minusleto/Best-Sborka/issues/16)
+- [ ] [#17 Кинетические машины](https://github.com/minusleto/Best-Sborka/issues/17)
+- [ ] [#18 Miner / Advanced Miner](https://github.com/minusleto/Best-Sborka/issues/18)
+- [ ] [#19 Block Cutting Machine / Advanced RE-Battery](https://github.com/minusleto/Best-Sborka/issues/19)
+
+Эти задачи разделяют исследование на компоненты и полноценные системы. Номера в названиях Issue намеренно указаны в начале, чтобы задачи было проще находить в списке.
