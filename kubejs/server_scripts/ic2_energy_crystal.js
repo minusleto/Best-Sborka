@@ -27,11 +27,14 @@ ServerEvents.recipes(event => {
   )
 
   // ---------------------------------------------------------------
-  // Glass fibre cable — additional IC2 Experimental 1.12.2 recipe.
-  // 6 glass + Energium Dust + silver dust -> 6 glass cables.
-  // Keep IC2 Classic's existing glass-cable recipes; this is an extra
-  // alternative, not a replacement for the crystal-based recipes.
+  // Glass fibre cable  (IC2 Experimental 1.12.2 recipe, ANY glass)
+  // 6 glass + 2 silver dust + Energium Dust -> 6 glass cables.
+  // IC2C's own recipe (6 glass + 2 redstone + 1 diamond -> 4 cables) and the
+  // earlier plain-glass version are removed: this is the only recipe now.
+  // '#forge:glass' accepts every glass block (plain, stained, tinted).
   // ---------------------------------------------------------------
+  event.remove({ output: 'ic2:glassfiber_cable_item' })
+
   event.shaped(
     '6x ic2:glassfiber_cable_item',
     [
@@ -40,7 +43,7 @@ ServerEvents.recipes(event => {
       'GGG'
     ],
     {
-      G: 'minecraft:glass',
+      G: '#forge:glass',
       S: 'ic2:dust_silver',
       D: 'kubejs:energium_dust'
     }
