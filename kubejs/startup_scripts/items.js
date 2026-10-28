@@ -40,4 +40,12 @@ StartupEvents.registry('item', event => {
     .parentModel('minecraft:item/handheld')
     .displayName('Forge Hammer')
     .tag('forge:tools')
+
+  // IC2 Experimental 1.12.2 Cutter (wire cutters): cuts plates into cables.
+  // Durability 60 is our choice (the wiki gives no number).
+  event.create('wire_cutters')
+    .maxDamage(60)
+    .parentModel('minecraft:item/handheld')
+    .displayName('Wire Cutters')
+    .tag('forge:tools')
 })

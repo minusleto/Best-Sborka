@@ -86,7 +86,7 @@
 				{
 					id: "15AC0D5D4759FB0E"
 					type: "item"
-					item: "ic2:lapotron_crystal"
+					item: "ic2:lapatron_crystal"
 				}
 			]
 		}
@@ -275,7 +275,7 @@
 				{
 					id: "0ED426FA1A2BB5B2"
 					type: "item"
-					item: "ic2:lapotron_crystal"
+					item: "ic2:lapatron_crystal"
 				}
 			]
 		}

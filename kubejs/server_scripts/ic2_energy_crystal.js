@@ -76,6 +76,30 @@ ServerEvents.recipes(event => {
     'ic2:iron_cable_item'
   ].forEach(cable => event.remove({ output: cable }))
 
+  // Wire cutters (IC2 Experimental 1.12.2 Cutter): 3 iron plates + 2 iron ingots
+  // (the wiki gives the ingredients but not the grid; scissors shape is our choice).
+  // Plate + cutters -> cables, the cutters lose 1 durability. Cable counts per
+  // plate follow the Metal Former cutting values (docs/recipe-changes.md).
+  event.shaped('kubejs:wire_cutters', [
+    'I I',
+    ' P ',
+    'P P'
+  ], {
+    I: 'minecraft:iron_ingot',
+    P: 'kubejs:iron_plate'
+  })
+
+  const cutterCables = [
+    ['2x ic2:copper_cable_item', 'kubejs:copper_plate'],
+    ['3x ic2:tin_cable_item', 'kubejs:tin_plate'],
+    ['4x ic2:gold_cable_item', 'kubejs:gold_plate'],
+    ['4x ic2:iron_cable_item', 'kubejs:iron_plate']
+  ]
+  cutterCables.forEach(r => {
+    event.shapeless(r[0], [r[1], 'kubejs:wire_cutters'])
+      .damageIngredient('kubejs:wire_cutters', 1)
+  })
+
   // Advanced Machine Casing (adapted Experimental layout)
   event.remove({ output: 'ic2:advanced_machine_block' })
   const casingKeys = {
