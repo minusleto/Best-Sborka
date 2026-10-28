@@ -279,3 +279,50 @@ IC2C локализация показывает Crop Harvester, WeedEx, Hydrati
 - Генерация и передача энергии в IC2C намного шире классической схемы Experimental: есть дополнительные генераторы, tiers и регулируемый трансформатор. Сначала решить, какие старые функции действительно потеряны.
 - Название `Advanced Miner` не найдено, но наличие `ROCKET_MINER` и `MINER` означает, что нужно сравнить их функции прежде, чем планировать восстановление Advanced Miner.
 
+
+
+## 11. Вторая итерация: конкретные различия и приоритизация
+
+### 11.1 Сверка с Experimental wiki
+
+По странице [Recipes and Resources (experimental)](https://wiki.industrial-craft.net/index.php?title=Recipes_and_Resources_%28experimental%29) и отдельным страницам подтверждены следующие характеристики именно описываемой wiki-ветки:
+- Advanced RE-Battery: 100,000 EU, ввод/вывод 128 EU/t, заряжается/разряжается в CESU или выше; применяется в Advanced Batpack и CESU. Источник: [Advanced RE-Battery](https://wiki.industrial-craft.net/index.php?title=Advanced_RE-Battery).
+- Block Cutting Machine: 4 EU/t, 1,800 EU за операцию, 3,600 EU внутреннего хранения; использует сменное лезвие и режет блоки металла в 9 пластин, а также дерево/доски в дополнительные доски/палочки. Источник: [Block Cutting Machine](https://wiki.industrial-craft.net/index.php?title=Block_Cutting_Machine).
+- Advanced Miner в Experimental отличается от обычного Miner: не требует Mining Pipe или Drill, работает от энергии, поддерживает blacklist/whitelist и OD/OV Scanner, имеет большую область добычи и может собирать блоки в инвентарь сверху. Источник: [Advanced Miner](https://wiki.industrial-craft.net/index.php?title=Advanced_Miner).
+- Pattern Storage — не просто предмет: он хранит и переключает шаблоны для Replicator и может получать шаблоны от Scanner или Memory Crystal. Источник: [Pattern Storage](https://wiki.industrial-craft.net/index.php?title=Pattern_Storage).
+- Replication — отдельная высокоэнергетическая система Mass Fabricator → UU-Liquid → Scanner/Memory Crystal/Pattern Storage → Replicator. Одних предметов с похожими названиями недостаточно, чтобы считать систему реализованной. Источник: [Tutorial:Replication](https://wiki.industrial-craft.net/index.php?title=Tutorial%3AReplication).
+- Experimental wiki описывает Kinetic Generator как конвертер кинетической энергии в EU и отдельные Kinetic Wind/Steam/Manual generators, Electric Kinetic Generator и Turning Table. Это отдельная механика с роторами/вращением, а не просто ещё один обычный генератор. Источник: [Recipes and Resources (experimental)](https://wiki.industrial-craft.net/index.php?title=Recipes_and_Resources_%28experimental%29).
+
+### 11.2 Подтверждённые границы текущей проверки JAR
+
+Повторный поиск строк в class-файлах из архива mods.zip подтвердил, что IC2 Classic содержит собственные классы Crop-Matron и другие системы, а IC2C Extras содержит локализации Coil. Однако поиск прямых ASCII-строк не выявил явных совпадений для electric_motor, tin_item_casing, advanced_re_battery, block_cutting_machine, kinetic_generator, turning_table, pattern_storage, crystal_memory, replicator и advanced_miner в тех файлах, которые были просмотрены.
+
+Это даёт **кандидатов на более глубокую проверку**, но не превращает их в подтверждённо отсутствующие функции: реестр может использовать другие имена, а функциональность — быть встроена в общую машину. Следующий технический уровень — декомпиляция конкретных регистрационных классов, поиск recipe serializers/data и тестирование в JEI/игре. До этого нельзя маркировать их как доказанно отсутствующие.
+
+### 11.3 Матрица решений
+
+| Функция Experimental | Факты из источников | Статус в текущей сборке | Решение |
+|---|---|---|---|
+| Advanced RE-Battery | Отдельный предмет 100k EU/128 EU/t в Experimental | Прямой ключ не найден; эквивалент по ёмкости/tiers не установлен | Проверить параметры существующих накопителей и рецептную прогрессию; не добавлять дубликат до сравнения |
+| Block Cutting Machine | Машина с лезвиями, режет металлические блоки в пластины и дерево с бонусным выходом | Прямой ключ не найден; в сборке есть custom Metal Former | Сравнить, может ли Metal Former покрыть её назначение. Если нет — отдельная машина/рецепт только после подтверждения отсутствия |
+| Advanced Miner | Не требует pipe/drill, использует фильтры и OD/OV Scanner | В IC2C найдены Miner и Rocket Miner, но их эквивалентность не доказана | Сравнить GUI, фильтры, диапазон, Silk Touch, энергозатраты и добычу жидкости |
+| Replication / Pattern Storage | Отдельная цепочка UU-Liquid + scanner + pattern + replicator | JAR ic2cuumatter установлен, но одного наличия мода недостаточно для подтверждения полной системы | Проверить registry и рецептную/GUI реализацию каждого звена |
+| Kinetic generation | Роторы/вращение и несколько разных генераторов/конвертеров | Очевидные прямые ключи не найдены | Считать механикой-кандидатом, не переносимой только KubeJS; проверить, нужен ли отдельный мод/custom code |
+| Electric Motor | Компонент нескольких рецептов Experimental | Не найден прямой ключ в проверенном поиске | Завершить #13 и восстановить только при доказанном отсутствии |
+| Tin Item Casing | Компонентная оболочка Experimental | Не найден прямой ключ в проверенном поиске | Завершить #14; проверить рецепт и существующие casing IDs |
+| Coil | Есть как ic2c_extras:coil | Предмет существует | Сравнить все применения и не создавать дубликат |
+
+### 11.4 Приоритет реализации
+
+1. **P0 — прогрессия компонентов:** Electric Motor, Tin Item Casing, Coil usages и существующие Metal Former рецепты. Это сравнительно локальные изменения, влияющие на несколько рецептов.
+2. **P1 — функциональные системы:** Replication/Pattern Storage, Advanced Miner, Kinetic machines, Block Cutting Machine. Перед реализацией нужна отдельная проверка классов и альтернатив, потому что это не только рецепты.
+3. **P2 — баланс/параметры:** Advanced RE-Battery, Electrolyzed Water Cell, кабели, трансформаторы, генераторы и ядерные компоненты. Сначала сравнить EU, tiers, потери и доступные рецепты.
+4. **P3 — длинный хвост:** agriculture/TFBP/armor/utility и прочие страницы категории Experimental, где уже есть множество потенциальных аналогов IC2C и Gravisuit.
+
+### 11.5 Что считается закрытием аудита
+
+- [ ] Все 89 страниц Experimental category классифицированы как релевантные / неактуальные / уже покрытые / отсутствующие / требуют теста.
+- [ ] Для каждого «отсутствует» есть не только отрицательный поиск строки, но и проверка registry/класса/recipe data.
+- [ ] Для каждого «покрыто аналогом» описано функциональное сравнение, а не только совпадение названия.
+- [ ] Вынесены отдельные Issue для систем, требующих кода или отдельной реализации.
+- [ ] В игровом тесте подтверждены рецепты и GUI; непроверенные пункты остаются явно открытыми.
