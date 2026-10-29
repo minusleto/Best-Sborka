@@ -31,4 +31,5 @@
 - [Проверенные ID IC2](docs/ic2-ids.md)
 - [План разработки](docs/roadmap.md)
 - [Рецепты IC2: сравнение и журнал изменений](docs/recipe-changes.md)
+- [Концепт прогрессии и финал сборки](docs/concept-progression.md)
 - [KubeJS](kubejs/README.md)

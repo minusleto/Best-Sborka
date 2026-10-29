@@ -242,3 +242,24 @@
 ### Правка: нано-шлем и сборщик
 - Нано-шлем снова требует очки ночного видения (`CEC/CGC`); выход сразу с NBT `armor_upgrades` (энергокристалл как модуль-батарея, upgrade_type `battery`), чтобы не было «0 / 0 EU». Нужно проверить в игре.
 - Добавлен предмет `kubejs:assembler` «Сборщик» (временная заглушка, текстура-копия, рецепт: продвинутый машинный блок + 2 электромотора + 2 продвинутые схемы + 2 пластины продвинутого сплава). Сама машина: issue #24.
+
+## Мост IC2 ↔ AE2 и финальный блок «Ядро сборки» (issue #26)
+Концепт: [concept-progression.md](concept-progression.md). Правило: не больше 2 требований на блок. IC2C хранит свои рецепты в Java, поэтому раскладки IC2 взяты из эталона 1.12.2 (`shaped_recipes.ini`), оригиналы AE2 из данных `appliedenergistics2` 12.9.12.
+
+| Что | Было | Стало | Файл |
+|---|---|---|---|
+| `ae2:drive` | 4 железных слитка, 2 инженерных процессора, 2 кабеля флюикса | пластины продвинутого сплава ×4 вместо железа, продвинутая схема в центре | `bridge_ic2_ae2.js` |
+| `ae2:inscriber` | железо, 2 липких поршня, медь, пустой центр | электромотор в центре | `bridge_ic2_ae2.js` |
+| `ae2:charger` | 4 железа, 2 меди | медь заменена 2 катушками (`ic2c_extras:coil`), электромотор в пустом слоте | `bridge_ic2_ae2.js` |
+| `ic2:mass_fabricator` | 1.12.2 `GCG/ALA/GCG`, C = продвинутая схема | C = `ae2:calculation_processor` | `bridge_ic2_ae2.js` |
+| `ic2:teleporter` | 1.12.2 `GFG/CMC/GDG`, D = алмаз | D = `ae2:quantum_link` | `bridge_ic2_ae2.js` |
+| `gravisuit:vajra` | рецепт Gravisuit (в Java) | лазер, Advanced Drill, нано-сабля, Vajra Core, лапотронный кристалл (инструмент-как-ингредиент) | `final_core.js` |
+| `kubejs:build_core` «Ядро сборки» | нет | `LSV/CQT/AKM`: Ultimate Lappack, Ultimate Hybrid Solar Panel, Vajra, 16M ячейка AE, Quantum Accumulator, Teleporter Hub, квантовая броня (нагрудник), квантовое ядро, Mass Fabricator | `final_core.js`, `build_core.js` |
+
+- Все ID сверены по jar-ам сборки скриптом (список в описании PR). Синтаксис скриптов проверен `node --check`.
+- Рецепт блока не может требовать заряд предметов (KubeJS не читает EU), поэтому «много энергии» обеспечивают стоимость компонентов и финальный квест (заряженный накопитель).
+- [ ] Проверить в JEI: по одному рецепту у каждого из выходов выше (особенно Vajra, Mass Fabricator, Teleporter: их оригиналы лежат в Java, `event.remove` по выходу мог не сработать).
+- [ ] Проверить в игре: блок «Ядро сборки» грузится, текстура и русское название на месте.
+- [ ] Квесты финальной главы (в конце, по политике `docs/quests.md`): трофеи, заряженный накопитель, награда Creative Source и `ae2:creative_energy_cell`.
+- Не трогали: Ultimate Lappack, Gravitation Engine, Teleporter Hub, Quantum Accumulator, Singularity Compressor (оригиналы только в Java; рецепты IC2C/Gravisuit остаются родными).
+

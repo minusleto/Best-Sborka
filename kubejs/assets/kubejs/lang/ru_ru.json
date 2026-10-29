@@ -29,5 +29,6 @@
   "item.kubejs.hybrid_circuit": "Гибридная схема",
   "item.kubejs.nano_circuit": "Нано-схема",
   "item.kubejs.quantum_circuit": "Квантовая схема",
-  "item.kubejs.quantum_core": "Квантовое ядро"
+  "item.kubejs.quantum_core": "Квантовое ядро",
+  "block.kubejs.build_core": "Ядро сборки"
 }
