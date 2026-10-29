@@ -73,4 +73,25 @@ StartupEvents.registry('item', event => {
     .parentModel('minecraft:item/handheld')
     .displayName('Wire Cutters')
     .tag('forge:tools')
+
+  // Late-game materials from the IC2 Additions 1.12.2 mod (schakaloff), adapted to crafting-table
+  // recipes (the mod makes them in its own Advanced Assembler). See docs/recipe-changes.md.
+  const additions = {
+    carbon_sheathing: 'Carbon Sheathing',
+    nano_sheathing: 'Nano Sheathing',
+    quantum_sheathing: 'Quantum Sheathing',
+    advanced_coil: 'Advanced Coil',
+    nano_coil: 'Nano Coil',
+    quantum_coil: 'Quantum Coil',
+    advanced_electric_motor: 'Advanced Electric Motor',
+    nano_electric_motor: 'Nano Electric Motor',
+    quantum_electric_motor: 'Quantum Electric Motor',
+    hybrid_circuit: 'Hybrid Circuit',
+    nano_circuit: 'Nano Circuit',
+    quantum_circuit: 'Quantum Circuit',
+    quantum_core: 'Quantum Core'
+  }
+  Object.keys(additions).forEach(id => {
+    event.create(id).displayName(additions[id])
+  })
 })

@@ -16,5 +16,18 @@
   "item.kubejs.iron_item_casing": "Железная оболочка",
   "item.kubejs.lead_item_casing": "Свинцовая оболочка",
   "item.kubejs.lead_plate": "Свинцовая пластина",
-  "item.kubejs.electric_motor": "Электромотор"
+  "item.kubejs.electric_motor": "Электромотор",
+  "item.kubejs.carbon_sheathing": "Карбоновая оболочка",
+  "item.kubejs.nano_sheathing": "Нано-оболочка",
+  "item.kubejs.quantum_sheathing": "Квантовая оболочка",
+  "item.kubejs.advanced_coil": "Продвинутая катушка",
+  "item.kubejs.nano_coil": "Нано-катушка",
+  "item.kubejs.quantum_coil": "Квантовая катушка",
+  "item.kubejs.advanced_electric_motor": "Продвинутый электромотор",
+  "item.kubejs.nano_electric_motor": "Нано-электромотор",
+  "item.kubejs.quantum_electric_motor": "Квантовый электромотор",
+  "item.kubejs.hybrid_circuit": "Гибридная схема",
+  "item.kubejs.nano_circuit": "Нано-схема",
+  "item.kubejs.quantum_circuit": "Квантовая схема",
+  "item.kubejs.quantum_core": "Квантовое ядро"
 }

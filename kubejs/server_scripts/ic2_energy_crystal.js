@@ -251,4 +251,77 @@ ServerEvents.recipes(event => {
     E: 'kubejs:electric_motor',
     W: 'ic2:circuit'
   })
+
+  // ---------------------------------------------------------------
+  // IC2 Additions 1.12.2 late-game materials, adapted (see docs/recipe-changes.md).
+  // Originals use the mod's Advanced Assembler (EU, sulfuric acid, lithium), which this pack
+  // does not have, so they are crafting-table recipes. Not integrated into other recipes yet.
+  // ---------------------------------------------------------------
+  // Carbon sheathing: 2 carbon plates (original: Advanced Assembler, 25000 EU)
+  event.shapeless('kubejs:carbon_sheathing', ['ic2:carbon_plate', 'ic2:carbon_plate'])
+  // Nano sheathing: 2 carbon sheathing + 3 energium dust (as in the original)
+  event.shapeless('kubejs:nano_sheathing', ['kubejs:carbon_sheathing', 'kubejs:carbon_sheathing', 'kubejs:energium_dust', 'kubejs:energium_dust', 'kubejs:energium_dust'])
+  // Quantum sheathing: the original needs 4 carbon + 6 iridium + 4 nano + 4 irradiant uranium (18 items,
+  // does not fit a 3x3 grid), so here it is about half of that.
+  event.shaped('kubejs:quantum_sheathing', ['NIN', 'CIC', 'UIU'], {
+    N: 'kubejs:nano_sheathing',
+    C: 'kubejs:carbon_sheathing',
+    I: 'ic2:plate_iridium',
+    U: 'advanced_solars:irradiant_uranium'
+  })
+
+  // Coils: advanced (original recipe, lapis block instead of the dense lapis plate),
+  // nano and quantum (original recipes; Sanarium = Sunnarium of Advanced Solars)
+  event.shaped('kubejs:advanced_coil', ['ICI', 'CLC', 'ICI'], {
+    I: 'ic2:iron_triple_insulated_cable_item',
+    C: 'ic2c_extras:coil',
+    L: 'minecraft:lapis_block'
+  })
+  event.shaped('kubejs:nano_coil', ['RAR', 'ACA', 'RAR'], {
+    R: 'advanced_solars:reinforced_iridium_iron_plate',
+    A: 'kubejs:advanced_coil',
+    C: 'kubejs:energium_dust'
+  })
+  event.shaped('kubejs:quantum_coil', ['ICI', 'CRC', 'ICI'], {
+    I: 'ic2:plate_iridium',
+    C: 'kubejs:nano_coil',
+    R: 'advanced_solars:irradiant_reinforced_plate'
+  })
+
+  // Electric motors (the dense steel plate is a dense iron plate: there is no steel in the pack)
+  event.shaped('kubejs:advanced_electric_motor', [' S ', 'CDC', ' S '], {
+    S: 'ic2c_extras:dense_iron_plate',
+    C: 'kubejs:advanced_coil',
+    D: 'minecraft:diamond'
+  })
+  event.shaped('kubejs:nano_electric_motor', [' C ', 'NBN', ' C '], {
+    C: 'kubejs:carbon_sheathing',
+    N: 'kubejs:nano_coil',
+    B: 'ic2:advanced_machine_block'
+  })
+  event.shaped('kubejs:quantum_electric_motor', [' S ', 'CIC', ' S '], {
+    S: 'advanced_solars:sunnarium',
+    C: 'kubejs:quantum_coil',
+    I: 'advanced_solars:irradiant_glass_pane'
+  })
+
+  // Circuits (the originals need lithium dust and 2000 mB sulfuric acid, neither is in the pack):
+  // hybrid = advanced circuit + glowstone dust instead of lithium + hydrated coal dust;
+  // nano and quantum keep the original ingredient lists, without the acid.
+  event.shapeless('kubejs:hybrid_circuit', [
+    'ic2:advanced_circuit', 'minecraft:glowstone_dust', 'minecraft:glowstone_dust', 'minecraft:glowstone_dust', 'ic2:dust_hydrated_coal', 'ic2:dust_hydrated_coal'
+  ])
+  event.shapeless('kubejs:nano_circuit', [
+    'kubejs:carbon_sheathing', 'kubejs:carbon_sheathing', 'kubejs:carbon_sheathing', 'kubejs:carbon_sheathing', 'minecraft:redstone', 'minecraft:redstone', 'minecraft:redstone', 'kubejs:hybrid_circuit', 'kubejs:nano_electric_motor'
+  ])
+  event.shapeless('kubejs:quantum_circuit', [
+    'ic2:heat_exchanger_advanced', 'ic2:heat_exchanger_advanced', 'ic2:heat_exchanger_advanced', 'ic2:heat_exchanger_advanced', 'kubejs:quantum_electric_motor', 'ic2:reflector_iridium', 'ic2:reflector_iridium', 'ic2:reflector_iridium', 'kubejs:nano_circuit'
+  ])
+
+  // Quantum core
+  event.shaped('kubejs:quantum_core', ['SNS', 'NCN', 'SNS'], {
+    S: 'advanced_solars:enriched_sunnarium_alloy',
+    N: 'minecraft:nether_star',
+    C: 'kubejs:quantum_circuit'
+  })
 })

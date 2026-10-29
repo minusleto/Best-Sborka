@@ -132,6 +132,30 @@
 - Алюминиевая руда в IC2C есть только в Незере.
 - Файлы: `kubejs/startup_scripts/items.js`, `kubejs/server_scripts/ic2_energy_crystal.js`, `kubejs/assets/kubejs/textures/item/aluminium_plate.png`, `kubejs/assets/kubejs/lang/ru_ru.json`.
 
+### Материалы лейтгейма из IC2 Additions 1.12.2
+Источник: мод IC2Additions 2.2.1 (schakaloff, 1.12.2), рецепты прочитаны из байткода `Recipes` и из дефолтного конфига `IC2AConfig` (Advanced Assembler). В оригинале материалы делаются на собственных машинах (Advanced и Molecular Assembler, Plasma Forge), которых в сборке нет, поэтому здесь это рецепты в верстаке. **Пока ни во что не внедрены**, это отдельная задача (issue «Внедрить материалы Additions в старые рецепты»).
+- [x] Добавлено 13 предметов `kubejs:*` (текстуры взяты из jar Additions, русские названия): `carbon_sheathing`, `nano_sheathing`, `quantum_sheathing`, `advanced_coil`, `nano_coil`, `quantum_coil`, `advanced_electric_motor`, `nano_electric_motor`, `quantum_electric_motor`, `hybrid_circuit`, `nano_circuit`, `quantum_circuit`, `quantum_core`.
+- [x] Уже есть в сборке и не дублируются: иридий-железные пластины, Sunnarium (в Additions «Sanarium»), MT Core, Irradiant Glass Pane (Advanced Solars); Super Conductor, Cooling Core, Engine Booster, Magnetron, Vajra Core (Gravisuit).
+- Рецепты (все в верстаке):
+  | Предмет | Рецепт | Отличие от оригинала |
+  |---|---|---|
+  | Карбоновая оболочка | 2 карбоновые пластины, бесформенно | оригинал: Advanced Assembler, 25 000 EU |
+  | Нано-оболочка | 2 карбоновые оболочки + 3 энергий-пыли, бесформенно | как в оригинале (без EU) |
+  | Квантовая оболочка | `NIN/CIC/UIU`: нано-оболочка, иридиевая пластина, карбоновая оболочка, облучённый уран | оригинал 4+6+4+4 предметов, в сетку 3x3 не помещается, взято примерно вдвое меньше |
+  | Продвинутая катушка | `ICI/CLC/ICI`: 4x изолированный железный кабель, катушка Extras, блок лазурита | вместо плотной лазуритовой пластины блок лазурита |
+  | Нано-катушка | `RAR/ACA/RAR`: усиленная иридий-железная пластина, продвинутая катушка, энергий-пыль | как в оригинале |
+  | Квантовая катушка | `ICI/CRC/ICI`: иридиевая пластина, нано-катушка, облучённая усиленная пластина | как в оригинале |
+  | Продвинутый электромотор | ` S /CDC/ S `: плотная железная пластина, продвинутая катушка, алмаз | вместо плотной стальной пластины (стали нет) плотная железная из Extras |
+  | Нано-электромотор | ` C /NBN/ C `: карбоновая оболочка, нано-катушка, продвинутый машинный блок | как в оригинале |
+  | Квантовый электромотор | ` S /CIC/ S `: Sunnarium, квантовая катушка, облучённое стекло | Sanarium заменён на Sunnarium |
+  | Гибридная схема | продвинутая схема + 3 светящейся пыли + 2 гидратированной угольной пыли, бесформенно | оригинал: литий вместо светящейся пыли и 2000 mB серной кислоты (их в сборке нет) |
+  | Нано-схема | 4 карбоновые оболочки + 3 редстоуна + гибридная схема + нано-электромотор, бесформенно | оригинал + 2000 mB серной кислоты |
+  | Квантовая схема | 4 продвинутых теплообменника + квантовый электромотор + 3 иридиевых отражателя + нано-схема, бесформенно | оригинал + 2000 mB серной кислоты |
+  | Квантовое ядро | `SNS/NCN/SNS`: обогащённый сплав Sunnarium, звезда Незера, квантовая схема | как в оригинале |
+- [ ] Не добавлено (нужны машины Additions): тританиум, дуританиум, термосил, фуллерит, фотон, Sanarium-цепочка, актиниды, оболочка из композитной жижи. Плазменная кузница и молекулярный сборщик в сборке отсутствуют.
+- [ ] Проверить в игре: все рецепты в JEI, правильность ID из Advanced Solars и IC2C (`advanced_solars:*`, `ic2:iron_triple_insulated_cable_item`, `ic2:dust_hydrated_coal`, `ic2:heat_exchanger_advanced`, `ic2:reflector_iridium`).
+- Файлы: `kubejs/startup_scripts/items.js`, `kubejs/server_scripts/ic2_energy_crystal.js`, `kubejs/assets/kubejs/textures/item/*.png`, `kubejs/assets/kubejs/lang/ru_ru.json`.
+
 ### Металлоформовщик (Metal Former)
 - [x] Мод `bs_machines` (папка `mods-src/bs-machines/`): блок `bs_machines:metal_former`, LV, 10 EU/t, 200 тиков на операцию, три режима (прокатка, экструзия, резка), кнопка режима в GUI, категории JEI. Проверено в игре: мод загружается, блок и название видны.
 - [x] Сборка jar идёт через GitHub Actions (`.github/workflows/build-bs-machines.yml`), готовый файл лежит в Releases (`bs-machines-latest`).
