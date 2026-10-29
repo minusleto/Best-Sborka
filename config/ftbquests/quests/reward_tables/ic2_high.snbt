@@ -2,6 +2,7 @@
 	id: "4BAF1A78FFF71DEE"
 	order_index: 5
 	title: "IC2: поздний этап"
+	icon: "ic2:iridium_box"
 	loot_size: 1
 	rewards: [
 		{

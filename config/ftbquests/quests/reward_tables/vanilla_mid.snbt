@@ -2,6 +2,7 @@
 	id: "50C254AF34BC3789"
 	order_index: 1
 	title: "Ваниль: неплохо"
+	icon: "minecraft:chest"
 	loot_size: 1
 	rewards: [
 		{

@@ -2,6 +2,7 @@
 	id: "619D7A8A4BA7BA75"
 	order_index: 3
 	title: "IC2: ранний этап"
+	icon: "ic2:tool_box"
 	loot_size: 1
 	rewards: [
 		{

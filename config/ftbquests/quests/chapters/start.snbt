@@ -12,6 +12,7 @@
 	quests: [
 		{
 			title: "Добро пожаловать!"
+			icon: "ftbquests:book"
 			x: 0.0d
 			y: 0.0d
 			shape: "hexagon"
@@ -52,6 +53,7 @@
 		}
 		{
 			title: "Как работают квесты"
+			icon: "minecraft:knowledge_book"
 			x: 2.0d
 			y: 0.0d
 			shape: "circle"
@@ -83,6 +85,7 @@
 		}
 		{
 			title: "JEI: рецепты за секунду"
+			icon: "minecraft:crafting_table"
 			x: 4.0d
 			y: 0.0d
 			shape: "circle"
@@ -115,6 +118,7 @@
 		}
 		{
 			title: "Jade и The One Probe"
+			icon: "minecraft:spyglass"
 			x: 6.0d
 			y: 0.0d
 			shape: "circle"
@@ -144,6 +148,7 @@
 		}
 		{
 			title: "Карта и метки"
+			icon: "minecraft:filled_map"
 			x: 8.0d
 			y: 0.0d
 			shape: "circle"
@@ -177,6 +182,7 @@
 		}
 		{
 			title: "Играем вдвоём: команда"
+			icon: "minecraft:player_head"
 			x: 2.0d
 			y: 2.0d
 			subtitle: "Общий прогресс"
@@ -206,6 +212,7 @@
 		}
 		{
 			title: "Удобства в инвентаре"
+			icon: "minecraft:ender_chest"
 			x: 4.0d
 			y: 2.0d
 			shape: "circle"
@@ -234,6 +241,7 @@
 		}
 		{
 			title: "Слоты Curios"
+			icon: "minecraft:totem_of_undying"
 			x: 6.0d
 			y: 2.0d
 			shape: "circle"
@@ -263,6 +271,7 @@
 		}
 		{
 			title: "Куда мы идём"
+			icon: "minecraft:compass"
 			x: 10.0d
 			y: 0.0d
 			shape: "hexagon"

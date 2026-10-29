@@ -2,6 +2,7 @@
 	id: "3369BDD39241368F"
 	order_index: 2
 	title: "Ваниль: джекпот"
+	icon: "minecraft:ender_chest"
 	loot_size: 1
 	rewards: [
 		{

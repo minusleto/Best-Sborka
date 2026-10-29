@@ -2,6 +2,7 @@
 	id: "406E85E51FFC15F2"
 	order_index: 4
 	title: "IC2: середина пути"
+	icon: "ic2:carbon_box"
 	loot_size: 1
 	rewards: [
 		{

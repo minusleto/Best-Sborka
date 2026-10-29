@@ -2,6 +2,7 @@
 	id: "3A9D2782D5058090"
 	order_index: 0
 	title: "Ваниль: мелочи"
+	icon: "minecraft:barrel"
 	loot_size: 1
 	rewards: [
 		{
