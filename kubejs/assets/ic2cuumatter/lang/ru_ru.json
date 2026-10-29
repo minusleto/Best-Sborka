@@ -1,0 +1,10 @@
+{
+  "translation.ic2cuumatter.amplifier": "Усилитель",
+  "translation.ic2cuumatter.energy": "Энергия",
+  "translation.ic2cuumatter.tier": "Уровень",
+  "translation.ic2cuumatter.tier.hv": "HV",
+  "translation.ic2cuumatter.tier.ev": "EV",
+  "translation.ic2cuumatter.ticks": "Тики",
+  "translation.ic2cuumatter.format1": "%s: ",
+  "translation.ic2cuumatter.format2": "%s: %s"
+}
