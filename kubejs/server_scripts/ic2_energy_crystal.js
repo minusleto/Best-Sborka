@@ -171,7 +171,7 @@ ServerEvents.recipes(event => {
   // "XbX|LGL|RCR" (2 advanced heat exchangers, battery, 2 lamps, reinforced
   // glass, 2 rubber, advanced circuit). Substitutions requested for this pack:
   // IC2 Classic RE Battery instead of the unavailable Advanced RE-Battery,
-  // Construction Light instead of the Luminator.
+  // Luminator (the lamp the IC2C recipe itself uses) in place of 1.12.2 flat luminator.
   event.remove({ output: 'ic2:nightvision_goggles' })
   event.shaped('ic2:nightvision_goggles', [
     'HBH',
@@ -179,27 +179,16 @@ ServerEvents.recipes(event => {
     'RCR'
   ], {
     H: 'ic2:heat_exchanger_advanced',
-    L: 'ic2:construction_light',
+    L: 'ic2:luminator',
     R: 'ic2:rubber',
     B: 'ic2:re_battery',
     G: 'ic2:reinforced_glass',
     C: 'ic2:advanced_circuit'
   })
 
-  // Nano Helmet — preserve the native IC2 Classic electric armor item.
-  // Only replace its recipe; do not create a KubeJS substitute item.
-  // Shaped layout: carbon plates in corners, Energy Crystal top-center,
-  // Nightvision Goggles center.
-  event.remove({ output: 'ic2:nano_suit_helmet' })
-  event.shaped('ic2:nano_suit_helmet', [
-    'CEC',
-    'CGC',
-    '   '
-  ], {
-    C: 'ic2:carbon_plate',
-    E: 'ic2:energy_crystal',
-    G: 'ic2:nightvision_goggles'
-  })
+  // Nano helmet: IC2C native recipe is kept (carbon plates + Energy Crystal + glass).
+  // It outputs createDefaultArmor() with the crystal installed as a battery module (NBT);
+  // a KubeJS override gives a bare item with 0/0 EU, so do not override it.
 
   // Metal Former machine (mod: mods-src/bs-machines, block bs_machines:metal_former)
   // Copper ingots, not copper cables: copper cable crafting is removed above and
