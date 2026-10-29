@@ -186,9 +186,25 @@ ServerEvents.recipes(event => {
     C: 'ic2:advanced_circuit'
   })
 
-  // Nano helmet: IC2C native recipe is kept (carbon plates + Energy Crystal + glass).
-  // It outputs createDefaultArmor() with the crystal installed as a battery module (NBT);
-  // a KubeJS override gives a bare item with 0/0 EU, so do not override it.
+  // Nano helmet: 1.12.2 layout "CcC|CGC" (carbon plates, Energy Crystal, Nightvision Goggles).
+  // The IC2C native recipe outputs createDefaultArmor(): the crystal is installed as a battery
+  // module, stored in NBT armor_upgrades. A bare item shows "0 / 0 EU", so the same NBT is set here.
+  event.remove({ output: 'ic2:nano_suit_helmet' })
+  event.shaped(
+    Item.of('ic2:nano_suit_helmet', '{armor_upgrades:[{id:"ic2:energy_crystal",Count:1b,upgrade_type:"battery"}]}'),
+    ['CEC', 'CGC', '   '], {
+      C: 'ic2:carbon_plate',
+      E: 'ic2:energy_crystal',
+      G: 'ic2:nightvision_goggles'
+    })
+
+  // Assembler (placeholder item until the machine exists, issue #24).
+  event.shaped('kubejs:assembler', ['CMC', 'AXA', 'CMC'], {
+    C: 'ic2:advanced_circuit',
+    M: 'kubejs:electric_motor',
+    A: 'ic2:plate_advanced_alloy',
+    X: 'ic2:advanced_machine_block'
+  })
 
   // Metal Former machine (mod: mods-src/bs-machines, block bs_machines:metal_former)
   // Copper ingots, not copper cables: copper cable crafting is removed above and
