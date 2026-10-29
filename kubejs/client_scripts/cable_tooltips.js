@@ -27,10 +27,13 @@ const CABLE_INFO = {
   'ic2:plasma_cable_item':                    { cap: 32768, loss: '1,2' }
 }
 
+// NOTE: in KubeJS 1902.6.x a Text/Component is Iterable (itself + each sibling), so passing
+// `Text.gray(..).append(..)` straight to event.add() prints the line and then the sibling again
+// as a separate line (duplicated values). Wrapping each line in an array keeps it as one line.
 ItemEvents.tooltip(event => {
   Object.keys(CABLE_INFO).forEach(id => {
     const info = CABLE_INFO[id]
-    event.add(id, Text.gray('Пропускная способность: ').append(Text.yellow(info.cap + ' EU/t')))
-    event.add(id, Text.gray('Потери: ').append(Text.yellow(info.loss + ' EU на блок')))
+    event.add(id, [Text.gray('Пропускная способность: ').append(Text.yellow(info.cap + ' EU/t'))])
+    event.add(id, [Text.gray('Потери: ').append(Text.yellow(info.loss + ' EU на блок'))])
   })
 })
