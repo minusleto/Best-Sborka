@@ -156,6 +156,13 @@
 - [ ] Проверить в игре: все рецепты в JEI, правильность ID из Advanced Solars и IC2C (`advanced_solars:*`, `ic2:iron_triple_insulated_cable_item`, `ic2:dust_hydrated_coal`, `ic2:heat_exchanger_advanced`, `ic2:reflector_iridium`).
 - Файлы: `kubejs/startup_scripts/items.js`, `kubejs/server_scripts/ic2_energy_crystal.js`, `kubejs/assets/kubejs/textures/item/*.png`, `kubejs/assets/kubejs/lang/ru_ru.json`.
 
+### AE2: рецепты усложнены материалами Additions (первая партия, #23)
+Файл: `kubejs/server_scripts/ae2_harder.js`. Исходные рецепты взяты из `appliedenergistics2-forge-12.9.12.jar`.
+- [x] **МЭ-контроллер** (`ae2:controller`): `ABA/BCB/ABA`, `A` = `kubejs:nano_sheathing` (было: гладкий небесный камень), `B` = кристалл флюикса, `C` = инженерный процессор. Контроллер теперь требует IC2 (карбон и энергий-пыль).
+- [x] **Квантовое кольцо** (`ae2:quantum_ring`): `ABA/CDE/ABA`, `A` = `kubejs:nano_sheathing` (было: железный слиток), остальное как в оригинале.
+- [ ] Проверить в игре: рецепты в JEI и что контроллер достижим по прогрессии (карбоновые пластины и энергий-пыль нужны до первого контроллера).
+- [ ] Следующие кандидаты (см. issue #23): дренаж `ae2:drive`, плотная энергоячейка, пространственные блоки, трансформаторы IC2.
+
 ### Металлоформовщик (Metal Former)
 - [x] Мод `bs_machines` (папка `mods-src/bs-machines/`): блок `bs_machines:metal_former`, LV, 10 EU/t, 200 тиков на операцию, три режима (прокатка, экструзия, резка), кнопка режима в GUI, категории JEI. Проверено в игре: мод загружается, блок и название видны.
 - [x] Сборка jar идёт через GitHub Actions (`.github/workflows/build-bs-machines.yml`), готовый файл лежит в Releases (`bs-machines-latest`).
