@@ -833,5 +833,613 @@
 				}
 			]
 		}
+		{
+			title: "Свой огород"
+			x: 8.0d
+			y: 4.0d
+			subtitle: "Еда на будущее"
+			description: [
+				"&6Что делать:&r вскопай землю мотыгой рядом с водой, посади семена (они выпадают из травы) и собери 8 пшеницы."
+				"&6Зачем:&r хлеб, торт и корм для скота: пшеница кормит всё хозяйство."
+				"&7Растёт сама, пока ты занят. Редкий случай, когда природа работает за тебя.&r"
+			]
+			dependencies: ["2CD7BC183FA2ABFD"]
+			id: "4C708D056A2AA153"
+			tasks: [
+				{
+					id: "6ADE5939E82DAE25"
+					type: "item"
+					item: "minecraft:wheat"
+					count: 8L
+				}
+			]
+			rewards: [
+				{
+					id: "5320DEAFF0E52A11"
+					type: "item"
+					item: "minecraft:bone_meal"
+					count: 6
+				}
+				{
+					id: "5EA4524360B21261"
+					type: "random"
+					table_id: 4223575468416532624L
+				}
+			]
+		}
+		{
+			title: "Хлеб"
+			x: 10.0d
+			y: 4.0d
+			subtitle: "Булка в запас"
+			description: [
+				"&6Рецепт:&r 3 пшеницы в ряд."
+				"&6Зачем:&r дешёвая сытная еда, которую можно носить стаками."
+				"&7Булка в кармане успокаивает лучше любого плана.&r"
+			]
+			dependencies: ["4C708D056A2AA153"]
+			id: "6F74A06D67323CB7"
+			tasks: [
+				{
+					id: "085A4F8FF542FD0C"
+					type: "item"
+					item: "minecraft:bread"
+					count: 3L
+				}
+			]
+			rewards: [
+				{
+					id: "5BB4618A026075B3"
+					type: "item"
+					item: "minecraft:apple"
+					count: 4
+				}
+				{
+					id: "2B371A7B969EAA11"
+					type: "random"
+					table_id: 4223575468416532624L
+				}
+			]
+		}
+		{
+			title: "Торт реален"
+			x: 12.0d
+			y: 4.0d
+			shape: "hexagon"
+			subtitle: "Праздник на базе"
+			description: [
+				"&6Рецепт:&r 3 ведра молока, 2 сахара, яйцо и 3 пшеницы. Ведро у тебя уже есть."
+				"&6Зачем:&r торт ставится на землю и съедается по кусочкам вместе с друзьями."
+				"&7Торт не врёт. Проверено лично.&r"
+			]
+			dependencies: [
+				"6F74A06D67323CB7"
+				"3C1B34E7CA077FF8"
+			]
+			id: "2C2CE219AD29CD6F"
+			tasks: [
+				{
+					id: "459C2DF1A195E69A"
+					type: "item"
+					item: "minecraft:cake"
+				}
+			]
+			rewards: [
+				{
+					id: "47C02B9CB56AB7DE"
+					type: "item"
+					item: "minecraft:cookie"
+					count: 8
+				}
+				{
+					id: "61D12F41D58A6588"
+					type: "random"
+					table_id: 5819306779996862345L
+				}
+			]
+		}
+		{
+			title: "Размножайтесь!"
+			x: 8.0d
+			y: 6.0d
+			subtitle: "Своя ферма"
+			description: [
+				"&6Что делать:&r дай двум животным одного вида пшеницу (коровам и овцам) или морковь (свиньям): появится детёныш."
+				"&6Зачем:&r своя ферма даёт мясо, кожу и шерсть без вылазок по лесам."
+				"&7Пара коров, немного романтики, и вот у тебя уже бизнес.&r"
+			]
+			dependencies: ["4C708D056A2AA153"]
+			id: "7673133D47D75684"
+			tasks: [
+				{
+					id: "67594679BBEAE8CC"
+					type: "advancement"
+					advancement: "minecraft:husbandry/breed_an_animal"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "6252472A26C7017A"
+					type: "item"
+					item: "minecraft:lead"
+					count: 2
+				}
+				{
+					id: "57C1A228AA689D21"
+					type: "random"
+					table_id: 4223575468416532624L
+				}
+			]
+		}
+		{
+			title: "Лук"
+			x: 14.0d
+			y: 4.0d
+			subtitle: "Бей издали"
+			description: [
+				"&6Рецепт:&r 3 палки и 3 нити (нить падает с пауков)."
+				"&6Зачем:&r лук бьёт издалека: скелеты и крипер остаются без шансов."
+				"&7Дистанция лучше любой брони.&r"
+			]
+			dependencies: ["1126B9DE7B810AE8"]
+			id: "4A96D6AF4014AA43"
+			tasks: [
+				{
+					id: "53145454F700D680"
+					type: "item"
+					item: "minecraft:bow"
+				}
+			]
+			rewards: [
+				{
+					id: "0A33AE77E721F0C0"
+					type: "item"
+					item: "minecraft:arrow"
+					count: 24
+				}
+				{
+					id: "1CA5F682EA36147F"
+					type: "random"
+					table_id: 4223575468416532624L
+				}
+			]
+		}
+		{
+			title: "Инспекция крипера"
+			x: 16.0d
+			y: 4.0d
+			subtitle: "Взрывоопасная работа"
+			description: [
+				"&6Что делать:&r убей крипера, лучше стрелой издали."
+				"&6Зачем:&r из него выпадает порох для TNT и фейерверков. А ещё он всё равно не оставит тебя в покое."
+				"&7Он шипит, значит, пора отбегать.&r"
+			]
+			dependencies: ["4A96D6AF4014AA43"]
+			id: "5607D34190512D37"
+			tasks: [
+				{
+					id: "0EC39E05EFCA9128"
+					type: "kill"
+					entity: "minecraft:creeper"
+					value: 1L
+				}
+			]
+			rewards: [
+				{
+					id: "4479C6D6E1AE4E62"
+					type: "item"
+					item: "minecraft:gunpowder"
+					count: 4
+				}
+				{
+					id: "3D9E837108FF9FE9"
+					type: "random"
+					table_id: 5819306779996862345L
+				}
+			]
+		}
+		{
+			title: "Ночная зачистка"
+			x: 14.0d
+			y: 6.0d
+			subtitle: "Десять зомби"
+			description: [
+				"&6Что делать:&r убей 10 зомби: они приходят с темнотой."
+				"&6Награда мира:&r гнилая плоть и редко железо, морковь или картофель."
+				"&7Один зомби не страшен. Десять уже называется работой.&r"
+			]
+			dependencies: ["1126B9DE7B810AE8"]
+			id: "37A0C8387F0C0481"
+			tasks: [
+				{
+					id: "4FA382F9931B36DF"
+					type: "kill"
+					entity: "minecraft:zombie"
+					value: 10L
+				}
+			]
+			rewards: [
+				{
+					id: "098E0AE1765935CD"
+					type: "item"
+					item: "minecraft:iron_ingot"
+					count: 2
+				}
+				{
+					id: "54C8E36750897643"
+					type: "random"
+					table_id: 4223575468416532624L
+				}
+			]
+		}
+		{
+			title: "Костяной сбор"
+			x: 16.0d
+			y: 6.0d
+			subtitle: "Пять скелетов"
+			description: [
+				"&6Что делать:&r убей 5 скелетов (в пещерах и по ночам)."
+				"&6Зачем:&r из них падают кости (на костную муку) и стрелы."
+				"&7Не стой в линии огня: у них отличный глазомер.&r"
+			]
+			dependencies: ["4A96D6AF4014AA43"]
+			id: "11C6E3638160A8E5"
+			tasks: [
+				{
+					id: "5BA9C447CFA57F13"
+					type: "kill"
+					entity: "minecraft:skeleton"
+					value: 5L
+				}
+			]
+			rewards: [
+				{
+					id: "45A08C90B703B0F4"
+					type: "item"
+					item: "minecraft:arrow"
+					count: 16
+				}
+				{
+					id: "6AA2494920A70FE9"
+					type: "random"
+					table_id: 4223575468416532624L
+				}
+			]
+		}
+		{
+			title: "Пышные пещеры"
+			x: 12.0d
+			y: -6.0d
+			subtitle: "Подземный сад"
+			description: [
+				"&6Что делать:&r найди пышные пещеры: под землёй, где растут мох, азалии и светящиеся ягоды."
+				"&6Зачем:&r здесь живут аксолотли, а азалии и ягоды украсят базу."
+				"&7Редкий случай, когда пещера выглядит уютно.&r"
+			]
+			dependencies: ["59F46FD06B8A0FCC"]
+			id: "1CA609B1D652E11C"
+			tasks: [
+				{
+					id: "2EAEDFBD7B426156"
+					type: "biome"
+					biome: "minecraft:lush_caves"
+				}
+			]
+			rewards: [
+				{
+					id: "149EBACF81B31695"
+					type: "item"
+					item: "minecraft:glow_berries"
+					count: 8
+				}
+				{
+					id: "078ABA5641910229"
+					type: "random"
+					table_id: 5819306779996862345L
+				}
+			]
+		}
+		{
+			title: "Каменные сосульки"
+			x: 14.0d
+			y: -6.0d
+			subtitle: "Острые пещеры"
+			description: [
+				"&6Что делать:&r найди каменные пещеры со свисающими сосульками (dripstone)."
+				"&6Осторожно:&r падающая сосулька бьёт больно. Смотри не только под ноги, но и вверх."
+				"&7Сталактит или сталагмит, помнить необязательно. Главное, что острый.&r"
+			]
+			dependencies: ["1CA609B1D652E11C"]
+			id: "096F3D506AD8216F"
+			tasks: [
+				{
+					id: "253E7BF5D9B86BF0"
+					type: "biome"
+					biome: "minecraft:dripstone_caves"
+				}
+			]
+			rewards: [
+				{
+					id: "0380D9644C8C022B"
+					type: "item"
+					item: "minecraft:pointed_dripstone"
+					count: 8
+				}
+				{
+					id: "028403F502D8F9BF"
+					type: "random"
+					table_id: 5819306779996862345L
+				}
+			]
+		}
+		{
+			title: "Мангровое болото"
+			x: 16.0d
+			y: -6.0d
+			subtitle: "Лягушки и грязь"
+			description: [
+				"&6Что делать:&r найди мангровое болото: мангровые деревья на корнях, грязь и лягушки."
+				"&6Зачем:&r мангровая древесина и грязевые кирпичи для красивой постройки."
+				"&7Комаров нет, лягушки есть. Хороший размен.&r"
+			]
+			dependencies: ["096F3D506AD8216F"]
+			id: "28C66B5CD221C803"
+			tasks: [
+				{
+					id: "6C4F8735DE2B760B"
+					type: "biome"
+					biome: "minecraft:mangrove_swamp"
+				}
+			]
+			rewards: [
+				{
+					id: "6C3DB30784955255"
+					type: "item"
+					item: "minecraft:mangrove_propagule"
+					count: 2
+				}
+				{
+					id: "27AA7E3FC2222940"
+					type: "random"
+					table_id: 5819306779996862345L
+				}
+			]
+		}
+		{
+			title: "Грибной остров"
+			x: 18.0d
+			y: -6.0d
+			shape: "pentagon"
+			subtitle: "Самое мирное место"
+			description: [
+				"&6Что делать:&r найди грибной остров: редкий биом посреди океана."
+				"&6Зачем:&r враждебные мобы там не появляются, зато бродят грибные коровы. Отличная безопасная база."
+				"&7Подозрительно мирно. Но, говорят, так и задумано.&r"
+			]
+			size: 1.3d
+			dependencies: ["28C66B5CD221C803"]
+			id: "55AC3232C01853F8"
+			tasks: [
+				{
+					id: "2CB4C56E803EEED5"
+					type: "biome"
+					biome: "minecraft:mushroom_fields"
+				}
+			]
+			rewards: [
+				{
+					id: "48C81476B5FD3F92"
+					type: "item"
+					item: "minecraft:mushroom_stew"
+					count: 4
+				}
+				{
+					id: "15D74EAADCCE72E4"
+					type: "random"
+					table_id: 3704700884878440079L
+				}
+			]
+		}
+		{
+			title: "Деревня"
+			x: 12.0d
+			y: -4.0d
+			subtitle: "Соседи нашлись"
+			description: [
+				"&6Что делать:&r найди деревню (любого вида) и зайди в неё."
+				"&6Зачем:&r там торгуют, спят в кроватях и жарят хлеб. Можно пополнить запасы и взять изумруды."
+				"&7Жители говорят хмм. Понимай как хочешь.&r"
+			]
+			dependencies: ["59F46FD06B8A0FCC"]
+			id: "5AF15C36267D54BB"
+			tasks: [
+				{
+					id: "4E3AB099FFEC1F8D"
+					type: "structure"
+					structure: "#minecraft:village"
+				}
+			]
+			rewards: [
+				{
+					id: "09CD42ED2B5F7C83"
+					type: "item"
+					item: "minecraft:emerald"
+					count: 2
+				}
+				{
+					id: "2CFA9741717C38F9"
+					type: "random"
+					table_id: 5819306779996862345L
+				}
+			]
+		}
+		{
+			title: "Первая сделка"
+			x: 14.0d
+			y: -4.0d
+			subtitle: "Рынок открыт"
+			description: [
+				"&6Что делать:&r обменяй что-нибудь у жителя деревни на любой товар."
+				"&6Зачем:&r за изумруды продают редкие вещи, в том числе книги с зачарованиями."
+				"&7Ценник кусается, зато торговаться можно хоть всю ночь.&r"
+			]
+			dependencies: ["5AF15C36267D54BB"]
+			id: "1C9E4C807279A73C"
+			tasks: [
+				{
+					id: "0E467C950A4E2B99"
+					type: "advancement"
+					advancement: "minecraft:adventure/trade"
+					criterion: ""
+				}
+			]
+			rewards: [
+				{
+					id: "46C1E09D6D1E0798"
+					type: "item"
+					item: "minecraft:emerald"
+					count: 3
+				}
+				{
+					id: "48E6BA07E891C9D3"
+					type: "random"
+					table_id: 5819306779996862345L
+				}
+			]
+		}
+		{
+			title: "Ужасная крепость"
+			x: 20.0d
+			y: 0.0d
+			subtitle: "Кирпичи над лавой"
+			description: [
+				"&6Что делать:&r найди крепость Незера: тёмно-красные кирпичи, мосты и коридоры."
+				"&6Зачем:&r там живут блейзы и растёт незерская бородавка. Мосты нависают над лавой, шагай осторожно."
+				"&7Красиво, страшно, и никаких тебе перил.&r"
+			]
+			dependencies: ["1CF2C9D5CBB68FAD"]
+			id: "5B6C0A96B9D32DE5"
+			tasks: [
+				{
+					id: "5011ED06454E8860"
+					type: "structure"
+					structure: "minecraft:fortress"
+				}
+			]
+			rewards: [
+				{
+					id: "5E3F3572ED01D603"
+					type: "item"
+					item: "minecraft:nether_wart"
+					count: 4
+				}
+				{
+					id: "6F89173BB803AF65"
+					type: "random"
+					table_id: 3704700884878440079L
+				}
+			]
+		}
+		{
+			title: "Забытый город"
+			x: 8.0d
+			y: -4.0d
+			shape: "heart"
+			subtitle: "Руины в Тёмных глубинах"
+			description: [
+				"&6Что делать:&r найди Древний город: огромные руины глубоко под землёй, где растёт светящийся скалк."
+				"&cОпасно:&r Хранитель слышит всё. Заглушай шаги шерстью, не прыгай и не бей по блокам без нужды."
+				"&7Приходи на цыпочках. Хотя бы мысленно.&r"
+			]
+			size: 1.3d
+			dependencies: ["6E71C8F20B81A3B6"]
+			id: "17D2FA965AC089C7"
+			tasks: [
+				{
+					id: "5E82109C38EEAD4A"
+					type: "structure"
+					structure: "minecraft:ancient_city"
+				}
+			]
+			rewards: [
+				{
+					id: "007EF15808266892"
+					type: "item"
+					item: "minecraft:echo_shard"
+				}
+				{
+					id: "7CAECD7ED8C6A475"
+					type: "random"
+					table_id: 3704700884878440079L
+				}
+			]
+		}
+		{
+			title: "Стол зачарований"
+			x: 16.0d
+			y: 0.0d
+			subtitle: "Магия на заказ"
+			description: [
+				"&6Рецепт:&r 4 обсидиана, 2 алмаза и книга (3 бумаги и кожа)."
+				"&6Зачем:&r зачаруй инструменты: Прочность и Эффективность спасают нервы."
+				"&7Книжные полки вокруг стола делают магию мощнее, в этом вся суть.&r"
+			]
+			dependencies: ["192756A168FF578F"]
+			id: "1F44F9626367CBDE"
+			tasks: [
+				{
+					id: "6A1763C6A7104F6B"
+					type: "item"
+					item: "minecraft:enchanting_table"
+				}
+			]
+			rewards: [
+				{
+					id: "751F7D9996C2AA3A"
+					type: "item"
+					item: "minecraft:experience_bottle"
+					count: 8
+				}
+				{
+					id: "058B77B6932FAED6"
+					type: "random"
+					table_id: 5819306779996862345L
+				}
+			]
+		}
+		{
+			title: "Варочная"
+			x: 18.0d
+			y: 6.0d
+			subtitle: "Первые зелья"
+			description: [
+				"&6Рецепт:&r стержень блейза и 3 булыжника."
+				"&6Зачем:&r зелья: от огнестойкости до ночного зрения. Пригодится в Незере и у лавы."
+				"&7Химия без вытяжки, зато с огоньком.&r"
+			]
+			dependencies: ["3C0EA7E1E1A65081"]
+			id: "3F40EB8733054256"
+			tasks: [
+				{
+					id: "1BAEB450958BAB17"
+					type: "item"
+					item: "minecraft:brewing_stand"
+				}
+			]
+			rewards: [
+				{
+					id: "13E115623EE4B0A6"
+					type: "item"
+					item: "minecraft:glass_bottle"
+					count: 3
+				}
+				{
+					id: "3E12CED7EDE9DF8A"
+					type: "random"
+					table_id: 5819306779996862345L
+				}
+			]
+		}
 	]
 }
