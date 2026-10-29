@@ -103,18 +103,9 @@ ServerEvents.recipes(event => {
     'ic2:iron_cable_item'
   ].forEach(cable => event.remove({ output: cable }))
 
-  // Wire cutters (IC2 Experimental 1.12.2 Cutter, grid "A A| A |I I" from the jar):
-  // 3 iron plates + 2 iron ingots. Plate + cutters -> cables, the cutters lose
-  // 1 durability (60 uses, as in 1.12.2). Cable counts per plate: 1.12.2 shapeless recipes.
-  event.shaped('kubejs:wire_cutters', [
-    'P P',
-    ' P ',
-    'I I'
-  ], {
-    I: 'minecraft:iron_ingot',
-    P: 'kubejs:iron_plate'
-  })
-
+  // Plate + IC2C cutter (ic2:cutter, "Wire Cutter", 128 uses) -> cables. In 1.12.2 the same
+  // Cutter is used for insulation and for cutting plates. ic2:cutter returns itself damaged by 1
+  // as a crafting remainder (CutterTool.getCraftingRemainingItem), so no extra damage logic here.
   const cutterCables = [
     ['2x ic2:copper_cable_item', 'kubejs:copper_plate'],
     ['3x ic2:tin_cable_item', 'kubejs:tin_plate'],
@@ -122,8 +113,7 @@ ServerEvents.recipes(event => {
     ['4x ic2:iron_cable_item', 'kubejs:iron_plate']
   ]
   cutterCables.forEach(r => {
-    event.shapeless(r[0], [r[1], 'kubejs:wire_cutters'])
-      .damageIngredient('kubejs:wire_cutters', 1)
+    event.shapeless(r[0], [r[1], 'ic2:cutter'])
   })
 
   // Advanced Machine Casing (adapted Experimental layout)

@@ -53,7 +53,7 @@
 |---|---|---|
 | Гаечный ключ, электроключ, резак (`cutter`), чертежный бур, кран | ✓ | `WRENCH`, `ELECTRIC_WRENCH`, `PRECISION_WRENCH`, `CUTTER` (`insulation_cutter`), `TREETAP`, `ELECTRIC_TREETAP` |
 | Кузнечный молот (`forge_hammer`) | К | `kubejs:forge_hammer` |
-| Кусачки как инструмент для кабелей | К | `kubejs:wire_cutters` (60 использований, рецепт из jar) |
+| Кусачки как инструмент для кабелей | ✓ | родной `ic2:cutter` (128 использований); рецепты «пластина + кусачки → кабели» добавлены в KubeJS |
 | Лом (`crowbar`), метка ветра (`wind_meter`), плазменная пушка | ✗ | не найдены |
 | Мотыга, бур, алмазный и иридиевый бур, пила, лазер, нано-сабля | ✓ | `ELECTRIC_HOE`, `DRILL*`, `CHAINSAW*`, `MINING_LASER`, `NANO_SABER` |
 | Обскуратор, анализатор культур, термометр, EU Reader | ✓ | `OBSCURATOR`, `CROP_ANALYZER`, `THERMOMETER`, `EU_READER` |

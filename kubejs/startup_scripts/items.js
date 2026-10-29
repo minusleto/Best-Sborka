@@ -66,14 +66,6 @@ StartupEvents.registry('item', event => {
     .displayName('Forge Hammer')
     .tag('forge:tools')
 
-  // IC2 Experimental 1.12.2 Cutter (wire cutters): cuts plates into cables.
-  // Durability 60 as in 1.12.2 (ItemToolCutter).
-  event.create('wire_cutters')
-    .maxDamage(60)
-    .parentModel('minecraft:item/handheld')
-    .displayName('Wire Cutters')
-    .tag('forge:tools')
-
   // Late-game materials from the IC2 Additions 1.12.2 mod (schakaloff), adapted to crafting-table
   // recipes (the mod makes them in its own Advanced Assembler). See docs/recipe-changes.md.
   // Placeholder item for the future Assembler machine (issue #24); texture is a temporary copy.
