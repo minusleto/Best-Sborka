@@ -2,14 +2,20 @@
 ServerEvents.recipes(event => {
 
   // Vajra (Gravisuit). The recipe lives in Java in Gravisuit (IC2C crafting manager), so check in JEI
-  // that only this one recipe is shown. Tools as ingredients: the Vajra is the sum of the pack's tools.
+  // that only this one recipe is shown. Layout of the 1.12.2 original (all 9 slots are used):
+  //   iron plate, energy crystal, iron plate / carbon plate, Vajra Core, carbon plate /
+  //   composite plate, lapotron crystal, composite plate.
+  // Here the top row (iron plate, energy crystal, iron plate) is replaced by three tools,
+  // so the Vajra is the sum of the pack's tools: mining laser, advanced drill, nano saber.
   event.remove({ output: 'gravisuit:vajra' })
-  event.shaped('gravisuit:vajra', ['LDS', ' C ', ' E '], {
+  event.shaped('gravisuit:vajra', ['LDS', 'PCP', 'ABA'], {
     L: 'ic2:mining_laser',
     D: 'ic2:advanced_drill',
     S: 'ic2:nano_saber',
+    P: 'ic2:carbon_plate',
     C: 'gravisuit:vajra_core',
-    E: 'ic2:lapatron_crystal'
+    A: 'ic2:plate_advanced_alloy',
+    B: 'ic2:lapatron_crystal'
   })
 
   // Build Core (final block). Each cell is the capstone of one branch of the pack:

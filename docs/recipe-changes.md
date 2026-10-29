@@ -253,7 +253,7 @@
 | `ae2:charger` | 4 железа, 2 меди | медь заменена 2 катушками (`ic2c_extras:coil`), электромотор в пустом слоте | `bridge_ic2_ae2.js` |
 | `ic2:mass_fabricator` | 1.12.2 `GCG/ALA/GCG`, C = продвинутая схема | C = `ae2:calculation_processor` | `bridge_ic2_ae2.js` |
 | `ic2:teleporter` | 1.12.2 `GFG/CMC/GDG`, D = алмаз | D = `ae2:quantum_link` | `bridge_ic2_ae2.js` |
-| `gravisuit:vajra` | рецепт Gravisuit (в Java) | лазер, Advanced Drill, нано-сабля, Vajra Core, лапотронный кристалл (инструмент-как-ингредиент) | `final_core.js` |
+| `gravisuit:vajra` | рецепт Gravisuit (в Java) | раскладка оригинала 1.12.2 (углепластик ×2, Vajra Core, композитная пластина ×2, лапотрон), верхний ряд железо/энергокристалл/железо заменён лазером, Advanced Drill и нано-саблей (инструмент-как-ингредиент) | `final_core.js` |
 | `kubejs:build_core` «Ядро сборки» | нет | `LSV/CQT/AKM`: Ultimate Lappack, Ultimate Hybrid Solar Panel, Vajra, 16M ячейка AE, Quantum Accumulator, Teleporter Hub, квантовая броня (нагрудник), квантовое ядро, Mass Fabricator | `final_core.js`, `build_core.js` |
 
 - Все ID сверены по jar-ам сборки скриптом (список в описании PR). Синтаксис скриптов проверен `node --check`.
