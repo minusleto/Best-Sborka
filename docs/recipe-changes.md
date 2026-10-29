@@ -188,7 +188,10 @@
 ### Нано-шлем и прибор ночного видения
 - [x] Удалён стандартный рецепт `ic2:nano_suit_helmet`.
 - [x] Добавлен рецепт, требующий `ic2:carbon_plate` + `ic2:energy_crystal` + `ic2:nightvision_goggles`; прибор ночного видения расходуется при крафте, как указано в русской Minecraft Wiki.
-- [ ] Проверить в JEI/игре, что рецепт загружается и ID `ic2:nano_suit_helmet` и `ic2:nightvision_goggles` корректны. Рецепт сейчас бесформенный, ингредиенты обязательны, исходная раскладка IC2C не сохраняется.
+- [x] Раскладка нано-шлема сверена с jar 1.12.2: `CcC/CGC` (4 карбоновые пластины, энергетический кристалл, очки), в сборке `CEC/CGC`, совпадает.
+- [x] Очки ночного видения: раскладка исправлена по jar 1.12.2, `XbX/LGL/RCR`: 2 продвинутых теплообменника, батарея, 2 лампы, усиленное стекло, 2 резины, продвинутая схема. Замены владельца сборки: `ic2:re_battery` вместо Advanced RE-Battery и `ic2:construction_light` вместо Luminator. Раньше стояла другая раскладка (`HLH/RBR/LGC`) с тем же набором ингредиентов.
+- [x] ID проверены по реестру/локализации IC2C: `ic2:nightvision_goggles`, `ic2:nano_suit_helmet`, `ic2:heat_exchanger_advanced`, `ic2:construction_light`, `ic2:rubber`, `ic2:re_battery`, `ic2:reinforced_glass`, `ic2:advanced_circuit`, `ic2:carbon_plate`, `ic2:energy_crystal`.
+- [ ] Проверить в JEI/игре: рецепты загружаются и дают предметы.
 - Файл: `kubejs/server_scripts/ic2_energy_crystal.js`.
 
 ## Идеи на потом (не сделано)

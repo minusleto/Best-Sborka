@@ -167,16 +167,16 @@ ServerEvents.recipes(event => {
     c: 'ic2:energy_crystal'
   })
 
-  // Nightvision Goggles — restore the full IC2 Experimental 1.12.2
-  // ingredient set. The only substitution requested for this pack is
-  // IC2 Classic RE Battery in place of the unavailable Advanced RE-Battery.
-  // Ingredients: 2 advanced heat exchangers, 2 lamps, 2 rubber,
-  // 1 RE Battery, 1 reinforced glass, 1 advanced circuit.
+  // Nightvision Goggles — IC2 Experimental 1.12.2 recipe, grid from the jar:
+  // "XbX|LGL|RCR" (2 advanced heat exchangers, battery, 2 lamps, reinforced
+  // glass, 2 rubber, advanced circuit). Substitutions requested for this pack:
+  // IC2 Classic RE Battery instead of the unavailable Advanced RE-Battery,
+  // Construction Light instead of the Luminator.
   event.remove({ output: 'ic2:nightvision_goggles' })
   event.shaped('ic2:nightvision_goggles', [
-    'HLH',
-    'RBR',
-    'LGC'
+    'HBH',
+    'LGL',
+    'RCR'
   ], {
     H: 'ic2:heat_exchanger_advanced',
     L: 'ic2:construction_light',
