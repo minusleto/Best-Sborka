@@ -1,5 +1,6 @@
 # Локальная среда и личные данные
 saves/
+backups/
 logs/
 crash-reports/
 screenshots/

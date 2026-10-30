@@ -26,6 +26,8 @@
 
 ## Документы
 
+- [Как менять сборку и не ломать мир (рабочий процесс, бэкапы, релизы)](docs/WORKFLOW.md)
+- [История изменений](CHANGELOG.md)
 - [Список модов](docs/mods-list.md)
 - [Квесты (FTB Quests)](docs/quests.md)
 - [Проверенные ID IC2](docs/ic2-ids.md)
