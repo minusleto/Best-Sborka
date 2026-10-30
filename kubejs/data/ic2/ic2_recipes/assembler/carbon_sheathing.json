@@ -1,0 +1,20 @@
+{
+  "input": [
+    {
+      "type": "ic2:item",
+      "item": "ic2:carbon_plate",
+      "size": 2
+    }
+  ],
+  "output": {
+    "type": "ic2:simple",
+    "xp": 0.0,
+    "outputs": [
+      {
+        "type": "ic2:item",
+        "item": "kubejs:carbon_sheathing",
+        "size": 1
+      }
+    ]
+  }
+}

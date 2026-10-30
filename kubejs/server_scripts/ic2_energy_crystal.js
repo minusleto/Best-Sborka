@@ -188,8 +188,8 @@ ServerEvents.recipes(event => {
       G: 'ic2:nightvision_goggles'
     })
 
-  // Assembler (placeholder item until the machine exists, issue #24).
-  event.shaped('kubejs:assembler', ['CMC', 'AXA', 'CMC'], {
+  // Assembler machine (bs-machines mod).
+  event.shaped('bs_machines:assembler', ['CMC', 'AXA', 'CMC'], {
     C: 'ic2:advanced_circuit',
     M: 'kubejs:electric_motor',
     A: 'ic2:plate_advanced_alloy',
@@ -252,18 +252,8 @@ ServerEvents.recipes(event => {
   // Originals use the mod's Advanced Assembler (EU, sulfuric acid, lithium), which this pack
   // does not have, so they are crafting-table recipes. Not integrated into other recipes yet.
   // ---------------------------------------------------------------
-  // Carbon sheathing: 2 carbon plates (original: Advanced Assembler, 25000 EU)
-  event.shapeless('kubejs:carbon_sheathing', ['ic2:carbon_plate', 'ic2:carbon_plate'])
-  // Nano sheathing: 2 carbon sheathing + 3 energium dust (as in the original)
-  event.shapeless('kubejs:nano_sheathing', ['kubejs:carbon_sheathing', 'kubejs:carbon_sheathing', 'kubejs:energium_dust', 'kubejs:energium_dust', 'kubejs:energium_dust'])
-  // Quantum sheathing: the original needs 4 carbon + 6 iridium + 4 nano + 4 irradiant uranium (18 items,
-  // does not fit a 3x3 grid), so here it is about half of that.
-  event.shaped('kubejs:quantum_sheathing', ['NIN', 'CIC', 'UIU'], {
-    N: 'kubejs:nano_sheathing',
-    C: 'kubejs:carbon_sheathing',
-    I: 'ic2:plate_iridium',
-    U: 'advanced_solars:irradiant_uranium'
-  })
+  // Sheathings are made ONLY in the Assembler (bs_machines:assembler); recipes are JSON in
+  // kubejs/data/ic2/ic2_recipes/assembler/ (carbon, nano, quantum).
 
   // Coils: advanced (original recipe, lapis block instead of the dense lapis plate),
   // nano and quantum (original recipes; Sanarium = Sunnarium of Advanced Solars)

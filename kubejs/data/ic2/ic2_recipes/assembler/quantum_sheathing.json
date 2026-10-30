@@ -1,0 +1,25 @@
+{
+  "input": [
+    {
+      "type": "ic2:item",
+      "item": "kubejs:nano_sheathing",
+      "size": 4
+    },
+    {
+      "type": "ic2:item",
+      "item": "ic2:plate_iridium",
+      "size": 6
+    }
+  ],
+  "output": {
+    "type": "ic2:simple",
+    "xp": 0.0,
+    "outputs": [
+      {
+        "type": "ic2:item",
+        "item": "kubejs:quantum_sheathing",
+        "size": 1
+      }
+    ]
+  }
+}

@@ -68,9 +68,6 @@ StartupEvents.registry('item', event => {
 
   // Late-game materials from the IC2 Additions 1.12.2 mod (schakaloff), adapted to crafting-table
   // recipes (the mod makes them in its own Advanced Assembler). See docs/recipe-changes.md.
-  // Placeholder item for the future Assembler machine (issue #24); texture is a temporary copy.
-  event.create('assembler').displayName('Сборщик')
-
   const additions = {
     carbon_sheathing: 'Carbon Sheathing',
     nano_sheathing: 'Nano Sheathing',
