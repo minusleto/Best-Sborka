@@ -160,7 +160,6 @@ public class BlockEntityAssembler extends BasicMachineTileEntity {
         float perTick = Math.max(1, this.defaultEnergyConsume);
         this.operationLength = Math.max(1, Math.round(AssemblerCosts.get(entry) / perTick * ratio));
         this.recipeOperation = this.operationLength;
-        this.recipeEnergy = this.energyConsume * this.operationLength;
     }
 
     /** Finds distinct input slots for every recipe input (any order); null if the recipe cannot be filled. */
