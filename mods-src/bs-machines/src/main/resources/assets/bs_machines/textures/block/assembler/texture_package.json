@@ -1,14 +1,14 @@
 {
-  "active_down": "bs_machines:block/metal_former/bottom",
-  "active_east": "bs_machines:block/metal_former/side",
-  "active_north": "bs_machines:block/metal_former/side",
-  "active_south": "bs_machines:block/metal_former/active_south",
-  "active_up": "bs_machines:block/metal_former/top_active",
-  "active_west": "bs_machines:block/metal_former/side",
-  "inactive_down": "bs_machines:block/metal_former/bottom",
-  "inactive_east": "bs_machines:block/metal_former/side",
-  "inactive_north": "bs_machines:block/metal_former/side",
-  "inactive_south": "bs_machines:block/metal_former/inactive_south",
-  "inactive_up": "bs_machines:block/metal_former/top",
-  "inactive_west": "bs_machines:block/metal_former/side"
+  "inactive_down": "bs_machines:block/assembler/assembler_bottom",
+  "inactive_up": "bs_machines:block/assembler/assembler_top",
+  "inactive_south": "bs_machines:block/assembler/assembler_front",
+  "inactive_north": "bs_machines:block/assembler/assembler_side",
+  "inactive_east": "bs_machines:block/assembler/assembler_side",
+  "inactive_west": "bs_machines:block/assembler/assembler_side",
+  "active_down": "bs_machines:block/assembler/assembler_bottom",
+  "active_up": "bs_machines:block/assembler/assembler_top_active",
+  "active_south": "bs_machines:block/assembler/assembler_front_active",
+  "active_north": "bs_machines:block/assembler/assembler_side_active",
+  "active_east": "bs_machines:block/assembler/assembler_side_active",
+  "active_west": "bs_machines:block/assembler/assembler_side_active"
 }
