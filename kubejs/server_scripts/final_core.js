@@ -18,22 +18,22 @@ ServerEvents.recipes(event => {
     B: 'ic2:lapatron_crystal'
   })
 
-  // Build Core (final block). Each cell is the capstone of one branch of the pack:
-  //   energy:  Ultimate Lappack, Quantum Accumulator   sun: Ultimate Hybrid Solar Panel
-  //   tools:   Vajra                                   storage: AE 16M Super Storage Cell
-  //   matter:  Mass Fabricator, Quantum Core           transport: Teleporter Hub
-  //   armor:   Quantum Chestplate
+  // Build Core (final block). Only real components, no finished gear: every cell is the core of
+  // one branch of the pack (the center is the energy heart of the pack).
+  //   tools/gravity: Vajra Core        quantum: Quantum Core       sun/molecular: MT Core
+  //   iridium: Reinforced Iridium Plate   energy: Glowtronic Crystal   AE2: Quantum Entangled Singularity
+  //   quantum set: Quantum Sheathing, Quantum Coil, Quantum Electric Motor
   // The recipe cannot require a charge (KubeJS cannot read the EU of an item), so the energy
-  // requirement is enforced by the cost of the capstones and by the final quest.
-  event.shaped('kubejs:build_core', ['LSV', 'CQT', 'AKM'], {
-    L: 'gravisuit:ultimate_lappack',
-    S: 'advanced_solars:ultimate_hybrid_solar_panel',
-    V: 'gravisuit:vajra',
-    C: 'ae2additions:super_cell_16m',
-    Q: 'ic2:quantum_accumulator',
-    T: 'ic2:teleporter_hub',
-    A: 'ic2:quantum_suit_chestplate',
-    K: 'kubejs:quantum_core',
-    M: 'ic2:mass_fabricator'
+  // requirement is enforced by the cost of the Glowtronic Crystal and by the final quest.
+  event.shaped('kubejs:build_core', ['VQM', 'IGS', 'ECO'], {
+    V: 'gravisuit:vajra_core',
+    Q: 'kubejs:quantum_core',
+    M: 'advanced_solars:mt_core',
+    I: 'ic2:iridium',
+    G: 'ic2:glowtronic_crystal',
+    S: 'ae2:quantum_entangled_singularity',
+    E: 'kubejs:quantum_sheathing',
+    C: 'kubejs:quantum_coil',
+    O: 'kubejs:quantum_electric_motor'
   })
 })
