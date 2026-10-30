@@ -290,18 +290,8 @@ ServerEvents.recipes(event => {
     I: 'advanced_solars:irradiant_glass_pane'
   })
 
-  // Circuits (the originals need lithium dust and 2000 mB sulfuric acid, neither is in the pack):
-  // hybrid = advanced circuit + glowstone dust instead of lithium + hydrated coal dust;
-  // nano and quantum keep the original ingredient lists, without the acid.
-  event.shapeless('kubejs:hybrid_circuit', [
-    'ic2:advanced_circuit', 'minecraft:glowstone_dust', 'minecraft:glowstone_dust', 'minecraft:glowstone_dust', 'ic2:dust_hydrated_coal', 'ic2:dust_hydrated_coal'
-  ])
-  event.shapeless('kubejs:nano_circuit', [
-    'kubejs:carbon_sheathing', 'kubejs:carbon_sheathing', 'kubejs:carbon_sheathing', 'kubejs:carbon_sheathing', 'minecraft:redstone', 'minecraft:redstone', 'minecraft:redstone', 'kubejs:hybrid_circuit', 'kubejs:nano_electric_motor'
-  ])
-  event.shapeless('kubejs:quantum_circuit', [
-    'ic2:heat_exchanger_advanced', 'ic2:heat_exchanger_advanced', 'ic2:heat_exchanger_advanced', 'ic2:heat_exchanger_advanced', 'kubejs:quantum_electric_motor', 'ic2:reflector_iridium', 'ic2:reflector_iridium', 'ic2:reflector_iridium', 'kubejs:nano_circuit'
-  ])
+  // Circuits (hybrid, nano, quantum) are made ONLY in the Assembler: kubejs/data/ic2/ic2_recipes/assembler/.
+  // Originals also need lithium dust and sulfuric acid; neither is in the pack (acid: issue #27).
 
   // Quantum core
   event.shaped('kubejs:quantum_core', ['SNS', 'NCN', 'SNS'], {

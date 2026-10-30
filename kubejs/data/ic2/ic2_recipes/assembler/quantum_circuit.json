@@ -1,0 +1,35 @@
+{
+  "input": [
+    {
+      "type": "ic2:item",
+      "item": "ic2:heat_exchanger_advanced",
+      "size": 4
+    },
+    {
+      "type": "ic2:item",
+      "item": "kubejs:quantum_electric_motor",
+      "size": 1
+    },
+    {
+      "type": "ic2:item",
+      "item": "ic2:reflector_iridium",
+      "size": 3
+    },
+    {
+      "type": "ic2:item",
+      "item": "kubejs:nano_circuit",
+      "size": 1
+    }
+  ],
+  "output": {
+    "type": "ic2:simple",
+    "xp": 0.0,
+    "outputs": [
+      {
+        "type": "ic2:item",
+        "item": "kubejs:quantum_circuit",
+        "size": 1
+      }
+    ]
+  }
+}

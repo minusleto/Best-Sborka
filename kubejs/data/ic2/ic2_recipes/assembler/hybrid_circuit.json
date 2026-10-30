@@ -1,0 +1,30 @@
+{
+  "input": [
+    {
+      "type": "ic2:item",
+      "item": "ic2:advanced_circuit",
+      "size": 1
+    },
+    {
+      "type": "ic2:item",
+      "item": "minecraft:glowstone_dust",
+      "size": 3
+    },
+    {
+      "type": "ic2:item",
+      "item": "ic2:dust_hydrated_coal",
+      "size": 2
+    }
+  ],
+  "output": {
+    "type": "ic2:simple",
+    "xp": 0.0,
+    "outputs": [
+      {
+        "type": "ic2:item",
+        "item": "kubejs:hybrid_circuit",
+        "size": 1
+      }
+    ]
+  }
+}

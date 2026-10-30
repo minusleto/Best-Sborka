@@ -1,0 +1,35 @@
+{
+  "input": [
+    {
+      "type": "ic2:item",
+      "item": "kubejs:carbon_sheathing",
+      "size": 4
+    },
+    {
+      "type": "ic2:item",
+      "item": "minecraft:redstone",
+      "size": 3
+    },
+    {
+      "type": "ic2:item",
+      "item": "kubejs:hybrid_circuit",
+      "size": 1
+    },
+    {
+      "type": "ic2:item",
+      "item": "kubejs:nano_electric_motor",
+      "size": 1
+    }
+  ],
+  "output": {
+    "type": "ic2:simple",
+    "xp": 0.0,
+    "outputs": [
+      {
+        "type": "ic2:item",
+        "item": "kubejs:nano_circuit",
+        "size": 1
+      }
+    ]
+  }
+}
