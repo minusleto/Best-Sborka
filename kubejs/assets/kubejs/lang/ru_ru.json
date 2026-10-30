@@ -30,5 +30,12 @@
   "item.kubejs.nano_circuit": "Нано-схема",
   "item.kubejs.quantum_circuit": "Квантовая схема",
   "item.kubejs.quantum_core": "Квантовое ядро",
-  "block.kubejs.build_core": "Ядро сборки"
+  "block.kubejs.build_core": "Ядро сборки",
+  "item.kubejs.iridium_matrix": "Иридиевая матрица",
+  "item.kubejs.singularity_matrix": "Матрица сингулярности",
+  "item.kubejs.solar_heart": "Солнечное сердце",
+  "item.kubejs.quantum_drive": "Квантовый привод",
+  "item.kubejs.gravity_core": "Гравитационное ядро",
+  "item.kubejs.matter_core": "Ядро материи",
+  "item.kubejs.void_heart": "Сердце бездны"
 }

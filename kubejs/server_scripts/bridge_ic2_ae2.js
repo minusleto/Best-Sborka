@@ -57,4 +57,14 @@ ServerEvents.recipes(event => {
     M: 'ic2:advanced_machine_block',
     Q: 'ae2:quantum_link'
   })
+
+  // --- AE2 Singularity ---
+  // None of the pack's jars has a recipe for ae2:singularity (AE2 12.9.12 only turns it into entangled
+  // singularities), so without this the Build Core would be uncraftable. If JEI already shows another
+  // recipe for it, delete this one.
+  event.shaped('ae2:singularity', ['EFE', 'FIF', 'EFE'], {
+    E: 'ae2:ender_dust',
+    F: 'ae2:fluix_pearl',
+    I: 'ic2:iridium'
+  })
 })
