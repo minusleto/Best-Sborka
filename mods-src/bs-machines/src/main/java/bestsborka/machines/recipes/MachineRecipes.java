@@ -18,8 +18,8 @@ public class MachineRecipes {
     public static final MachineRecipeList EXTRUDING = new MachineRecipeList("metal_former_extruding", list -> { });
     public static final MachineRecipeList CUTTING = new MachineRecipeList("metal_former_cutting", list -> { });
 
-    /** Two inputs, exact amounts; datapack folder ic2_recipes/assembler. */
-    public static final MultiMachineRecipeList ASSEMBLER = new MultiMachineRecipeList("assembler", 2, true, list -> { });
+    /** Up to six inputs (exact=false: any count from 1 to 6); datapack folder ic2_recipes/assembler. */
+    public static final MultiMachineRecipeList ASSEMBLER = new MultiMachineRecipeList("assembler", 6, false, list -> { });
 
     public static void init() {
         register(true);
