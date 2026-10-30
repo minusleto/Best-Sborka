@@ -1,6 +1,7 @@
 package bestsborka.machines.jei;
 
 import bestsborka.machines.BSMachines;
+import bestsborka.machines.blockentity.BlockEntityAssembler;
 import bestsborka.machines.blockentity.BlockEntityMetalFormer;
 import bestsborka.machines.init.ModBlocks;
 import bestsborka.machines.recipes.MachineRecipes;
@@ -25,6 +26,9 @@ public class BSMachinesJeiPlugin implements IModPlugin {
     public static final RecipeType<IMachineRecipeList.RecipeEntry> CUTTING =
             RecipeType.create(BSMachines.MODID, "metal_former_cutting", IMachineRecipeList.RecipeEntry.class);
 
+    public static final RecipeType<IMachineRecipeList.RecipeEntry> ASSEMBLER =
+            RecipeType.create(BSMachines.MODID, "assembler", IMachineRecipeList.RecipeEntry.class);
+
     @Override
     public ResourceLocation getPluginUid() {
         return new ResourceLocation(BSMachines.MODID, "jei_plugin");
@@ -38,7 +42,8 @@ public class BSMachinesJeiPlugin implements IModPlugin {
         registration.addRecipeCategories(
                 new MetalFormerCategory(helper, ROLLING, texture, ModBlocks.METAL_FORMER, "rolling"),
                 new MetalFormerCategory(helper, EXTRUDING, texture, ModBlocks.METAL_FORMER, "extruding"),
-                new MetalFormerCategory(helper, CUTTING, texture, ModBlocks.METAL_FORMER, "cutting"));
+                new MetalFormerCategory(helper, CUTTING, texture, ModBlocks.METAL_FORMER, "cutting"),
+                new AssemblerCategory(helper, ASSEMBLER, BlockEntityAssembler.TEXTURE, ModBlocks.ASSEMBLER));
     }
 
     @Override
@@ -48,6 +53,7 @@ public class BSMachinesJeiPlugin implements IModPlugin {
         registration.addRecipeCatalyst(machine, ROLLING);
         registration.addRecipeCatalyst(machine, EXTRUDING);
         registration.addRecipeCatalyst(machine, CUTTING);
+        registration.addRecipeCatalyst(new ItemStack(ModBlocks.ASSEMBLER), ASSEMBLER);
     }
 
     @Override
@@ -56,5 +62,6 @@ public class BSMachinesJeiPlugin implements IModPlugin {
         registration.addRecipes(ROLLING, MachineRecipes.ROLLING.getAllEntries());
         registration.addRecipes(EXTRUDING, MachineRecipes.EXTRUDING.getAllEntries());
         registration.addRecipes(CUTTING, MachineRecipes.CUTTING.getAllEntries());
+        registration.addRecipes(ASSEMBLER, MachineRecipes.ASSEMBLER.getAllEntries());
     }
 }

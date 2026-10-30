@@ -2,13 +2,23 @@
   "input": [
     {
       "type": "ic2:item",
-      "item": "kubejs:nano_sheathing",
+      "item": "kubejs:carbon_sheathing",
       "size": 4
     },
     {
       "type": "ic2:item",
       "item": "ic2:plate_iridium",
       "size": 6
+    },
+    {
+      "type": "ic2:item",
+      "item": "kubejs:nano_sheathing",
+      "size": 4
+    },
+    {
+      "type": "ic2:item",
+      "item": "advanced_solars:irradiant_uranium",
+      "size": 4
     }
   ],
   "output": {

@@ -7,5 +7,7 @@
   "jei.bs_machines.metal_former.rolling": "Metal Former: Rolling",
   "jei.bs_machines.metal_former.extruding": "Metal Former: Extruding",
   "jei.bs_machines.metal_former.cutting": "Metal Former: Cutting",
-  "block.bs_machines.assembler": "Assembler"
+  "block.bs_machines.assembler": "Assembler",
+  "jei.bs_machines.assembler": "Assembler",
+  "jei.bs_machines.cost": "Cost: %s EU"
 }
